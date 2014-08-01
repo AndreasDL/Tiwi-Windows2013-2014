@@ -13,3 +13,6 @@ Needed:
 * oleview
 * perl
 * ms office excel 2007
+
+Notes:
+Everything uses the strict & warnings module.
