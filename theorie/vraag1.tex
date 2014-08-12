@@ -1,0 +1,184 @@
+\chapter{Structuur van Active Directory gegevens}
+
+\section{Bespreek de diverse namen die alle Active Directory\\ objecten identificeren. (2.2.1)}
+
+\textbf{Naamgeving van object}\\
+De namen zijn logisch en hi\"erarchisch opgebouwd.\\
+Volgende vier namen zijn steeds beschikbaar.
+
+\begin{enumerate}
+
+\item \textbf{RDN - Relative distinguished name}
+\begin{itemize}
+\item Voorbeeld: cn = beelzebub
+\item Is uniek binnen zijn container.
+\item Denk aan absoluut path (DN) vs. relatief filepath (RDN).
+\item Wordt opgeslagen in het cn attribuut van het object.
+\end{itemize}
+
+\item \textbf{DN - Distinguished name}
+\begin{itemize}
+\item Voorbeeld: cn = beelzebub, ou= iii, ou=hogent, ou=be (cn = common name, ou = organisational unit)
+\item Attributed naming, verschillende attribuut=waarde koppels
+\item Afgeleid van alle container object waarvan het object hi\"erarchisch deel uitmaakt.
+\item Uniek over het hele domein.
+\item Denk aan absoluut path (DN) vs. relatief filepath (RDN).
+\item Wordt opgeslagen in het distinguishedName attribuut van het object.
+\end{itemize}
+\clearpage
+\item \textbf{CN - canonieke naam}
+\begin{itemize}
+\item !! Niet hetzelfde als de cn van hierboven. Hier cn = canonieke naam ; hierboven cn = common name als waarde van een DN)
+\item Voorbeeld: hogent.be/iii/beelzebub
+\item Samengesteld uit de DN, geeft de DN op een eenvoudigere manier weer.
+\item De meeste hulpmiddelen in active directory tonen de canonieke naam.
+\item Wordt opgeslagen in het canonicalName attribuut van het object. (en dus niet in het cn attribuut)
+\end{itemize}
+
+\item \textbf{GUID - global unique identifier}
+\begin{itemize}
+\item Globaal uniek (zelfs in tijd) getal van 128 bits.
+\item Kan en wordt nooit gewijzigd.
+\item Wordt opgeslagen in het objectGUID attribuut van het object.
+\item Wordt gegenereerd en toegewezen bij het aanmaken van het object.
+\end{itemize}
+
+\end{enumerate}
+
+\section{Wat zijn SPN objecten ? Bespreek de aanvullende naamgeving voor deze objecten. (2.2.2)}
+
+\begin{enumerate}
+
+\item \textbf{SPN - Security Principal Objects}
+\begin{itemize}
+\item Doel: SPN of Security Principal Objects zijn Active Directory objecten die gebruikt worden om toegang te verlenen tot domeinbronnen. 
+\item Zijn van toepassing op computers, gebruikersrekeningen en domeinen.
+\end{itemize}
+
+\item \textbf{SID - Security ID}
+\begin{itemize}
+\item Zijn net als guids uniek in tijd; wanneer een object verwijderd en vervolgens terug aangemaakt wordt, zal het een andere SPN krijgen. Hierdoor kan een object nooit machtigingen van een oude account behouden.
+\item Opgeslagen in het objectSid kenmerk
+\item Men maakt gebruik van SIDs naast GUIDs om compabiliteitsredenen.
+\item hi\"erarchische string getallen gescheiden door koppeltekens bijvoorbeeld S-1-5-x-y-z-500. Hierbij is S-1-5 een standaard prefix bestaande uit een revision level en een authority identifier. X,y en z zijn 32bit getallen die specifiek zin voor het domain, (Domain Subauthority Identifier), 500 is een relatieve ID (RID) dat naar het feitelijke object verwijst.
+\item SID blijft behouden als het object verplaatst wordt binnen hetzelfde domein. Als er verplaatst wordt naar een nieuw domein zal de SID wijzigen.
+\item Wordt gegenereerd en toegewezen bij de aanmaak van het object.
+\item sIDHistory, houdt alle SIDs bij die het SPN in het verleden had om te vermijden dat een gebruiker na verplaatsing van objecten zijn toegang zou verliezen.
+\end{itemize}
+
+\item \textbf{UPN - User Principal Name}
+\begin{itemize}
+\item Doel aanmeldingsnamen van gebruikers vereevoudigen.
+\item opgeslagen in het userPrincipalName kenmerk.
+\item Als de UPN enkel gebruikt wordt voor aanmelding, moet hij uniek zijn binnen het volledige forest.
+\item Bestaat standaard uit [RDN gebruiker]@[UPN suffix] (zonder [ en ])
+\item UPN suffix kan vervangen worden door
+\begin{itemize}
+\item DNS domeinnaam van het domein waar de account zich bevindt of het root domein
+\item Mag zelfs een willekeurige naam zijn ook, als hij geregistreerd is met behulp van de Active Directory domeins and Trust snap-in.
+\end{itemize}
+\item Wordt maar sporadisch gebruikt door compabiliteitsredenen. Vaak maakt men gebruik van: [NetBIOSnaam van het domein]-[SAM accountnaam]. (zonder [ en ]).
+\end{itemize}
+
+\item \textbf{NetBIOS}
+\begin{itemize}
+\item Bestaat standaard uit de meest linkse component in de DNS naam van het domein
+\item Is niet langer dan 15 letters
+\item deze naam moet uniek zijn in zijn forest
+\end{itemize}
+
+\item \textbf{SAM accountnaam - Security Accounts Manager}
+\begin{itemize}
+\item Moet uniek zijn in het domein
+\item Wordt opgeslagen in sAMAccountName
+\item Bestaat uit hoogstens 20 karakters, standaard de eerste 20 bytes van de RDN afgesloten door een \$
+\footnote{in de cursus staat er bytes p21, voorlaatste paragraaf, ik zou eerder denken dat het letters zijn}.
+\item Deze naam kan op elk gewenst moment veranderd worden.
+\end{itemize}
+\clearpage
+\item \textbf{DNS hostname}
+\begin{itemize}
+\item opgeslagen in dnsHostName kenmerk
+\item standaard eerste 15 bytes van de RDN gevold door de suffix voor de primaire DNS
+\item Standaard is de suffix de volledige DNS naam van het domein waar de computer toe behoord.
+\item Er kan afgeweken worden; meer dan 15 chars en andere DNS naam.
+\end{itemize}
+
+\end{enumerate}
+
+\section{Enkele veel gebruikte klassen vertonen nog \\ "meer identificerende attributen voor hun instanties.\\ Bespreek deze klassen en attributen.}
+
+\textbf{Komt later aan bod. zaken zoals:}
+\begin{enumerate}
+\item lDAPDisplayName
+\item Object identifier
+\item \textbf{objectClass (de hi\"erarchische klassen)}
+\item \textbf{objectCategory (de categorie van de klasse van het object)}
+\item ... 
+\end{enumerate}
+
+\clearpage
+\section{In welke partities is de Active Directory informatie\\ verdeeld ? Geef de betekenis van elke partitie,\\ hun onderlinge relatie,\\ en de replicatiekarakteristieken ervan. (laatste helft 2.2.3)}
+
+\subsection{Wat?}
+We noemen de verzameling van alle active directory informatie (objecten en containerobjecten samen met hun meta data (ook objecten)) het gegevensarchief of de directory. Elke domeincontroller bevat een kopie van de directory van zijn domein. De informatie is fysiek verdeeld in minimaal 3 categori\"en of partities. Cli\"ent computer houden (uiteraard) geen informatie bij.
+
+\subsection{Partities}
+\begin{enumerate}
+\item \textbf{Domeinpartities met domeingegevens}
+\begin{itemize}
+\item bevatten informatie over objecten in het domein: gedeelde bronnen (servers, bestanden en printers) en accounts.
+\item Bij installatie worden er een aantal standaard objecten aangemaakt, een daarvan is de administrator account
+\item elk domein zit in een aparte partitie, er zijn dus evenveel partities met domeingegevens als dat er domeinen in het forest zijn.
+\item deze gegevens hebben bijgevolg enkel betrekking op dit domein en worden niet gedistribueerd naar ander domeinen.
+\item een subset van deze gegevens wordt opgeslagen in de global catalog
+\end{itemize}
+
+\item \textbf{Applicatie partities}
+\begin{itemize}
+\item bv dns gegevens
+\item kunnen geen SPN objecten bevatten
+\item kunnen niet verplaatst worden buiten de applicatie partitie
+\item beschikbaar vanaf windows server 2003
+\item zelf partities maken met adsiedit.msc
+\end{itemize}
+
+\clearpage
+
+\item \textbf{configuratie gegevens}
+\begin{itemize}
+\item beschrijven de fysieke topologie van de directory (bv lijst van alle domeinstructuren, locaties van domeincontrollers en global catalog controllers, sites, ..)
+\item Instellingen voor het hele forest worden vertaald naar kenmerken van objecten in de configuratie gegevens. (bv. uPNSuffixes kenmerk houdt de mogelijke UPN suffixen bij)
+\end{itemize}
+
+\item \textbf{schema}
+\begin{itemize}
+\item bevat een formele definitie van alle objecten en kenmerkgegevens die kunnen opgeslagen worden in de directory.
+\item is uniek voor alle domeinen in het forest.
+\end{itemize}
+\end{enumerate}
+
+\subsection{Onderlinge relatie}
+\begin{itemize}
+\item Logische structuur ; boomstructuur
+\mijnfiguur[ht]{width=\textwidth}{structuur}{onderlinge relatie van de partities, uit de cursus "Besturingssystemen III - Windows Server (J. Moreau)"}
+\item Het forest root domein staat bovenaan en bevat de domein partities samen met de configuratie partitie
+\item partities kunnen deel uitmaken van een andere partitie, zo kan een domein partitie deel zijn van een hoger liggende domein partitie.
+\item De schema partitie is een onderdeel van de configuratie partitie
+\item Applicatie partities kunnen op 3 plaatsen toegevoegd worden
+\begin{enumerate}
+\item als een afzonderlijke boom in het forest
+\item als kind van een domein partitie
+\item als kind van een applicatie partitie
+\end{enumerate}
+\item Fysieke structuur: de schema partitie en de configuratie partitie zijn 2 verschillende entiteiten.
+\end{itemize}
+
+\subsection{Replicatie}
+\begin{itemize}
+\item Elke partitie is een aparte eenheid voor replicatie.
+\item schema & configuratie gegeven worden gerepliceerd naar alle domeincontrollers in het forest. 
+\item De domeingegevens van een bepaald domein worden gerepliceerd binnen het domein zelf.
+\item de applicatie partities worden uitgewisseld met een eigen deelverzameling specifiek geconfigureerde domeincontrollers van het forest, onafhankelijk van de domein grenzen. (bv dns gegevens enkel syncen met dns servers)
+\item een subset van de kenmerken van alle objecten in de domeingegevens van elk domein in het forest worden gerepliceerd naar de globale catalogus.
+\end{itemize}
