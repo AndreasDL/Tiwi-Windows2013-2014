@@ -1,0 +1,169 @@
+\chapter{attributeSchema objecten (2.2.4 en 2.2.5)}
+\npar
+Er zijn verschillende soorten schema's
+\begin{itemize}
+\item \textbf{Active directory schema - re\"ele schema} : volledige schema dat de regels van klassen en objecten bevat.
+bevat 2 soorten definities:
+\begin{itemize}
+\item attributeSchema objecten: kenmerken, elk kenmerk wordt 1 keer gedefinieerd en wordt daarna gebruikt voor meerdere klassen.
+\item classSchema objecten: klassen, de klassen die gemaakt kunnen worden.
+\end{itemize}
+\item \textbf{abstracte schema}: compacte representatie van het gehele schema
+\end{itemize}
+
+\section{Bespreek het doel en de werking van attributeSchema objecten. Hoe kunnen deze objecten het best geraadpleegd en gewijzigd worden ?}
+
+\subsection{Doel \& werking}
+\begin{itemize}
+\item Kenmerken van klassen zijn zelf objecten in het schema
+\item beperkingen opleggen
+\item worden beheerd net als andere objecten
+\item een kenmerk kan in meerdere klassen hergebruikt worden
+\end{itemize}
+
+\subsection{Raadplegen \& wijzigen}
+\begin{itemize}
+\item dsquery (tonen)
+\item via adsiedit.msc
+\item zelf gemaakte scripts
+\item ldifde csvde
+\item verwijderen van items is niet mogelijk, wel isDefunct op true zetten, zodat ze niet meer aangemaakt kunnen worden. Voordeel hiervan is dat ongedaan maken van een (foutieve verwijdering) eenvoudig is.
+\end{itemize}
+
+\section{Bespreek de diverse naamgevingen van attributeSchema objecten.}
+
+Voor elk object is ook een viervoudige naamgeving aanwezig.
+\begin{enumerate}
+\item \textbf{CN - Common name}
+\begin{itemize}
+\item Niets anders dan de RDN van het attributeSchema object in de schema container.
+\item bijgehouden in het cn attribuut
+\end{itemize}
+
+\item \textbf{GUID van een kenmerk}
+\begin{itemize}
+\item Onafhankelijk van het GUID van een attributeSchema object (duh)
+\item automatisch gegenereerd ndien gewenst
+\item uniek binnen het forest
+\item bijgehouden in het schemaIDGUID attribuut
+\end{itemize}
+
+\item \textbf{LDAP display name}
+\begin{itemize}
+\item belangrijk voor programmatische toegang
+\item bijgehouden in het lDAPDisplayName attribuut
+\end{itemize}
+
+\item \textbf{OID - object identifier}
+\begin{itemize}
+\item interne representatie
+\item x.500 ids worden verleend door speciale autoriteiten zoals ITU ANSI en ISO en zijn gegarandeerd uniek in alle netwerken over de hele wereld.
+\item je kan een tak aanvragen of een unieke genereren in de ms subtak met behulp van de oidgen
+\item bijgehouden in het attributeID attribuut.
+\end{itemize}
+\end{enumerate}
+
+\section{Bespreek de belangrijkste kenmerken van attributeSchema objecten, en hoe die ingesteld kunnen worden.}
+De 7 belangrijke kenmerken zijn
+\begin{enumerate}
+\item \textbf{attributeSyntax \& oMSyntax}
+\begin{itemize}
+\item bepaald het data type (26 mogelijkheden waarvan 18 in gebruik, bv boolean, integer)
+\item het is niet mogelijk om nieuwe syntax te defini\"eren.
+\item de oMSyntax wordt gebruikt om een bijkomend onderscheid te maken omdat de attributeSyntax alleen niet genoeg blijkt te zijn.
+\end{itemize}
+
+
+\item \textbf{rangeLower en rangeUpper}: bereikbeperkingen van een kenmerken
+
+\item \textbf{isSingleValued} : Of het object een over meerdere waarden heeft
+
+\item \textbf{searchFlags} : binaire nformatie waarbij de meeste bits bepalen of het kenmerk op een of andere manier ge\"indexeerd wordt. Indien het kenmerk ge\"indexeerd is, kan er sneller gezocht worden op dat kenmerk.
+\begin{itemize}
+\item laagste bit: eenvoudige indexering van de waarde van het kenmerk
+\item tweede laagste bit: waarde van het kenmerk combineren met de identificatie van de container. Dergelijke containerized indexen kunnen snel alle objecten binnen een specifieke container opsporen.
+\item derde laagste bit: ambiguous name resolution toelaten. Zoeken waarbij minstens een kenmerk uit een verzameling kenmerken een specifieke waarde aanneemt.
+\item zesde laagste bit; versnellen van opzoekingen waarin kenmerken met jokertekens vermeld worden. deze tuple indexen vergen heel wat resources en worden best in beperkte mate gebruikt.
+
+\item vijfde laagste bit: heeft niets met indexing te maken, maar bepaald of de waarde van het attribuut behouden blijft indien men een kopie maakt van het object.
+\end{itemize}
+
+\item \textbf{systemFlags} Bevat ook binaire informatie
+\begin{itemize}
+\item de laagste bit bepaald of het kenmerk al dan niet gerepliceerd wordt naar andere domeincontrollers. Niet gerepliceerde kenmerken worden gebruikt voor caching of gebruikt bij relatief dynamische kenmerken waarvan de waarde grequent wijzigt zoals lastLogion en LAstLogoff.
+\item het derde laagste bit van systemFlags wijst op een geconstrueerd attribuut; een attribuut dat telkens opnieuw berekend wordt.
+\end{itemize}
+
+\item \textbf{isMemberOfPartialAttributeSet}: bepaald of het kenmerk in de global catalog opgenomen wordt of niet.
+
+\item \textbf{linkID}
+\begin{itemize}
+\item Sommige kenmerken vormen koppels bestaande uit forward-link en back-link kenmerken
+\item De referenti\"ele integriteit te garanderen.
+\item Enkel de forward link kan aangepast worden, de backlink wordt beheerd door het systeem.
+\item gebruik door de overeenkomstige attributen van de kenmerken op te vullen met opeenvolgende even en oneven gehele getallen.
+\end{itemize}
+\end{enumerate}
+
+\section{Welke andere types objecten bevat het Active Directory schema, en wat is hun bedoeling ? (o.a. 2.2.7)}
+
+\begin{enumerate}
+\item \textbf{classSchema-objecten} Groepen de attributen per klasse en geven dus aan welke klassen er gemaakt kunnen worden.
+\item \textbf{het abstracte schema}
+\begin{itemize}
+\item abstracte schema
+\item vereenvoudige interface aan LDAP cli\"ents door het verbergen van overbodige implementatie details.
+\item RDN = Aggregate
+\item high level toegang via ADSI interfaces.
+\item geeft beperkt aantal kenmerken aan van het class- en attributeSchema.
+\item kan heel wat werk besparen.
+\end{itemize}
+\end{enumerate}
+
+\section{Via welke attributen kun je de klasse van een willekeurig Active Directory object achterhalen ? Hoe moet je op zoek gaan naar alle objecten van een bepaalde klasse ? Illustreer aan de hand van relevante voorbeelden. (laatste paragraaf 2.2.6)}
+
+Hiervoor kan men gebruik maken van 2 mandatory-kenmerken van de top klasse. Deze zijn, doordat ze mandatory zijn in de topklasse, verplicht aanwezig in elk object.
+
+\subsection{objectClass}
+Is een multi valued en niet ge\"indexeerd attribuut dat alle hi\"erarchische superklassen (op de statische hulpklassen na) bevat.
+
+\subsection{objectCategory}
+Is een single valued en ge\"indexeerd attribuut dat de meest typische vertegenwoordiger uit de verzameling bestaande uit de klasse zelf en alle hi\"erarchische superklassen.
+
+\subsection{Wat gebruiken?}
+\begin{itemize}
+\item Als de objectCategory is ingesteld met de klasse van het object is dit natuurlijk de beste keuze. De opzoeking laat toe om een beroep te doen op indexeren, wat een stuk performanter is.
+\item objectCategory ingesteld op een hogere klasse: problemen: we krijgen ook andere deelklassen. Het beste is om eerst de hogere klasse op te halen en dan deze kleinere lijst nogmaals filteren. 
+\item alleen de objectClass selecteren is het traagste vermits er niet ge\"indexeerd wordt.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
