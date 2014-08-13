@@ -1,0 +1,114 @@
+\chapter{Active Directory functionele niveaus (2.4.3)}
+\section{Geef de diverse functionele niveaus waarop Active Directory kan ingesteld worden, en welke beperkingen er het gevolg van zijn.}
+
+\subsection{Domein functioneel niveau}
+Het domein functioneel niveau geeft aan welke minimum eis er gesteld wordt aan het besturingssysteem van de domeincontrollers en bepaalt tegelijkertijd welk faciliteiten er beschikbaar zijn. Dit niveau wordt opgeslagen in 2 attributen = ntMixedDomain en msDS-Behavior-Version. Er zijn vier mogelijkheden
+\begin{enumerate}
+\item \textbf{Windows 2000 mixed}
+\begin{itemize}
+\item de laagste active directory functionaliteit
+\item windows 2008+ domeincontrollers niet mogelijk
+\item standaard gebruikt bij windows server 2000 en 2003
+\end{itemize}
+
+\item \textbf{Windows 2000 native} enkel windows server NT5+  domein controllers, werkposten en lidservers mogen lager zijn
+\item \textbf{Windows Server 2003} enkel windows server 2003+ domein controllers, werkposten en lidservers mogen lager zijn.
+\item \textbf{Windows Server 2008} enkel windows server 2008+ domein controllers, werkposten en lidservers mogen lager zijn.
+\end{enumerate}
+
+\subsection{Forest functioneel niveau}
+Analoog aan het domein funcitoneel niveau is er ook een forest functioneel niveau. Dit functioneel niveau bepaald het minimale niveau van een alle domeinen binnen een forest. Dit wordt opgeslagen in het msDS-Behavior-Version attribuut, maar dan van het partitions containerobect van de configuratie gegevens. Er zijn 3 mogelijkheden:
+\begin{enumerate}
+\item \textbf{windows 2000 forest} geen enkele eis aan het functioneel niveau van de liddomeinen. De standaard instelling
+
+\item \textbf{Windows Server 2003} enkel domeinen van 2003+ niveaus 
+\item \textbf{Windows Server 2008} enkel domeinen van 2008+ 
+\end{enumerate}
+
+
+
+\section{Bespreek van elk niveau alle eraan gekoppelde voordelen. Geef hierbij telkens een korte bespreking (verspreid over de cursus !) van de ingevoerde begrippen.}
+
+\subsection{Domein functioneel niveau}
+\subsubsection{Windows 2000 native}
+\begin{itemize}
+\item 1 globale catalog voor het ganse forest
+\item transitieve vertrouwensrelaties tussen verschillende domeinen van eenzelfde forest
+\item alle domeincontrollers kunnen zelfstandig een aantal SPN objecten aanmaken door de delegering van de RID master, waar er bij het mixed domein steeds beroep moet doen op de PDC emulator master van een domein.
+\item ruimere mogelijkheden voor configuratie van groepen
+\item alle sids die een SPN object in het verleden gehad heeft, worden bijgehouden in het sIDHistory kenmerk.
+\end{itemize}
+\clearpage
+\subsubsection{Windows Server 2003 niveau}
+\begin{itemize}
+\item gebruik van aanvullende schema klassen en attributen 
+\item naam van een domeincontroller kan eenvoudiger veranderd worden (geen degradatie en promotie meer nodig)
+\item dagvullende opdrachten: rdirusr en redircmp om de default active directories te wijzigen waarin respectievelijk nieuwe gebruikers en nieuwe computers terecht komen.
+\item caching op domeincontroller niveau van UPN suffices en het lidmaatschap van universele groepen zodat het niet meer strikt noodzakelijk is dat tijdens het inlogproces een global catalog bereikbaar is
+\item group policies filteren ook met behulp van WMI scripts.
+\end{itemize}
+
+\subsubsection{Windows Server 2008}
+\begin{itemize}
+\item aanvullende schema klassen en attributen 
+\item encryptie van het kerberos protocol
+\item fijnkorrelig wachtwoord beleid
+\item replicatie van DFS namesspaces en SYSVOL share via DFS replicatie (performanter van file replication service)
+\end{itemize}
+
+\subsection{Forest functioneel niveau}
+\subsubsection{Windows 2000}
+\begin{itemize}
+\item geen enkele eis aan het functionele niveau van de liddomeinen
+\end{itemize}
+\clearpage
+\subsubsection{Windows Server 2003}
+\begin{itemize}
+\item hergebruiken van gedeactiveerde attributen en klassen
+\item dynamische hulpklassen
+\item dynamische objecten met een beperkte levensduus
+\item effici\"entere replicatie van de global catalog gegevens, waardoor ondermeer toevoeging van een nieuw kenmerk niet leidt tot een volledige synchronisatie van alle objectkenmerken.
+\item veranderen van naamgeving en de hi\"erarchische structuur van domeinen in een forest.
+\item transitieve vertrouwens relaties tussen verschillende forests
+\item read only windows server 2008+ domeincontrollers
+\item effici\"entere KCC algoritmen voor de constructie van de replicatietopologie.
+\item replicatie van individuele waarden van multi-valued attributen zodat bijvoorbeeld bij verandering van het lidmaatschap van een groep niet de volledige verzameling leden opnieuw moet gesynced worden.
+\end{itemize}
+
+\subsubsection{Windows Server 2008}
+\begin{itemize}
+\item geen aanvullende functionaliteiten
+\item wel betere beveiliging
+\end{itemize}
+
+\section{Hoe kan men detecteren op welk niveau een Active Directory omgeving zich bevindt ?}
+\subsection{Domein functioneel niveau}
+\begin{itemize}
+\item opgeslagen in 2 attributen
+\begin{enumerate}
+\item ntMixedDomain
+\item msDS-Behavior-Version
+\end{enumerate}
+\item ingesteld op het domeinobject zelf (bv. dc=iii, dc= hogent , dc = be)
+\end{itemize}
+
+\subsection{Forest functioneel niveau}
+\begin{itemize}
+\item ingesteld op het partitions containerobject van de configuratiegegevens
+\item wordt bepaald door 1 attribuut: msDS-Behavior-Version
+\end{itemize}
+
+\section{Op welke diverse manieren kan men het functionele niveau verhogen of verlagen ?}
+
+\begin{itemize}
+\item gebeurd niet automatisch, moet manueel gebeuren
+\item Kan op 2 manieren
+\begin{enumerate}
+\item zelf de attributen manipuleren
+\item de Active Directory Domains and Trust snap-in
+\end{enumerate}
+\item Als niet alle voorwaarden voldaan zijn wordt je hiervan op de hoogte gebracht
+\item verlagen is niet mogelijk
+\item alle domeincontrollers moeten opnieuw opgestart worden om de wijzigingen door te voeren.
+\item als je weet dat er geen oudere controllers zijn kun je best het niveau al updaten bij de installatie van de eerste active directory controller zodat alle controllers die erna toegevoegd worden vanzelf het juiste niveau hebben.
+\end{itemize}
