@@ -1,0 +1,159 @@
+\chapter{classSchema objecten (2.2.4 en 2.2.6)}
+\section{Bespreek het doel en de werking van classSchema objecten.}
+\begin{enumerate}
+\item \textbf{doel \& werking}
+\begin{itemize}
+\item doel: defini\"eren hoe een klasse er uit ziet.
+\item voor elke klasse is er een object in het classSchema
+\item 2 soorten regels
+\begin{enumerate}
+\item structuurregels: hi\"erarchische relaties tussen de klassen
+\item inhoudsregels: kenmerken defini\"eren die de klasse moet hebben (verwijzen naar attributen van hierboven)
+\end{enumerate}
+\item worden ook opgeslagen als objecten.
+\end{itemize}
+\end{enumerate}
+
+\section{Hoe benadert Active Directory het mechanisme van overerving ?}
+
+\begin{enumerate}
+\item \textbf{basis overerving}
+\begin{itemize}
+\item elke klasse, behalve de TOP klasse is afgeleid van een andere klasse
+\item superklasse of bovenliggende klasse
+\item subklassen 
+\item overerving: overnemen van alle kenmerken; structuur- en inhoudsregels van de bovenliggende klasse. (!! kenmerken GUID overnemen, maar daarom wordt de waarde van GUID nog niet overgenomen)
+\item overname is recursief, alle kenmerken van alle bovenliggende klassen overnemen
+\end{itemize}
+
+\item \textbf{meervoudige overerving}
+\begin{itemize}
+\item enkel kenmerken overnemen van onmiddellijke superklasse en speciaal bestemde hulpklassen.
+Deze hulpklassen kunnen zelf geen klassen genereren.
+\item hulpklassen kunnen zowel dynamisch als statisch gebruikt worden
+\end{itemize}
+
+\item \textbf{statisch gebruik van hulpklassen}
+\begin{itemize}
+\item auxilairyClass of systemAuxiliaryClass
+\item Wordt vastgelegd in de definitie van de klasse
+\item statisch en kan niet veranderd worden zonder de definitie van de klasse aan te passen.
+\item in de definitie van de klasse wordt reeds vastgelegd van welke hulpklassen deze klasse kenmerken kan overnemen. Alle objecten hebben dit kenmerk dus vanzelf.
+\end{itemize}
+
+\item \textbf{dynamisch gebruik van hulpklassen}
+\begin{itemize}
+\item beschikbaar vanaf windows server 2003
+\item entryTTL als optioneel attribuut dat gebruikt kan worden om de klasse vanzelf te laten vervallen
+\item entryTTL kan opgefrist worden
+\item dynamisch kenmerken bijladen door het objectClass kenmerken aan te vullen met de klassenaam. Hierdoor erft enkel deze instantie de kenmerken van de hulpklasse
+\item dit moet wel bij de create van de instantie ingesteld worden vermits het objectClass kenmerk na creatie niet meer gewijzigd kan worden.
+\end{itemize}
+
+\end{enumerate}
+Of een klasse een structureel, abstracte of hulpklasse is, is af te leiden uit de objectClassCategory integer.
+de waarde van de ints zijn respectievelijk 1, 0 of 2 , en 3. Abstracte klasse kunnen ook geen objecten maken en worden gebruikt om objecten te verzamelen bv aPersoon . een abstracte klasse kan enkel een abstracte klasse als superklasse hebben.
+
+\clearpage
+
+\section{Bespreek de diverse naamgevingen van classSchema objecten.}
+
+Er is voor elke object ook een viervoudige naamgeving:
+\begin{enumerate}
+\item common name
+\item GUID
+\item ldap displayname
+\item object ID
+\end{enumerate}
+Voor meer informatie kijk bij reeks1 vraag2, daar worden de verschillende namen al uitgelegd.
+
+\section{Bespreek de belangrijkste kenmerken van classSchema objecten, en hoe die ingesteld kunnen worden.}
+
+2 soorten regels. Als de naam begint met system wordt het kenmerk beheerd door het systeem zelf.
+\begin{enumerate}
+\item \textbf{Inhoudsregels}: defini\"eren welke kenmerken een klasse heeft.
+\begin{itemize}
+\item \textbf{postSuperiors \& systemPostSuperiors} lijst van verplichte kenmerken.Deze zullen na overerving ook altijd verplicht blijven ook al zijn ze in de klasse zelf als optioneel gemarkeerd.
+\item \textbf{mayContain \& systemMayContain} lijst van optionele kenmerken
+\item \textbf{rDNAttID} bepaald welk kenmerk van een klasse gebruikt wordt om de RDN van objecten te bepalen. Voor de meeste klassen staat dit kenmerk ingesteld op de waarde.
+\item \textbf{defaultSecurityDescriptor} bepaalt expliciete machtigingen die gelden voor objecten van deze klassen. Dit kan gebruikt worden om het beheer van deze klasse te delegeren.
+\item \textbf{systemOnly} indien dit kenmerk de waarde true heeft kunnen de structuurregels en inhoudsregels niet gewijzigd worden.
+\item isDefunct kan gebruik worden om klassen te deactiveren (verwijderen van klassen is niet mogelijk). Doordat klassen enkel gedeactiveerd kunnen worden is het ongedaan maken ervan veel simpeler.
+\end{itemize}
+\clearpage
+\item \textbf{Structuur regels} : Defini\"eren de mogelijke hi\"erarchische relaties tussen klassen of objecten.
+\begin{itemize}
+\item \textbf{objectClassCategory} : categorie van de klasse bepalen. 
+\begin{itemize}
+\item 1 : structurele klasse
+\item 0 of 2 : abstracte klasse
+\item 3 hulpklasse
+\end{itemize}
+\item \textbf{objectClass} multivalued niet ge\"indexeerd. Alle bovenliggende klassen
+\item \textbf{objectCategory}: single valued en ge\"indexeerd. De meest typische vertegenwoordiger.
+\item \textbf{auxiliaryClass en systemAuxiliaryClass}  welke hulpklassen de klasse heeft
+\item \textbf{poosSuperiors en systemPossSuperiors} bepaald welke andere objecten de klasse kunnen bevatten. Bijvoorbeeld een organizationalUnit kan bijvoorbeeld container zijn voor o.a. user-obecten, dit betekent dat het classSchema-object voor user verwijst naar organizationalUnit.
+\end{itemize}
+\end{enumerate}
+
+\section{Welke andere types objecten bevat het Active Directory schema, en wat is hun bedoeling ? (o.a. 2.2.7)}
+
+Naast het classSchema-objecten zijn er ngo 2 andere beschikbaar:
+\begin{enumerate}
+\item \textbf{attributeSchema-objecten} waar de attributen gedefini\"eeerd worden. zie hierboven ergens.
+\item \textbf{abstract schema objecten} een compacte representatie van het re\"eele schema, zie hierboven.
+\end{enumerate}
+\clearpage
+\section{Hoe en met welke middelen kan het Active Directory schema uitgebreid worden ? (2.2.8, ldifde fractie 2.2.3)}
+
+\textbf{risicovol}
+\begin{itemize}
+\item risico vol
+\item schema uitbreiden = wijzigingen geldig in heel het forest
+\item maak zoveel mogelijk gebruik van overerving om problemen te vermijden en maak dus enkel een geheel nieuwe structurele klasse aan als er geen enkel bestaande klasse voldoet.
+\item veel potentieel / veel mogelijkheden
+\item uiteraard kunnen enkel gemachtigde gebruikers wijzigingen doorvoeren
+\item best een testomgeving gebruiken
+\end{itemize}
+
+textbf{tools}
+\begin{enumerate}
+
+\item \textbf{ldifde en csvde}
+\begin{itemize}
+\item via command prompt
+\item grootschalige wijzigingen
+\item uitwisseling gebaseerd op intermediaire tekstbestanden in:
+\begin{itemize}
+\item ldifde= LDAP Data Interchange Format
+\item csvde = comman seperated value
+\end{itemize}
+\end{itemize}
+
+
+\item \textbf{LDAP of ADSI interface} Wijzigingen doorvoerenvia ADSIEdit.msc of eigen scripts.
+
+\item \textbf{Active Directory schema snap-in}
+\begin{itemize}
+\item standaard niet in MMC (Microsoft MAnagement console).
+\item klassen en attributen in verschillende mappen weergegeven
+\item na het selecteren van een klasse in het linkerpanel krijg je een detail overzicht
+\item dubbelklikken op een kenmerk laat toe om wijzigingen aan te brengen via een dialoog venster.
+\end{itemize}
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
