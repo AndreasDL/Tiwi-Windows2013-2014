@@ -1,0 +1,110 @@
+\chapter{Active Directory domeinstructuren (2.4.4 en 2.4.6)}
+\section{Wat is de bedoeling van vertrouwensrelaties ?}
+\begin{itemize}
+\item Gebruikers van 1 trusted domein ook vertrouwen/ kunnen verifi\"eren in een ander trusting domein.
+\item weergegeven et een pijl in de richting van het trusted domein. (Als domein A domein B vertrouwd, is er een pijl van A naar B)
+\item eenmaal geverifieerd moet er gekeken worden naar de rechten en machtigingen van een gebruiker alvorens hij toegang krijgt tot het andere domein. Deze machtigingen worden per domein toegewezen.
+\end{itemize}
+
+\section{Bespreek de verschillende soorten vertrouwensrelaties.}
+\subsection{expliciet}
+Deze moeten manueel aangemaakt worden
+\subsubsection{forest trusts}
+\begin{itemize}
+\item windows server 2003+ (2003 of hoger) nodig
+\item manueel tussen de rootdomeinen van de forests
+\item directionele
+\item transitief
+\item realms bestaande uit meer dan 2 forests? voor elk koppel een trust maken
+\end{itemize}
+
+\subsubsection{Realm trusts}
+\begin{itemize}
+\item veralgemening van forest trust
+\item tussen windows server 2008+ en willekeurige kerberos v5 realms onafhankelijk van het besturingssysteem waarop die ge\"implementeerd zijn.
+\item bidirectioneel / enkelvoudig 
+\item transitief / niet-transitief
+\end{itemize}
+ 
+\subsubsection{Verkorte vertrouwensrelaties}
+\begin{itemize}
+\item worden gebruikt om het vertrouwenspad in grote en complexe trees korter te maken.
+\item performanter
+\item ook shortcut of cross-link genoemd
+\item in praktijk pas zinvol als het vertrouwens pad 5 of meer domeinen overspant.
+\item enkelvoudig/bi-directioneel
+\end{itemize}
+ 
+\subsubsection{Externe vertrouwensrelaties} 
+\begin{itemize}
+\item een domein vertrouwd het andere
+\item niet transitief
+\item altijd enkelvoudig, wil je bi-directioneel dan moet je 2 relaties maken.
+\item kan niet binnen hetzelfde forest
+\item bedoeld voor communicatie met externe partners
+\item met oude NT4 domeinen
+\end{itemize}
+
+\subsection{impliciet}
+Deze worden automatisch aangemaakt en beheerd bv tussen rootdomein en de subdomeinen
+
+\clearpage
+\section{Op welke diverse manieren kunnen vertrouwensrelaties gecre\"eerd en gecontroleerd worden ? Bespreek ook de optionele configuratiemogelijkheden.}
+Enkel de expliciete vertrouwensrelaties moeten zelf geconfigureerd worden.
+
+\begin{enumerate}
+\item \textbf{Active Directory and Domains Trust snap)in}
+\begin{itemize}
+\item beschikbaar via domain.msc
+\item rechtermuisknop op domein, properties, trusts-tab, new trusts wizard.
+\item aan elke vertrouwensrelatie wordt een wachtwoord toegewezen
+\item aanvullende config is mogelijk en aangeraden vanuit het beveiligingsstandpunt
+\begin{enumerate}
+\item Standaard worden alle gebruikers van het trusted domein opgenomen in de authenticated users impliciete groep van het trusting domein.
+\item men kan echter ook voor selective authentication kiezen waardoor dit per individuele gebruiker of gebruikersgroep expliciet moet ingesteld worden.
+\item inden men gebruik maakt van SID Filtering (de standaard instelling), dan wordt enkel rekening gehouden met de SID opgeslagen in het objectSid attribuut van de objecten in het trusted domein (en bijgevolg met SIDs waarvan de domain subauthority identifier zeker overeenkomt met die van het trusted domein.
+\item indein men SID Filtering uitschakeld, dan verwerkt het trusting domein ook de SIDs opgeslagen in het siDHistory attribuut. Malafide beheerder in het trusted domein met olledige toegang tot het siDHistory attribuut van de objecten in hun eigen domein kunnen langs deze weg zichzelf meer machtigingen en rechten toe-eigenen in het trusting domein.
+\end{enumerate}
+\end{itemize}
+
+\item \textbf{Via command line}
+\begin{itemize}
+\item netdom trust : nieuwe relaties toevoegen
+\item netdom query trust : huidige vertrouwensrelaties opvragen / query'n
+\end{itemize}
+\end{enumerate}
+
+\clearpage
+\section{Welke verschillen zijn er in praktijk tussen NT 4.0 en Windows Server domeinstructuren ? Bespreek de alternatieve mogelijkheden bij de conversie van een NT 4.0 domeinstructuur naar een Windows Server omgeving.}
+\begin{itemize}
+\item NT4 maakt een onderscheid in master domeinen en resource domeinen
+\begin{itemize}
+\item Master domein of account domein bevat de gebruikers en groepen 
+\item resource domein biedt bronnen aan zoals printers, shared , ...
+\item NT4 domeinstructuren bestaan uit een of meerder master domeinen en meerder resource domeinen. Er wordt een bi-directionele vertrouwensrelatie aangemaakt tussen all masterdomeinen onderling. Daarnaast zijn er enkelvoudige vertrouwensrelaties waarbij elk resource domein elk masterdomein vertrouwd.
+\end{itemize}
+\item omschakeling moet geleidelijk en evolutionair gebeuren ipv revolutionair.
+
+\item windows server kan ervoor zorgen dat het aantal domeinen vermindert, wat het beheer zal vereenvoudigen
+\begin{itemize}
+\item gebruik maken van ou om domeinen te vervangen
+\item oud hebben als bijkomend voordeel dat het verplaatsen van objecten veel makkelijker is.
+\end{itemize}
+
+\item beginnen in de root en dan naar beneden werken. eerst het master NT4 domein en dan de resource domeinen. Dit moet zo gebeuren omdat windows server altijd een root domein nodig heeft om te kunnen functioneren.
+
+\item indien bedrijfseenheden als aparte organisaties moeten behandeld worden is een forest met aparte trees een zeer goee oplossing. Elke groep beheerders kan dan een eigen beveiligingsbeleid instellen dat onafhankelijk is van het beleid in andere domeinen. Daarbij worden gebruikers wel best verplaatst naar de domeinen met de bronnen die ze het meeste gebruiken.
+
+
+\item indien er meerdere master domeinen waren , dan was dat om een van volgende redenen:
+\begin{itemize}
+\item \textbf{het netwerk is te groot , een SAM database groter dan 40MB is niet stabiel}
+Dit is opgelost in windows server, hier neemt een database van 1000 000 gebruikers 20GB in, wat moeiteloos ondersteun kan worden met de huidige database technologie\"en. 
+	
+\item \textbf{het netwerk heeft verschillende geografische locaties}, aan elkaar gekoppeld door trage verbindingen waarover geen massaal replicatie verkeer tussen domeincontrollers gewenst is. Ook opgelost, zie hierboven.
+
+\item \textbf{men wil een specifiek wachtwoord beleid voor verschillende groepen gebruikers} Dit kan opgelost worden door de fine-grained password policies van Windows Server 2008.
+
+\item \textbf{het domeinmodel weerspiegeld de organisatie} waarin verschillende bedrijfseenheden controle moeten hebben over hun eigen gebruikers en bronnen. Dit is het enige argument om de aparte domeinen in de verschillende sites te behouden. Hierbij krijg je een root domein dat enkel een structural of placeholder domain is.
+\end{itemize}
+\end{itemize}
