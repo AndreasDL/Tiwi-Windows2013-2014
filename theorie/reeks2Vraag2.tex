@@ -1,0 +1,71 @@
+\chapter{ Active Directory sites (2.6)}
+\textbf{best 2.6 eens lezen ook}
+
+\section{Welke rol vervullen sites ? Welke Active Directory aspecten worden erdoor be\"invloed ? Bespreek hoe deze aspecten anders gerealiseerd worden indien de toestellen zich al dan niet in verschillende sites bevinden. (ondermeer verschil tussen intrasite en intersite replicatie)}
+\begin{itemize}
+\item replicatie kan heel wat bandbreedte opslorpen wat in een WAN omgeving wel tot problemen kan leiden.
+\item opdeling in sites, een site is een fysieke locatie. Een verzameling subnetwerken die aan LAN snelheid met elkaar kunnen communiceren.
+\item sites zorgen voor een fysieke structurereing van het netwerk en voor het bijhouden van geografische aspecten ervan.
+\item er is niet noodzakelijk enig verbond tussen de fysieke structuur en de domeinstructuur van het netwerk. Logische en fysieke structuren zijn onafhankelijk van elkaar.
+\item sites zorgen er dus eigenlijk voor om het replicatie verkeer over een wan verbinding te beperken
+\item replicatie tussen de DCS van verschillende sites wordt zoveel mogelijk beperkt, en moet expliciet worden geconfigureerd.
+\item de KCC software duidt een inter-site topology generator aan
+\item deze istg is een dc die toestemming heeft om de sitekopplingen te maken voor replicatie.
+\item hierbij wordt er hoogstens 1 verbindingsobject aangemaakt  per partitie
+\item de dcs die dit gebruiken worden bruggenhoofden genoemd.
+\end{itemize}
+
+\section{Welke relaties bestaan er tussen sites, domeinen, domeincontrollers en global catalogs ? Druk deze relaties ondermeer uit in termen zoals ... een X vereist minimaal/exact/maximaal nr Y's ... . Geef een verantwoording voor elk van deze beweringen. Hoe wordt bepaald tot welke site computers behoren ?}
+
+\begin{itemize}
+\item een domein overspant meerdere sites.
+\item minstens een dc per domein nodig, meerdere mag
+\item per site is er (best) minstens een dc met een GC
+\item Een dc met gc zal over de sites heen repliceren om het verkeer te beperken.
+\item per site kunnen er meerdere domeinen aanwezig zijn.
+\item 1 GC per forest volstaat.
+\end{itemize}
+
+\section{Bespreek de diverse noodzakelijke instellingen om de verschillende aspecten van sites te configureren, en vermeld hierbij telkens: waar en in welke gegroepeerde vorm ze opgeslagen worden, waarom ze noodzakelijk zijn (ondermeer welke andere aspecten er afhankelijk van zijn).}
+\begin{itemize}
+\item de meeste config wordt bijgehouden in de AD zelf, namelijk de sites container van de configuratiegegevens.
+\item sommige instellingen van het replicatiemechanisme worden in het register van elke inidviduele DC bijgehouden.
+\item Deze instellingen staan in Parameters subtak van de NTDS service.
+\item Elementaire configuratie gebeurt met de active directory sites en servers snap-in (dssite.msc)
+\item create van sites en toevoegen van lidservers aan sites kan in dssite.msc
+\item ook sitekoppelingen worden hier aangemaakt, in de inter site transort link container van de snap in
+\begin{itemize}
+\item rechts op container klikken, ip , new site linke, nieuwe link aanmaken
+\item let erop dat de sitekoppeling in tegenstelling tot verbindingsobjecten wel reflexief zijn, ze moeten niet in beide richtingen worden aangemaakt.
+\end{itemize}
+\item sitekoppelingen zijn niet transitief, bijkomende instellingen zijn:
+\begin{itemize}
+\item protocol: RPC (betrouwbaar maar meer belasting) of SMTP (vergt minder resources)
+\item synchronisatie schema bepaald de tijdstippen waarop de replicatie gebeurd.
+\item de bandbreedte en de kost van de verbinding kunnen worden ingesteld, de goedkoopste verbinding die beschikbaar is, wordt gebruikt.
+\item het interval tussen verschillend polls
+\end{itemize}
+
+\item voor gedetailleerde config moet het objecte van de sitekoppleling rechtstreeks aangepast worden met bv ADSIEdit.msc
+\item alle verbindingsobjecten zowel inter als intra-site zijn opgenomen in de NTDS settins container vandssite.msc snap-in.
+\begin{itemize}
+\item de manuele creatie van verbindingsobjecten kan in deze container.
+\item meestal is het beter om de KCC deels of volledig zijn gang te laten gaan.
+\end{itemize}
+
+\item subnetten vormen de basis voor de indeling in sites
+\begin{itemize}
+\item elke site is geassocieerd met minstens een subnet en een sitekoppeling
+\item subnetten kunnen gecre\"eerd worden met de dssite.msc
+\end{itemize}
+
+
+\item het bruggenhoof die als enige dc gegevens mag repliceren over de sitegrenzen heen, kan expliciet worden geconfigureerd in de properties tabpagina van de server.
+\item de site covering van een dc bepaald welke sites hij kan bedienen , in het geval dat alle DCs in een bepaald site zijn uitgevallen.
+Sites krijgen best een eigen global catalog toegewezen. een DC tot global catalog server promoveren kan ook in dssite.msc, meer bepaald in de general tabpagina van de properties tabpagina van de server.
+\item de site covering van een dc bepaald welk sites hij kan bedienen, in het geval dat alle cs in een bepaald site zijn uitgevallen
+\item sites krijgen best een eigen GC toegewezen, een dc tot GC promoveren kan in dssite.msc, general tabpagina,properties van de NTDS settins van de overeenkomstige server
+\item in de properties van NTDS site setting kan de inter-site topology generator voor de site worden gekozen.
+\item ook universal group membership caching kan hier worden ingeschakeld, dankzij deze optie is het in 2003+ domeinen mogelijk om de inlogprocedure te voltooien zonder een global catalog server te moeten contacteren.
+\item de cache wordt in ad zelf opgeslagen, maar wordt niet gerepliceerd.
+\end{itemize}
