@@ -1,0 +1,232 @@
+\chapter{Gedeelde mappen en NTFS}
+\section{Welke manier om gedeelde mappen te cre\"eren biedt de meeste configuratieinstellingen aan ? Bespreek het doel van deze diverse instellingen en de belangrijkste eigenschappen en mogelijkheden ervan. (3.2.1, 3.2.2, fracties 3.3.1, 3.4.2, 3.4.3, 3.5 en 3.6)}
+
+\subsection{Creatie}
+Er zijn vier mogelijkheden om shares aan te maken:
+\subsubsection{advanced share knop an de sharing tabpagina van de folder properties van de map die we wensen te delen op de computer die we gebruiken.}
+\begin{itemize}
+\item Share this folder: geeft aan of de map gedeeld is of niet.
+\item share this name: voegt een share naam toe.
+\item share limit the number of simultaneous users: beperkingen op het aantal gebruikersdat tegelijkertijd verbinding kan maken
+\item permissions: machtigingen
+\item caching: offline mogelijkheden door caching
+\end{itemize}
+
+\subsubsection{Shared folders MMC snap-in}
+\begin{itemize}
+\item zowel als extensie (compmgmt.msc of stand-alone (fsmgmt.msc)
+\item rechtermuisklik op systemtools, shared folders, sharesmap , new share, wizard hier moet je ook nog het pad eerst ingeven.
+\end{itemize}
+
+\subsubsection{server manager - ServerManager.msc}
+\begin{itemize}
+\item rechtermuisknop op roles, file services, share and storage management, provision share, wizard.
+\item biedt meer configuratie mogelijkheden.
+\item achtereenvolgens wordt gevraagd om volgende aspecten te configureren:
+\begin{itemize}
+\item shared folder location
+\item ntfs permissions
+\item smb permissions
+\item smb settings  access based enumeration en client-side caching
+\item quota policy
+\item filescreen policy
+\end{itemize}
+\end{itemize}
+
+\subsubsection{net share - command prompt}
+\begin{itemize}
+\item enkel mogelijk op de locale computer, vanop afstand moet je rmtshare gebruiken
+\item optie grant identity permission om een machtiging voor een identiteit toe te kennen
+\item mogelijk op windows server 2008+
+\item optie delete om share te verwijderen
+\end{itemize}
+
+\subsection{Configuratie}
+\subsubsection{zichtbaarheid}
+\begin{itemize}
+\item standaard voor iedereen zichtbaar
+\item verbergen door de naam te laten eindigen op \$
+\item verborgen shares zijn niet zichtbaar in explorer, maar wel in compmgmt.msc en de server manager.
+\item na installatie van de windows server zijn er reeds een aantal standaard shares, de meeste zijn verborgen.
+\end{itemize}
+
+\subsubsection{machtigingen}
+\begin{itemize}
+\item wie heef toegang tot wat en kan er wat mee doen?
+\item elk object in de AD of van een NTFS volume, elke registersleutel, elk proces, elke service heeft een security descriptor.
+\item deze security descriptor bestaat uit Disrectionary Access Control List (DACL of ACL), System Access Control List (sacl , logging), SID van de eigenaar en de primaire groep van de eigenaar (wegens POSIX compabiliteit)
+\end{itemize}
+
+\subsection{ACL}
+\begin{itemize}
+\item Discretionary Access Control List = machtegingsset
+\item verzameling van machtigingen die gelden voor bepaalde groepen of gebruikers + bepaald het type toegang. 
+\item Welke machtigingen gekoppeld kunnen worden is afhankelijk van het type object (een bestand is verschillend  van een register key)
+\item ele toewijzing van machting wordt een machtigingsvermelding of Access Control Entity ACE genoemd. Alle ACE vormen samen de ACL. ACE's kunnen aangemaakt worden voor gebruikers en groep van het eigen domein en alle trusted domeinen.
+\item Zo veel mogelijk machtigingen toepassen op de groepen en niet op individuele gebruikers voor een eenvoudiger beheer.
+\item de ACL van een object wordt steeds in cannonieke volgorde verwerkt door Security Reference Monitor (SRM). Eerst worden alle ACE die machtigingen ontzeggen overlopen vervolgens de gene die machtigingen toekennen. Ontzeggen is dominant op toekennen.
+\end{itemize}
+
+\subsection{machtigingen zijn hi\"erarchische gestructureerd en overerving is mogelijk}
+\begin{itemize}
+\item Er zijn 2 sooren machtigingen
+\begin{enumerate}
+\item \textbf{expliciete machtigingen}: zijn rechtstreeks aan een object gekoppeld (tijdens het maken of achteraf geconfigureerd) en hebben steeds voorrang op impliciete machtigingen
+\item \textbf{impliciete machtigingen}: zijn overge\"erfd van de container waarin het object zich bevindt, dit vereenvoudigd het beheer van machtigingen en vergoot de consistentie.
+\end{enumerate}
+\end{itemize}
+
+\subsection{Verschil tussen een security descriptor met lege ACL of zonder ACL}
+Een lege ACL laat niemand toe, geen ACL betekent dat iedereen toegang heeft.
+
+\subsection{2 niveaus voor machtigingen}
+\begin{itemize}
+\item \textbf{Share niveau = SMB machtigingen}
+\begin{itemize}
+\item eerste beveiligingslaag
+\item hebben overhand op NTFS machtigingen als ze meer beperkend zijn
+\item bij FAT is dit het enige mogelijke 
+\item 3 machtigingen
+\begin{enumerate}
+\item full control
+\item read
+\item change
+\end{enumerate}
+\item omzeild door gebruikers die lokaal inloggen.
+\end{itemize}
+
+\item \textbf{NTFS niveau}
+\begin{itemize}
+\item 2de (beveiliging van mappen) en 3de (beveiliging van bestanden) verdedigingsmuren.
+\item vaak enkel NTFS machtiging ingesteld en volledige toegang op share niveau.
+\item Randeffect: gebruikers kunnen onmiddelijk submappen zien, ookal hebben ze geen machtigingen. Dit kan opgelost woren door de Acces Based Enumeration in te schakelen.
+\item 2 niveaus van machtigingen
+\begin{enumerate}
+\item laagste niveau - 13 atomaire machtigingen die gebruikt worden voor het hogere niveau. Dit zijn de kleinst mogelij machtigingen
+\item hoogste niveau - moleculaire of standaard machtigingen. Dit zijn 6 veel gebruikte combinaties van atomaire machtigingen.
+\end{enumerate}
+\item instellen van machtigingen op heel veel toffe verschillende manieren zie 3.3.3
+\clearpage
+\item quota's instellen 
+\begin{itemize}
+\item opslag capaciteit per gebruiker afdwingen.
+\item staat standaard uit
+\item 2 sooren quotas
+\begin{enumerate}
+\item Volumequotas
+\begin{itemize}
+\item gelden voor een heel NTFS volume
+\item zijn gebaseerd op bestandseigendom (dus SID gebonden en niet per groep.)
+\item indien volume meerdere mappen bevat wore de quota's collectief van toepassing op alle mappen.
+\item houden geen rekening met eventuele bestandscompressies
+\item aanzetten met opdracht fsutil quota of in de explorer bij properties van een volume en dan de quota tab.
+\end{itemize}
+\item map quotas
+\begin{itemize}
+\item enkel windows server 2008+
+\item instellen van quota's op mapniveau
+\item gelden collectief, onafhankelijk van de bestandseigendom
+\item houden rekening met bestandscompressie
+\item vooral zinvol indien de toegang tot de mappen beperkt is tot individuen of groepen.
+\item aanzetten via de quota management tak in server manager of de fsrm.msc of dirquota opdracht
+\end{itemize}
+\end{enumerate}
+\item voor beide soorten wordt er gebruik gemaakt van 2 drempel waarden
+\begin{enumerate}
+\item soft threshold : waarschuwing
+\item hard threshold : eenmaal overschreven kan de gebruiker geen bestanden meer opslaan.
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+
+\item \textbf{file screens}
+\begin{itemize}
+\item verhinderen dat bestanden met bepaald extensies kunnen opgeslagen worden
+\item kunnen reacties triggeren bij poging om het toch te doen
+\item configuratie analoog met mapquota's , maar nu via de file screening management tak of via filescrn opdracht
+\end{itemize}
+
+\clearpage
+
+\item \textbf{client-side caching}
+\begin{itemize}
+\item caching van vaak gebruikte netwerk bestanden
+\item kopie\"en worden opgeslagen in een map op de lokale HDD met de naam offline Files.
+\item wijzigingen worden zowel in de cache als op de share doorgevoerd.
+\item indien de timestamp gelijk is wordt het lokaal bestand geopend, anders wordt het bestand van de share afgehaald/geupdatet.
+\item de cache blijft beschikbaar als de netwerkshare onbeschikbaar is, zodat de gebruiker kan doorwerken.
+\item hogere snelheid + betere betrouwbaarheid.
+\item sync center programma zorgt dat offline wijzigingen worden doorgevoerd zodra de share beschikbaar is. Indien hierbij een conflict optreed, moet de gebruiker dit oplossen (hij zal de gebruiker dus om een actie vragen).
+\item bij de configuratie kan men de bestanden vrijlaten aan de gebruiker, alle bestanden laten cachen (voor performantie, bv .exe's wordt steeds lokaal uitgevoerd) of de caching afzetten.
+\end{itemize}
+
+\end{itemize}
+
+\section{Waar wordt de definitie en (parti\"ele) configuratie van gedeelde mappen opgeslagen ? Hoe kan men deze wijzigen vanuit een Command Prompt ?}
+zie hierboven en cursus
+
+\section{Op welke diverse manieren kan men gebruik maken van gedeelde mappen ? (3.2.3)}
+\textbf{mappen in het lokale filesystem}
+\begin{itemize}
+\item  de share krijgt dan een stationsletter toegewezen 
+\item kan dan gebruikt worden alsof het een lokale schijf was
+\item handig voor shares die veel gebruikt worden. 
+\item via command prompt met de opdracht net use.
+\item kan ook via pushd deze pakt dan automatisch de laatst beschikbare driveaanduiding.
+\end{itemize}
+
+\section{Geef een overzicht van de belangrijkste voordelen van de opeenvolgende versies van het NTFS bestandssysteem. Bespreek elk van deze aspecten (ondermeer het doel, de voordelen en de beperkingen ervan), en geef aan hoe je er gebruik kan van maken, bij voorkeur vanuit een Command Prompt. (NTFS fractie 1.6, fracties 3.4.1, 3.4.2 en 3.4.4)}
+
+De NTFS versies zijn:
+\begin{enumerate}
+\item V1.0, V1.1, V1.2, NT4 en voorlopers
+\item V3.0 Windows 2000
+\item v3.1 windows xp en hoger
+\end{enumerate}
+
+\subsection{Features vanaf v1.2}
+\begin{itemize}
+\item beveiliging op bestandsniveau.
+\begin{itemize}
+\item  Gebruikt van security descriptors.
+\item vereist voor sommige functies van windows server waaronder de AD
+\end{itemize}
+\item logging van schrijfactiviteiten
+\item dynamisch uitbereiden van partities en volumes
+\item compressie
+\item spannende volumes (over meerdere fysieke schijven)
+\item grotere partities zonder performantie degradatie
+\item hardlinks
+\item auditing op objecttoegang
+\end{itemize}
+
+\clearpage
+\subsection{Features vanaf V 3.0}
+\begin{itemize}
+\item reparsepunten en bestandssysteemfilters
+\item transparante encryptie en decodering
+\item individuele diskquota op volume niveau
+\item volumekoppelpunten, mounten van volumes in ntfs mappen
+\item sparse (ijle) bestanden
+\begin{itemize}
+\item mogelijkheid om enkel schijfruimte toe te wijzen aan delen van grote bestand waarnaar geschrijven werd, enkel nuttige data (vrs van 0) wordt bewaard.
+\item dit kan met de opdracht fsutil sparse setflag
+\end{itemize}
+\item hardlinks : fsutil hardlink create 
+\item junction points (softlinks) naar mappen. File markers voor remote storage service dmv junction point: bestandnaam op server , eigenlijke bestand op tape. via linkd
+\item in NT6 voor beide de opdracht mklink gebruiken met /h voor hardlink en /d voor symbolic link/. mklink kan voor zowel lokale als remote bestanden gebruikt worden.
+
+\item de meeste features worde gerealiseerd door reparse punten
+\begin{itemize}
+\item wanneer nt5+ een reparsepunt detecteerd wordt de tag van het reparsekenmerk teruggestuurd naar de IO-stack, waar de reparsetag wordt onderzocht door extra bestandssysteemfilters, die bij herkenning nt5+ vertellen dat er een ander stuurprogramme moet worden gebruikt dan het standaard NTFS stuurprogramma.
+\item dit mechanisme laat toe dat er extra functionaliteit wort toegevoegd aan het bestandssysteem, door microsoft en andere partijen zonder dat het bestandssysteem telkens moet worden herzien.
+\item Voorbeelden in de windows server 2008:
+\begin{itemize}
+\item self healing van het volume, zo kunnen corrupties online opgespoord en verbeterd worden.
+\item ondersteuning van transacties , meerdere transacties bundelen tot 1 atomair geheel.
+\item mapquota 
+\item filescreens
+\end{itemize}
+\end{itemize}
+
+\end{itemize}
