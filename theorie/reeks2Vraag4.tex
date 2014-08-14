@@ -1,0 +1,92 @@
+\chapter{Machtigingen op bestandstoegang (3.3)}
+\section{Welke rol spelen machtigingen bij de beveiliging van bronnen ? Geef een gedetailleerd algemeen overzicht van het mechanisme van machtigingen.}
+\begin{itemize}
+\item machtigingen bepalen wie er toegang heeft tot welke gegevens en wat die er mee kan doen.
+\item elk object in de AD , elk object van een ntfs volume , elk registersleutel , elk proces en elke service heeft een security descriptor. Deze bevat:
+\begin{itemize}
+\item een machtigingsset of Discretionary Access Control List (ACL)
+\item Een System Access Control List (ACL) die definieert welk acties van de gebruiker gelogd worden
+\item de SID van de eigenaar vna het object. Makers van objecten zijn standaard eigenaar, maar kunnen de eigendom overdragen. De eigenaar of beheerder is verantwoordelijk voor het instellen van de ACL.
+\item Wegens POSIX compatibiliteit: de primaire groep van de maker.
+\end{itemize}
+\item Een ACL is een verzameling machtigingen die gelden voor bepaalde groepen of gebruikers.
+\item door machtigingen in te stellen voor een object, bepaalt de eigenaar of beheerder welke gebruikers en groepen toegangsrechten voor het object hebben. Deze machtigingen bepalen ook het type toegang. 
+\item welke type machtigingen er aan een object gekoppeld kunnen worden is afhankelijk van het type object
+\item elke toewijzing van machtigingen aan een gebruiker of groep wordt een machtigingsvermelding of access control entry (ACE) genoemd. Hierin wordt ge gebruiker of groep opnieuw ge\"identificeerd met zijn SID.
+\item een ACE kan een machtiging ontkennen of toezeggen
+\item alle ACE 's tesamen vormen de ACL
+\item best om de machtigingen per groep toe te passen om het beheer simpeler te houden.
+\item ACE worden in canonieke volgorde behandeld, eerst de ontzeggingen, daarna de toekenningen. Een ontzegging staat dus hoger dan een toekenning.
+\item Er zijn 2 soorten machtigingen
+\begin{enumerate}
+\item Expliciete machtigingen : rechtstreeks aan het object gekoppeld
+\item impliciete machtigingen : via de container waartoe het object behoord.
+\end{enumerate}
+\item expliciete machtigingen krijgen altijd voorrang op impliciete
+\item lege ACL => niemand heeft machtigingen
+\item geen ACL => iedereen heeft alle machtigingen
+\end{itemize}
+
+\section{Bespreek hoe het mechanisme van machtigingen specifiek (en op diverse niveaus) toegepast wordt op bestandstoegang. Geef de verschillende soorten machtigingen, hun onderlinge relaties, en hoe deze kunnen geanalyseerd en ingesteld worden. Toon hierbij aan dat je zelf met deze configuratietools geëxperimenteerd hebt.}
+\begin{itemize}
+\item Hiervoor worden NTFS machtigingen gebruikt deze bestaan in 2 niveaus.
+\begin{enumerate}
+\item \textbf{13 atomaire machtigingen}, dit is het laagste niveau.
+\begin{enumerate}
+\item \textbf{Traverse Folder/Execute File:} Traverse Folder geldt voor mappen en laat de gebruiker toe om hulpbestanden die zich meer dan een niveau lager bevinden waartoe de gebruiker toegang heeft, maar niet de tussenliggende mappen toch te gebruiken.
+\item \textbf{List Folder/Read Data:} Inhoud van een bestand of map tonen.
+\item \textbf{Read Attributes:} Elementaire bestandskenmerken weergeven.
+\item \textbf{Read Extended Attributes:} Programma-afhankelijke uitgebreide bestandskenmerken weergeven.
+\item \textbf{Create Files/Write Data:} Nieuwe bestanden in een map aanmaken/Data van een bestaand bestand overschrijven, maar niet aan een bestaand bestand toevoegen.
+\item \textbf{Create Folder/Append Data:} Nieuwe mappen creëren en data toevoegen aan een bestand.
+\item \textbf{Write Attributes:} Elementaire bestandskenmerken wijzigen.
+\item \textbf{Write Extended Attributes:} Uitgebreide bestandskenmerken wijzigen.
+\item \textbf{Delete Subfolders and Files:}
+\item \textbf{Delete: Het object zelf verwijderen.}
+\item \textbf{Read Permissions: NTFS machtigingen weergeven.}
+\item \textbf{Change Permissions: NTFS machtigingen wijzigen.}
+\item \textbf{Take Ownership:} eigenaarschap van een bestand of map overnemen. De eigenaar staat buiten alle machtigingen en kan de machtigingen van het object wijzigen.
+\end{enumerate}
+
+\item \textbf{6 Moleculaire machtigingen }: vormen combinaties van atomaire machtigingen om zo de meest gebruikte combinatie aan te bieden.
+\begin{enumerate}
+\item \textbf{Full Control:} Alle atomaire machtigingen
+\item \textbf{Read:} Inhoud, machtigingen en kenmerken van een object bekijken. Submappen waar geen toegang tot is blijven zichtbaar.
+\item \textbf{Read\&Execute:} Identiek aan de Read machtiging, aangevuld met de atomaire Traverse Folder/Execute File machtiging.
+\item \textbf{Write:} Nieuwe bestanden en submappen aanmaken. Om bestaande bestanden te kunnen wijzigen is de aanvullende Read moleculaire machtiging nodig
+\item \textbf{Modify: Read\&Execute + Write + Delete (atom.)}
+\item \textbf{List Folder Contents:} enkel voor mappen, laat toe om inhoud van mappen te bekijken ongeacht het bezit van Read toegang.
+\end{enumerate}
+\end{enumerate}
+
+\item de ACL van een object bevindt zich in de security tab van het properties venster. In nt6+ moet er eerst geklikt worden op edit.
+\item de permissions tab toont een overzicht van de ACE in volgorde zoals ze door de SRM worden verwerkt. De kolom inherited from geeft aan vanwaar het attribuut werd overge\"erfd 
+\clearpage
+\item de knop edit opent het venster in edit mode, door een ACE te selecteren in edit mode komt een lijst van atomaire machtigingen tevoorschijn. Speciale combinatie van atomaire machtigingen die niet tot een combinatie van moleculaire machtigingen te herleiden zijn kunnen hier worden ingesteld. In het properties venster wordt dit weergegeven als special permissions. De permissions tab in edit mode laat drie aanvullende mogelijkheden toe:
+\begin{enumerate}
+\item Allow inheritable permissions : geeft aan of er machtigingen worden overge\"erfd van de bovenliggende map. Bij het uitschakelen wordt gevraagd of bestaande overge\"erfde permissies van de bovenliggende map moeten worden gekopieerd of verwijderd.
+\item Replace all existing inheritable permissions: zorgt ervoor dat indien ingeschakeld, alle machtigingen op onderliggende object expliciet worden toegepast. Hierbij worden alle machtigingen van de onderliggende objecten vervangen. Reeds gedefinieerde machtigingen gaan verloren. De actie kan niet ongedaan gemaakt worden.
+\item Add/Remove/Edit : hiermee kunnen ACE worden toegevoegd verwijderd. Ook de atomaire machtigingen kunnen worden aangepast. De keuzelijst applyonto kan overerving selectief laten gelden.
+\end{enumerate}
+\item de auditing tab gebruikt om de sacl van het object in te stellen.
+\item de ower tabpagina laat toe om de eigenaar van het object te veranderen. Dit kan enkel gebeuren door gebruikers met de take ownership machtiging op het object; die enkel kan worden toegekend door beheerders, eigenaars of gebruikers met Full Control. Overdrachten van eigendom moeten wederzijds aanvaard worden.
+\item de effectieve permissions tab toont een overzicht van de uiteindelijke effectieve machtigingen zoals ze zouden worden toegekend door de security reference monitor. Dit kan handig zijn voor debugging en probleem diagnose.
+
+\item In de command prompt kunnen machtigingen worden bekeken met showacls of perms. Wijzigingen aanbrengen kan met iacls , xacls os subinacl. De eerst laat toe om een lijst van permissions te bewaren in een bestand, om dan later met de optie restore te herstellen.
+\end{itemize}
+
+\clearpage
+
+\section{Wat gebeurt er met de machtigingen bij het verplaatsen van een bestand ? Wat gebeurt er met de machtigingen bij het kopi\"eren van een bestand ?}
+\begin{itemize}
+\item de gebruiker die de kopie maakt wordt eigenaar van de bestanden.
+\item binnen hetzelfde ntfs volume : de expliciete machtigingen worden behouden, de impliciete worden vervangen door de impliciete machtigingen van de aankomst locatie.
+\item indien er gekopieerd wordt naar een ander NTFS volume, vervallen alle machtigingen en worden de impliciete machtigingen van het aankomst volume toegepast.
+\item naar anders soort volume dan NTFS : alle machtigingen weg
+\item machtigingen wel behouden ? kopieren met speciale tools zoals scopy en robocopy.
+\end{itemize}
+
+\section{Op welke andere objecten zijn machtigingen van toepassing ?}
+
+De machtigingen zijn van toepassing op elk object in de AD , elk object van een NTFS volume, elke register sleutel, elk proces en elke service.
+Deze hebben allemaal een security descriptor en dus de bijhorende machtigingen.
