@@ -1,0 +1,47 @@
+\chapter{Gebruikersgroepen (4.2.2 en 4.2.3)}
+\section{Bespreek in detail het onderscheid tussen de diverse soorten veiligheidsgroepen, ondermeer afhankelijk of het toestel al dan niet in een domein is opgenomen. Behandel hierbij vooral de mogelijkheden en beperkingen. Bespreek ondermeer:}
+\begin{itemize}
+\item de zichtbaarheid van de diverse soorten groepen
+\item welke objecten er lid van kunnen zijn
+\item de onderlinge relaties en de regels voor het nesten van de diverse soorten groepen ? Stel deze relaties eveneens schematisch voor.
+\end{itemize}
+
+\textbf{antwoord}
+\begin{table}[H]
+\begin{tabular}{p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+ & Zichtbaarheid		& Geldigheid	& Aanwezig op	& Bevat \\
+ \\
+Domein lokale groep & \parbox{3cm}{alle\\ lidcomputers\\ (workstations\\ en servers)\\ van het domein} & eigen domein                 & \parbox{3cm}{dc van eigen\\ domein}                                      & \parbox{3cm}{gebruikers en\\ groepen uit elk\\ domein van het\\ forest of een\\ ander trusted\\ domein. Lokale\\ groepen van het\\ eigen domein.} \\ \\
+
+Globale groep       & elk domein van het forst of een ander trusting domein      & volledige forest             & DC en eigen domeinen en GC (enkel naam op GC, geen leden) & Gebruikers en globale groepen van het eigen domein.                                                                   \\ \\
+
+Universele groep    & Alle domeinen van het forest                               & Alle domeinen van het forest & GC van het forest                                         &                                                                                                                      
+\end{tabular}
+\end{table}
+
+%generated with http://www.tablesgenerator.com/
+
+\clearpage
+\section{Hoe en waarom worden deze soorten groepen in de praktijk best gebruikt, al dan niet gecombineerd ? Van welke omstandigheden is dit afhankelijk ? Illustreer aan de hand van concrete voorbeelden.}
+
+Lokale groepen worden meestal gebruikt om rechten en machtigingen toe te kennen binnen hetzelfde domein, en bevatten eerder andere groepen dan gebruikers. Men creëert een lokale groep, die men toegang geeft tot de bron en voegt andere groepen aan deze groep toe, om te toegang te verlenen. Lokale groepen zijn interessant wanneer de groep enkel zichtbaar mag zijn binnen een domein.
+\npar
+Globale groepen worden gebruikt om gebruikers van een domein te groeperen. Globale groepen kunnen rechten worden toegewezen in een ander domein, bijvoorbeeld door ze toe te voegen aan een lokale groep van het domein waartoe de bron behoort, die toegang heeft tot de bron. Globale groepen zijn minder interessant om aan een bron te koppelen, omdat ze enkel gebruikers en andere globale groepen kunnen bevatten. Lokale groepen kunnen zowel gebruikers als elk soort andere groepen bevatten.
+\npar
+Universele groepen kunnen voor dezelfde doeleinden worden gebruikt al domein lokale groepen, maar zijn dan onmiddellijk zichtbaar in het gehele forest. Dit heeft dus het bijkomend voordeel dat ze niet in elk domein opnieuw moeten gedefinieerd worden. Een mogelijke strategie laat lokale en universele groepen achterwege, en gebruikt enkel universele groepen. Dit heeft echter als risico dat de GC onnodig groot wordt, omdat elke universele groep met al zijn leden in de GC wordt opgenomen. Indien er nog frequente wijzigingen aan het lidmaatschap gebeuren, veroorzaakt dit bijkomend replicatieverkeer. In 2003+ is dit probleem beperkter omdat niet de gehele lijst van leden moet worden gerepliceerd, maar enkel de individule elementen van het multivalued attribuut. Bovendien is het contacteren van een GC nodig voor het inloggen van een gebruiker, om het lidmaatschap van een universele groep na te gaan.
+
+\section{Waar en hoe wordt het (volledige) lidmaatschap van een object tot een groep bijgehouden ? Op welke diverse manieren kan men dit lidmaatschap configureren ? Door wie wordt dit lidmaatschap bij voorkeur ingesteld ? Op welke diverse manieren kan men de volledige verzameling van objecten, die er deel van uitmaken, achterhalen ?}
+
+De groepen waartoe een object behoort worden opgeslagen in het memberOf attribuut. Omdat het een back-link attribuut is, kan het niet rechtstreeks worden gewijzigd. Objecten programmatisch aan groepen toe te voegen, kan door het member attribuut van het groepsobject aan te vullen. Dit is het corresponderende forward-link attribuut van memberOf.
+\npar
+Om met de grafische interface een gebruiker of groep aan een andere groep toe te voegen, kan het Member Of tabblad van het Properties venster van de gebruiker of groep worden gebruikt.
+
+
+\section{Welke conversieregels gelden er tussen de diverse soorten groepen. Behandel hierbij alle mogelijke combinaties.}
+
+\begin{itemize}
+\item Lokale groepen kunnen naar de universele scope worden geconverteerd, op voorwaarde dat ze geen andere lokale groepen bevatten.
+\item Globale groepen kunnen naar de universele scope worden geconverteerd, zolang de groep geen lid is van een andere groep met globale scope.
+\item Universele groepen kunnen meestal niet worden omgezet naar anders scopes.
+\item Veiligheidsgroepen kunnen worden omgezet naar distributiegroepen, en omgekeerd.
+\end{itemize}
