@@ -1,0 +1,113 @@
+\chapter{Active Directory replicatie (2.5)}
+\section{Wat is de bedoeling van replicatie ?}
+\begin{itemize}
+\item gebruikers en services moeten op elk gewenst moment vanaf elke computer in het forest toegang kunnen krijgen tot de directory gegevens. 
+\item fouttolerantie en belastingsverdeling opvangen met meerdere dc's
+\item toevoegingen en wijzigingen op een controller doorgeven aan alle andere via de replicatieservice.
+\item alle domein controllers nemen deel aan de replicatie en bevatten een volledige kopei van alle direcotry gegeven voor het eigen domein.
+\item analoog beschikken alle dc in een forest over heel het directory schema en de configuratie gegevens. Deze info wordt gedistribueerd over het hele forst.
+\item creatie of modificatie van objecten leidt tot het doorsturen van de gewijzigde gegevens (replicatie)
+\end{itemize}
+\clearpage
+\section{Hoe wordt dit in Windows Server (ondermeer ten opzichte van NT 4.0) gerealiseerd: bespreek de verschillende technische kenmerken en concepten van Windows Server replicatie, en hoe men specifieke problemen vermijdt of oplost.}
+
+\subsection{Windows NT4}
+\begin{itemize}
+\item Master - slave model met primaire domeincontrollers en backup controllers.
+\item werd gebruikt om de SAM gegevens , de policies , de gebruikersprofielen en de logon scripts tedistribueren.
+\item Slechts een server, de primaire domeincontroller, had een wijzigbare kopie van de directory.
+\end{itemize}
+
+\subsection{Winows Server}
+\begin{itemize}
+\item multimaster replicatie: directory bijwerken vanaf elke DC (tenzij het een RODC is).
+\item evolutie van het master - slave model waarbij wel alle dc's ingeschakeld worden om aanvragen af te handelen, inclusief wijzigingen in de directory
+\item alle dc's zijn equivalent op de Operations master rollen na.
+\item meer fouttolerantie want meerdere domeincontrollers kunnen verder repliceren indien een controller uitvalt.
+\item replicatie verkeer beperken en dus enkel gewijzigde gegevens doorsturen.
+\item \textbf{Update Sequence Number (USN)} is een 64bits getal dat per dc verhoogd wordt elke keer hij een of ander object wijzigt. 
+\begin{itemize}
+\item zorgt ervoor dat een wijziging maar een keer wordt gerepliceerd
+\item wordt verhoog bij elke wijziging
+\end{itemize}
+\clearpage
+\item USN met GUID vormt de \textbf{Up-To-Dateness Vector (UTD)} van de dc.
+\begin{itemize}
+\item dc melt zijn utd telkens als er een wijziging gebeurd.
+\item elke dc houdt een utd vector tabel bij met de meest recente utd van elke vector van andere dcs
+\item heeft een dc al een wijziging? kijken naar UTD vector tabellen en die vergelijken
+\end{itemize}
+\item de metadata van elk object die ook in AD opgeslagen zit, houdt voor elk kenmerk o.a. een Property Version Number (PVN) bij samen met de corresponderende UTD vector.
+\item op basis van de UTD vectortabel kan een controller alle wijzigingen met een bepaalde minimale USN aan een andere controller opvragen . Aan de hand van de metadata kan deze controller precies te weten komen welke wijzigingen hij maar moet opsturen.
+
+\item \textbf{conflicten}
+\begin{itemize}
+\item opgelost door enkel de wijzigingen van hoogste GUID te accepteren. Kans op een conflict is nu zeer zeer klein.
+\item voor schema en andere zeer kritische zaken, 1 controller aanduiden die wijzigingen kan doorvoeren, de operations master
+\end{itemize}
+
+\item \textbf{tombstone objecten}
+\begin{itemize}
+\item na verwijderen van een object wordt het als een tombstone gemarkeerd om te vermijden dat andere dc dit object opnieuw ophalen.
+\item na afloop van de tomSoneLifeTime wordt het object effectief verwijderd, dit heeft als gevolg dat als een dc langer de deze tijd niet gesynced is, hij niet meer gesynced kan worden \footnote{De reden waarom weet ik niet, maar ik vermoed dat het is omdat die objecten dan toch opnieuw opgevraagd zullen worden}. 
+\item Deze strict replication consistency kan wel uitgeschakeld worden.
+\end{itemize}
+\end{itemize}
+\clearpage
+\subsection{Store-and-forward replicatie}
+\begin{itemize}
+\item elke wijziging wordt maar met een andere domeincontroller uitgewisseld.
+\item de replicatietopologie , de configuratie van de verbindingsobjecten, wordt gegenereerd door de KCC of de Knowledge Consistency Checker. 
+\begin{itemize}
+\item De KCC zoekt zelf de meest optimale topologie.
+\item hierbij worden topologie\"en gecre\"eerd voor de domeingegevens en voor de schema en configuratie gegevens anderzijds. Ook voor elke applicatie partitie is er een aparte topologie.
+\item verbindingsobjecten gelden in een richting, de topologie zal bijgevolg niet uit koppel bestaan die met elkaar repliceren (bij RODC kan dit zowieso al niet)
+\item de topologie verbindt elke domeincontroller met minstens 2 paden
+\item elke controller is max met 3 andere verbonden
+\item het grootste aantal hops tussen 2 domeincontrollers is 3
+\item aparte topologie voor forest en domein gegevens
+\end{itemize}
+\item mechanisme is pull based, een controller meld enkel dat hij wijzigingen heeft, de buurt zal ze nadien ophalen. 
+\item Wijzigingen worden gebundeld en dan periodiek verstuurd (propagation damping), niet ingeschakeld voor attributen die met beveiliging te maken hebben (urgent replication)
+\item de replicatie is multithreaded en kan dus met verschillende partners tegelijk gebeuren.
+\item de kleinste replicatie entiteit
+\begin{itemize}
+\item nt4 : 1 object
+\item windows server : 1 kenmerk
+\item windows server 2003+ : 1 waarde van een multivalued attribuut
+\end{itemize}
+\end{itemize}
+\clearpage
+\section{Welke toestellen repliceren onderling in een forest ? Welke specifieke gegevens worden hierbij uitgewisseld ?}
+
+\begin{itemize}
+\item alle DC in een forest beschikken over het directory schema en configuratie gegevens
+\item tussen een dc met GC van het ene domein en een dc van het andere domein wordt het schema en de config gerepliceerd.(enkel naar een dc in het andere domein\footnote{zie figuur p67}) De dc zal ook een subset van zijn domeingegevens naar de GC server repliceren.
+\item tussen de GC servers van een forest worden subsets van alle domeingegevens naar alle domeinen gerepliceerd.
+\end{itemize}
+
+\section{Welke impact hebben sites met betrekking tot de replicatie van Active Directory gegevens ? Je hoeft hierbij het begrip site op zich niet verder te behandelen. (eerste helft 2.6.1, verschil tussen intrasite en intersite replicatie)}
+
+\begin{itemize}
+\item binnen een site worden gegevens continue en automatisch gerepliceerd.
+\item bij replicatie tussen sites, ook wel intra-site replicatie genoemd, zijn er heel wat verschillen
+\begin{itemize}
+\item replicatie partners van verschillende sites laten standaard het meldingsmechanisme van gewijzigde UTD vectortabellen achterwege. er wordt enkel polling toegepast (std. om de 3uur, kan op 15 minuten gezet worden). Hierdoor is Urgent replication niet mogelijk. 
+\item gegevensuitwisseling wordt standaard gecomprimeerd (40\% compression rate), kan wel uitgeschakeld worden per verbinding.
+\item sitekoppelingen gebruiken om aan te geven hoe de sites onderling verbonden zijn. KCC genereren automatisch enkel verbindingsobjecten tussen sites als er een sitekoppeling bestaat.
+\item gebruik maken van meerdere routes tussen sites om de betrouwbaarheid te verbeteren.
+\item geen sitekoppeling = geen verbinding; en dus een nutteloze site (vermits ie geen gegevens krijgt)
+\clearpage
+\item de topologie tussen sites wordt er gebruikt gemaakt van de Inter-site Topology Generator (ISTG), (dc met grootste GUID), dom ervoor te zorgen dat er geen willekeurige dc gekozen worden om informatie uit te wisselen tussen de sites. Anders zouden er meerdere verbindingen gelegd worden tussen sites, maar met verschillende dcs
+\item ISTG maakt voor elke partite hoogstens 1 verbindingsobject per sitekoppeling.
+\item de dc die dit verbindingsobject gebruiken worden bruggenhoofdserver genoemd. 
+\item ISTG en bruggenhoofd servers zorgen ervoor dat de intra-site replicatie optimaal aangepast is aan de siteconfiguratie.
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
