@@ -18,7 +18,7 @@ Everything below is in Dutch, since this code probably won't have a lot of use.
 **Notes:**
 
 **labo**
-overal strict & warnings modules gebruikt.
+* overal strict & warnings modules gebruikt.
 
 **theorie:**
 * Gebaseerd op gevonden samenvattingen op inwe.be (waarvoor denk)
