@@ -1,0 +1,1 @@
+dsquery * "CN=Andreas De Lille,OU=EM7INF,OU=Studenten,OU=iii,DC=iii,DC=hogent,DC=be" -s 193.190.126.71 -u "" -p "" -attr mail objectclass
