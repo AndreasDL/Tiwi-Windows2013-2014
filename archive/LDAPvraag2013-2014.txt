@@ -1,0 +1,5 @@
+1) Zoek je eigen container, zoek de properties van die container die als syntax 'integer' hebben, singlevalued zijn en niet ingesteld. Hierbij mag je geen gebruik maken van get en getex, maar moet je propertycacheInterfaces gebruiken.
+Vul het attribuut 'countryCode' in met het aantal keer dat het script gerund werd (dus telkens het gerund wordt +1)
+2) schrijf een geneste LDAP query waarbij je de hulpklassen ophaalt en alle klassen die gebruik maken van die hulpklasse. Geef hierbij de uitvoer weer als in hulpklassen.txt
+3) breng overerving in kaart zoals te zien in overerving.txt (dus gwn met extra indents per niveau).
+Gebruik hiervoor een recursieve functie
