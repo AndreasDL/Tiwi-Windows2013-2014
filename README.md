@@ -18,10 +18,10 @@ Everything below is in Dutch, since this code probably won't have a lot of use.
 
 **Notes:**
 
-**labo**
+***Labo***
 * overal strict & warnings modules gebruikt.
 * ik heb niet alle alle oefeningen gemaakt, maar wel het grootste deel. Anderzijds is niet elke oefening een script.
 
-**theorie:**
+***Theorie:***
 * Gebaseerd op gevonden samenvattingen op inwe.be (waarvoor denk)
 * Het is aan te raden van de cursus toch minstens eenmaal te lezen. Ik heb deze vragen uitgeschreven zodat ik ze beter zou onthouden.
