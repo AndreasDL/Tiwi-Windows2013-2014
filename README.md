@@ -21,6 +21,7 @@ Everything below is in Dutch, since this code probably won't have a lot of use.
 
 ***Labo***
 * overal strict & warnings modules gebruikt.
+* Reeks5 is niet te kennen
 * ik heb niet alle alle oefeningen gemaakt, maar wel het grootste deel. Anderzijds is niet elke oefening een script.
 * Bij volgende stukken code moet je user en pass nog infullen
 ```

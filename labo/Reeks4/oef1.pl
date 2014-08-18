@@ -11,10 +11,9 @@ my $compname  = "localhost";
 #manier 1
 my $wbem	  = Win32::OLE->GetObject("winmgmts://$compname/$namespace");
 #manier 2
-my $locator   = Win32::OLE->New("WbemScripting.SWbemLocator");
-my $wbem      = $locator->ConnectServer($compname,$namespace);
+my $locator   = Win32::OLE->new("WbemScripting.SWbemLocator");
+#my $wbem      = $locator->ConnectServer($compname,$namespace);
 
 #remote
-#my $compname = "randomComp";
-#my $locator = ...
-my $wbem      = $locator->ConnectServer($compname,$namespace,"$compname\\administrator", <pass>);
+#my $wbem      = $locator->ConnectServer($compname,$namespace,"$compname\\administrator", <pass>);
+print join(" / ",Win32::OLE->QueryObjectType($wbem)) , "\n";
