@@ -35,3 +35,5 @@ $book1->Worksheets(1)->Range("A1:D" . @$orig)->{'Value'} = $orig;
 $book1->save();
 
 #layout = bs
+$book1->Close();
+$book2->Close();

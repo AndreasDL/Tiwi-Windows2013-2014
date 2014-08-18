@@ -16,5 +16,5 @@ print "\naantal worksheets: $book->{Worksheets}->{Count}\n";
 foreach my $sheet (in $book->{Worksheets}){
 	print "Sheet name : ", $sheet->{Name} , 
 		  "\n\tused range = ", $sheet->{UsedRange}->{columns}->{count} , " : ",
-		  				   $sheet->{USedRange}->{rows}->{count}, "\n";
+		  				   $sheet->{UsedRange}->{rows}->{count}, "\n";
 }
