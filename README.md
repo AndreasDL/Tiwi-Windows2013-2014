@@ -48,6 +48,16 @@ my $con = Win32::OLE->CreateObject("ADODB.Connection");
 ```
 
 
-***Theorie:***
+***Theorie***
 * Gebaseerd op gevonden samenvattingen op inwe.be (waarvoor denk)
 * Het is aan te raden van de cursus toch minstens eenmaal te lezen. Ik heb deze vragen uitgeschreven zodat ik ze beter zou onthouden.
+
+
+***Other***
+* Dank aan Tim Vereecken voor het oplossen van de ldap test :D 
+* Dank aan iedereen op inwe.be forum voor oplossingen van voorgaande jaren & onderhoud van forum!
+* Feel free to fork/clone/send a pull Request
+
+
+
+Andreas De Lille - @andreasCFDL

@@ -41,7 +41,7 @@ my $base   = "LDAP://";
    $base  .= "193.190.126.71/" unless (uc($ENV{USERDOMAIN}) eq "III");
    $base  .= $rootDSE->Get("schemaNamingContext");
 my $filter = "(&(objectCategory=classSchema)(objectClassCategory=3))";
-my $attr   = "adspath,cn"; #enkel adspath dus
+my $attr   = "adspath,ldapdisplayname,cn"; #enkel adspath dus
 my $scope  = "subtree";
 
    $cmd->{CommandText} = "<$base>;$filter;$attr;$scope";
@@ -51,7 +51,7 @@ my $rec = $cmd->Execute();
 print "found " , $rec->{RecordCount} , " objects!\n";
 #voor elke hulpklassen de klassen die hem gerbuiken ophalen
 until ($rec->{EOF}){
-	my $auxClass = $rec->Fields("cn")->{Value};
+	my $auxClass = $rec->Fields("ldapdisplayname")->{Value};
 	print $auxClass , "\n";
 
 	#filter
@@ -60,7 +60,7 @@ until ($rec->{EOF}){
        $cmd->{CommandText} = "<$base>;$ffilter;$attr;$scope";
     my $classes = $cmd->Execute();
     until($classes->{EOF}){
-    	print "\t", $classes->Fields("cn")->{Value},"\n";
+    	print "\t", $classes->Fields("ldapdisplayname")->{Value},"\n";
     	$classes->MoveNext();
     }
 
