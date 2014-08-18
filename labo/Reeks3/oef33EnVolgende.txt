@@ -1,0 +1,12 @@
+#met eeuwige dank aan tim vereecken
+
+1. wmi cim studio -> IntervalTimerInstruction (class openen)
+2. maak een new instance
+	ID moogt ge kiezen (ik heb test genomen)
+	en als interval neem wat dan ook (bv. 100)
+3. save
+
+4. open wbemtest (win+r wbemtest.exe) & connecteer
+5. klik op notification query
+6. SELECT * from __TimerEvent
+7. wees blij!
