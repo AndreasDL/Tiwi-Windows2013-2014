@@ -14,7 +14,7 @@ sub getNamespaces{
 
 	my $instances = $wbem->ExecQuery("select * from __NAMESPACE");
 	return unless $instances->{Count};
-	getNamespaces($_) foreach sort {uc($a) cmp uc uc($b)} map {$_->{Name}} in $instances;
+	getNamespaces($_) foreach sort {uc($a) cmp uc($b)} map {$_->{Name}} in $instances;
 }
 
 getNamespaces("root"); #start at root
