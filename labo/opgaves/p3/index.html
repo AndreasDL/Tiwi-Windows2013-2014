@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content="intranetr/0.10.0">
+<title>Reeks 3 | iii intranet</title>    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/default.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/sites/default.css">
+    <script type="text/javascript" src="../../../js/cache/0d6197553acf19ea859c96f7caf7d8fa6c6519b8.js?0.10.0"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css">
+<![endif]-->
+    <script type="text/javascript">
+    (function() {
+        var month = 8;
+        iii.semester = month == 1 ? 1
+            : month <= 6 ? 2
+            : month <= 9 ? 0 : 1;
+        if (iii.semester > 0) {
+            var hideOtherSemester = function() {
+                var other = iii.semester == 1 ? 2 : 1;
+                $('#breadcrumbs li.group-sem'
+                        + other
+                        + ':not(.group-sem'
+                        + iii.semester + '):not(.active)')
+                    .hide();
+            };
+            $(document)
+                .ready(hideOtherSemester)
+                .on("contentUpdate.iii", hideOtherSemester);
+        }
+    })();
+    </script>
+</head>
+
+<body>
+    <div id="header"><h1>
+    <a href="../../../index.html" title="Naar de thuispagina">
+        intranet
+    </a>
+</h1>
+</div>
+<div id="main">    <div id="node-children">
+    <ul>
+            <li><a href="../index.html"><span style="float: right">&#8593;</span>Omhoog</a></li>
+            </ul>
+    </div>
+
+<div id="content" class="">
+        <div id="breadcrumbs-container">
+    <span id="you-are-here">Je bent hier:</span>
+    <ul id="breadcrumbs">
+                            <li class="breadcrumb first"><a href="../../../index.html" class="breadcrumb first">Intranet</a>
+                </li>
+                            <li class="breadcrumb"><a href="../../index.html" class="breadcrumb">Windows</a>
+                    <ul class="breadcrumb-siblings">
+                                                <li class="separator"><span>Tweede bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Besturingssystemen-I/index.html">Besturingssystemen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Computernetwerken-I/index.html">Computernetwerken I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Informatica-II/index.html">Informatica II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Softwareontwikkeling-I/index.html">Softwareontwikkeling 1</a></li>
+                                                                <li class="separator"><span>Derde bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Algoritmen-I/index.html">Algoritmen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2 leaf"><a class="breadcrumb-sibling group-sem2 leaf" href="../../../Computergrafiek/index.html">Computergrafiek</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-II/index.html">Computernetwerken II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Computernetwerken-III/index.html">Computernetwerken III</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Databanken/index.html">Databanken</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Design-Patterns/index.html">Design Patterns</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2"><a class="breadcrumb-sibling group-sem1 group-sem2" href="../../../Hardware/index.html">Hardware</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../OGP/index.html">OGP</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-I/index.html">Systeemanalyse I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../UNIX/index.html">UNIX</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Beveiliging/index.html">Beveiliging</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-IV/index.html">Computernetwerken IV</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2 leaf"><a class="breadcrumb-sibling group-sem1 group-sem2 leaf" href="../../../Masterproef/index.html">Masterproef</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-II/index.html">Systeemanalyse II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 active"><a class="breadcrumb-sibling group-sem1 active" href="../../index.html">Windows</a></li>
+                                                                <li class="separator"><span>Algemeen</span></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Activiteiten/index.html">Activiteiten</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Huisregels-labos/index.html">Huisregels voor labo&#039;s</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Opleiding-Informatica/index.html">Opleiding Informatica GTI</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Andere-problemen/index.html">Probleemoplossende instanties</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling"><a class="breadcrumb-sibling" href="../../../Roosters/index.html">Roosters</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../index.html" class="breadcrumb">Labo</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling active"><a class="breadcrumb-sibling active" href="../index.html">Labo</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Theorie/index.html">Theorie</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../p3.1" class="breadcrumb">Reeks 3</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p0.1">Reeks 0</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p1.1">Reeks 1</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p2.1">Reeks 2</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf active current"><a class="breadcrumb-sibling leaf active current" href="../p3.1">Reeks 3</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p4.1">Reeks 4</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p5.1">Reeks 5</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p6.1">Reeks 6</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p7.1">Reeks 7</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p8.1">Reeks 8</a></li>
+                                        </ul>
+                </li>
+        </ul>
+    </div>
+    <h2>Reeks 3</h2>
+    <div id="page-content">
+        <h3>WMI concepten</h3>
+<h4>Inleiding</h4>
+In de cursus <em>Computernetwerken&nbsp;III</em> werd aangetoond
+dat <strong>SNMP</strong> een nuttig hulpmiddel kan zijn bij het
+beheer van de diverse componenten van een grote netwerkomgeving.
+Alhoewel SNMP, ondermeer via de <em>host MIB</em>, ook kan
+aangewend worden voor het beheer van besturingssystemen, servers en
+werkposten, blijven de mogelijkheden in dat kader eerder beperkt.
+Belangrijke leveranciers (HP, SUN, Novell, Microsoft, …),
+gegroepeerd in de <em>Distributed Management Tast Force</em>
+(<strong>DMTF</strong>) hebben hierop dan ook gereageerd met een
+generische beheersomgeving, <strong>WBEM</strong> (<em>Web-Based
+Enterprise Management</em>), die zich precies op dit domein
+toespitst. WBEM wordt ondermeer ondersteund op de belangrijkste
+UNIX systemen voor productieomgevingen (HP Unix, Solaris). Ook voor
+Linux zijn er een aantal recente open source initiatieven, zoals
+<em>OpenWBEM</em> en <em>OpenPegasus</em>. Microsoft heeft zijn
+implementatie voor Windows <strong>WMI</strong> (<em>Windows
+Management Instrumentation</em>) genoemd. WMI is vanaf NT 5.0
+(Windows 2000) standaard geïnstalleerd (maar niet op de
+<em>Home</em> edities).
+<p>Deze labo's richten zich op WMI. In deze reeks worden de
+belangrijkste basisaspekten en mogelijkheden van WMI bestudeerd. In
+de volgende reeks ligt de focus op het gebruik van WMI via
+programmatische toegang. Zoals dikwijls wordt het begrijpen van een
+reeds tamelijk complexe omgeving bemoeilijkt door een overvloedige
+nomenclatuur en redundante detailaspecten. De theoretische
+beschrijving hier wordt daarom eerder gesimplificeerd en tot een
+strikt minimum herleid. Het is dan ook de bedoeling om de WMI
+omgeving zo vlug mogelijk <em>experimenteel</em> te benaderen.
+Hiervoor kan men best een beroep doen op twee GUI programma's:
+<strong>WbemTest</strong> en
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong>. Doorgaans zullen we
+WMI&nbsp;CIM&nbsp;Studio gebruiken, aangezien dit over een meer
+gebruiksvriendelijke interface beschikt. Beide programma's zijn op
+de labotoestellen beschikbaar via een shortcut op de desktop.</p>
+<p>Gedetailleerde WMI documentatie vind je terug in de
+<em>Win32&nbsp;and&nbsp;COM&nbsp;Development</em> /
+<em>Administration&nbsp;and&nbsp;Management</em>
+/<em>Windows&nbsp;Management&nbsp;Instrumentation&nbsp;(WMI)</em> /
+<em>SDK&nbsp;Documentation</em> /
+<em>Windows&nbsp;Management&nbsp;Instrumentation&nbsp;</em> subtak
+van de <strong>MSDN&nbsp;Library</strong>, die we kortweg
+<em>WMI-documentatie</em> zullen noemen. Deze documentatie mag je
+ook gebruiken in de testen.<br>
+De on-line <strong>MSDN Library</strong> toont kleine verschillen
+en gebruik je dus beter niet !</p>
+<h4>WMI klassen en objecten</h4>
+In tegenstelling tot SNMP (meer bepaald versie 1 ervan) is de WMI
+benadering <strong>consequent objectgeöriënteerd</strong>. Elke
+<strong>WMI klasse</strong> vertegenwoordigt een elementair
+deelaspect van het systeembeheer. Zo zijn er bijvoorbeeld telkens
+één of meerdere klassen om diskpartities, bestandsystemen,
+bestanden, directories, gedeelde mappen, eventlogs, geheugen,
+processoren, processen, threads, harde schijven, netwerkinterfaces,
+printers en andere randapparatuur gedetailleerd te beschrijven. De
+corresponderende attributen en methoden beschrijven de toestand en
+het gedrag van specifieke hardware- of softwarecomponenten.<br>
+Om de operationele toestand, de performantie en de configuratie van
+het toestel en zijn besturingssysteem te beschrijven en te
+manipuleren, worden duizenden <strong>WMI objecten</strong>
+aangemaakt. Het geheel van de WMI objecten vormt een interface om
+de Windows API op een objectgeoriënteerde manier aan te spreken.
+<p>De <strong>CIM repository</strong> (CIM staat voor
+<em>Common&nbsp;Information&nbsp;Model</em>) bevat de specificaties
+van alle WMI klassen. De WMI objecten worden niet in de repository
+bewaard, op een aantal uitzonderingen na (zogenaamde
+<em>statische</em> klassen, zoals <em>__NAMESPACE</em> en
+<em>__Win32Provider</em>).</p>
+<h4>De architectuur van WMI</h4>
+De <a class="popout" href="w1.bmp">basisarchitectuur van WMI</a>
+vertoont heel wat gelijkenissen met deze van SNMP. De
+<strong>Windows Management Instrumentation service</strong> van elk
+NT besturingssysteem (in de WBEM terminologie <em>Common
+Information Model Object Manager</em>, <strong>CIMOM</strong>,
+genoemd) vervult de rol van <em>master agent</em>.
+Beheersapplicaties, <strong>consumers</strong> genoemd, moeten voor
+elke interactie met WMI een beroep doen op de WMI service, en
+kunnen dit vanuit om het even welk toestel dat tot hetzelfde
+internetwerk behoort. WMI consumers kunnen in diverse
+programmeertalen ontwikkeld worden: C++ biedt de minste
+beperkingen, in deze labo's zullen we het meer eenvoudige
+<strong>Perl</strong>(Script) gebruiken.<br>
+De WMI agent functionaliteit wordt <strong>niet
+monolitisch</strong> geïmplementeerd: de interactie met de
+verschillende deelaspecten van de hardware en de software van het
+systeem worden gerealiseerd door diverse WMI
+<strong>providers</strong>. De functionaliteit van deze providers
+is gelijkaardig aan deze van <em>subagenten</em> in het SNMP model.
+Elke provider is dus verantwoordelijk voor een aantal WMI-klassen.
+In de CIM repository wordt voor elke WMI klasse ook bijgehouden
+door welke provider de WMI klasse gerealiseerd wordt. Enkel de
+provider is op de hoogte hoe (met welke API's, ...) specifieke
+systeemcomponenten moeten benaderd worden.
+<p>De WMI service heeft een drie functies:</p>
+<ol>
+<li>Ze interageert met de WMI consumers op een <strong>uniforme
+manier</strong>, onafhankelijk van de te beheren component.</li>
+<li>De WMI service is verantwoordelijk voor <strong>alle</strong>
+interacties met de providers waardoor de gehele WMI omgeving zich
+als één enkele entiteit gedraagt, met een <strong>uniforme</strong>
+interface. Naar consumers toe is de verzameling van providers
+transparant.</li>
+<li>De CIM repository is enkel toegankelijk via de WMI
+service.</li>
+</ol>
+Telkens een consumer de waarde van een attribuut wil raadplegen, of
+een methode wil uitvoeren, doet de WMI service
+<strong>dynamisch</strong> een beroep op de juiste provider om de
+informatie te bekomen of de handeling te realiseren (de WMI service
+raadpleegt eerst de CIM repository om te weten welke provider moet
+aangesproken worden). Om de performantie te verbeteren, worden
+objectgegevens na een eerste raadpleging wel tijdelijk in de
+<strong>geheugencache</strong> van de WMI service bijgehouden. De
+informatie die een WMI consumer krijgt van de WMI service kan dan
+ook afwijken van de actuele toestand van de component. Gelukkig kan
+de WMI service expliciet gevraagd worden om zijn cachegegevens in
+verband met een specifiek object <em>op te frissen</em>.
+<p>Tijdens een basisinstallatie van Windows NT worden reeds een
+aantal providers geactiveerd. Enkele typische voorbeelden hiervan
+zijn de <em>Win32</em>, <em>Security</em>,
+<em>System&nbsp;Registry</em>, <em>Event&nbsp;Log</em> en
+<em>Performance&nbsp;Counter</em> providers. Installatie van
+aanvullende componenten (bijvoorbeeld <em>DNS&nbsp;Server</em>,
+<em>IIS</em>, <em>SQL&nbsp;Server</em>, <em>Exchange Server</em>,
+...) leidt dikwijls tot de automatische integratie van extra
+providers.</p>
+<h4>Namespaces en hun WMI klassen/objecten</h4>
+De diverse WMI klassen worden in de CIM repository logisch
+gegroepeerd in <strong>namespaces</strong>. Het aantal namespaces
+in een repository is afhankelijk van de geïnstalleerde hardware en
+software. Meestal stelt men een paar tientallen namespaces vast.
+Alhoewel namespaces entiteiten zijn die volledig onafhankelijk van
+elkaar zijn, is de naamgeving hiërarchisch: root, root/default,
+root/msapps12 (Office 2007 toepassingen), root/cimv2 (de in deze
+labo's meest geraadpleegde namespace), root/ cimv2/applications,
+root/cimv2/applications/MicrosoftIE zijn enkele voorbeelden.<br>
+Namespaces kunnen onafhankelijk van elkaar specifiek beveiligd
+worden. Doorgaans beperkt een WMI consumer zich tot de manipulatie
+van objecten die tot dezelfde namespace behoren. Een consumer moet
+zich <strong>connecteren</strong> aan een namespace vooraleer
+objecten/klassen die tot de namespace behoren, kunnen geraadpleegd
+of gemanipuleerd worden. Tijdens deze connectiefase wordt op basis
+van de gebruikersnaam en het bijbehorende paswoord gecontroleerd
+welke handelingen toegelaten worden. Interacties tussen een WMI
+consumer en de WMI service op een zelfde toestel kunnen enkel
+uitgevoerd worden in de gebruikerscontext van de ingelogde
+gebruiker (of in de procescontext waarin de consumer uitgevoerd
+wordt).
+<dl class="compact">
+<dt>1.</dt>
+<dd>Bij het gebruik van WbemTest of WMI&nbsp;CIM&nbsp;Studio is het
+connecteren <strong>aan een namespace</strong> een eerste
+noodzakelijke stap. Connecteer je in WMI&nbsp;CIM&nbsp;Studio
+achtereenvolgens:
+<ul>
+<li>aan de root/cimv2 namespace van het toestel waarop je ingelogd
+bent, in je <strong>eigen gebruikerscontext</strong> </li>
+<li>aan de root/cimv2 namespace <strong>van een ander
+labotoestel</strong> (dan het toestel waarop je ingelogd bent), in
+de gebruikerscontext van de (lokale) administrator van dat
+toestel.</li>
+<li>aan de root/cimv2 namespace van het toestel waarop je ingelogd
+bent, in de gebruikerscontext van de (lokale)
+<strong>administrator</strong> van het toestel (een dergelijke
+connectie heeft heel wat minder beperkingen&nbsp;!)</li>
+</ul>
+<p><a class="popout" href="01.pl">antwoord</a></p>
+</dd>
+</dl>
+Na connecteren met een <em>namespace</em> bevat de grijze titelbalk
+van WMI&nbsp;CIM&nbsp;Studio rechts drie iconen. Mogelijks zijn
+deze iconen niet 'zichtbaar', maar vind je ze wel terug na een
+muisklik. Het uiterst rechtse icoon is het
+<strong>Help-boek</strong> waarmee je het WMI Help-bestand opent,
+die de functionaliteit van WMI&nbsp;CIM&nbsp;Studio verder
+toelicht. We verwijzen naar deze help met <nobr><em>Help WMI CIM
+Studio</em></nobr>. In de tak <em>Help WMI CIM Studio / WMI CIM
+Studio / WMI CIM Studio User Interface</em> extra toelichting bij
+de GUI, die uit twee panelen bestaat:
+<ul>
+<li>Het linkerpaneel, de <em>Class Explorer</em>, toont de
+<strong>klassehiërarchie</strong> in de namespace. De uitklapbare
+structuur visualiseert hoe elke klasse is afgeleid van de
+bovenliggende <nobr>klasse(n)</nobr>. Het ingekleurde vierkante
+icoontje bepaalt het type van de klasse. Zoek de zes types op in
+<em>Help WMI CIM Studio / WMI CIM Studio / WMI CIM Studio User
+Interface / Class Explorer</em>. De kleine werkbalk van dit paneel
+bevat twee handige mogelijkheden:
+<ul>
+<li>met de <em>Browse&nbsp;For&nbsp;Namespace</em> knop kan je een
+andere namespace, eventueel op een ander toestel connecteren.</li>
+<li>met de <em>Search for Class</em> knop kun je klassen opzoeken
+op basis van een deel van de klassenaam, de klassebeschrijving of
+een beschikbaar attribuut. Dit is geen overbodige luxe want het
+achterhalen van de juiste klasse is misschien wel de grootste
+hinderpaal bij het gebruik van WMI.</li>
+</ul>
+</li>
+<li>Het detailpaneel (rechts), ook <em>Class Viewer</em> genoemd,
+bevat initieel <strong>detailinformatie</strong> in verband met
+<strong>de klasse</strong> die geselecteerd is in het linkerpaneel.
+Dit venster bestaat steeds uit drie tabpagina's.<br>
+We bespreken voorlopig enkel de eerste twee tabpagina's:
+<ul>
+<li><strong>Properties</strong>:
+<ul>
+<li>elke klasse heeft tien <strong>systeemattributen</strong>,
+waarvan de naam met een <strong>dubbele</strong> underscore begint,
+zoals <em>__CLASS</em>, <em>__SUPERCLASS</em>,
+<em>__SERVER</em>,.... De systeemattributen zijn voor alle klassen
+gelijk en geven zeer algemene informatie voor elke klasse,
+bijvoorbeeld de klassehiërarchie (<em>__DERIVATION</em>).</li>
+<li>Het <em>__PROPERTY_COUNT</em> systeemattribuut bevat het aantal
+(reguliere) attributen.</li>
+<li>De lijst met reguliere attributen is uiteraard afhankelijk van
+de klasse die je geselecteerd hebt. Deze reguliere attributen
+bevatten extra informatie die zinvol is voor elke instantie van een
+bepaalde klasse. Initiëel zijn de meeste reguliere attributen niet
+ingevuld.</li>
+<li>In dit overzicht wordt ook getoond welke reguliere attributen
+<em>overgeërfd</em> zijn, welke <em>wijzigbaar</em> zijn, en welke
+behoren tot de <em>sleutel</em> van de klasse (zie ook <em>Help WMI
+CIM Studio / WMI CMI Studio Functions / Displaying the definition
+of an Existing Class / Displaying Class Properties</em> ).</li>
+</ul>
+</li>
+<li><strong>Methods</strong>: Indien er methodes beschikbaar zijn
+voor de klasse kan je via dubbelklik of het
+<em>Edit&nbsp;Method&nbsp;Parameters</em> snelmenu nagaan welke
+invoerparameters en uitvoerparameters mogelijk zijn.</li>
+</ul>
+<p>De kleine werkbalk van dit paneel bevat extra mogelijkheden,
+onder andere:</p>
+<ul>
+<li>de <em>Help for class</em> knop waarmee je de beschrijving
+krijgt van de klasse, zijn attributen en methodes. Deze informatie
+kan je ook, uitgebreider, terugvinden in de
+<em>WMI-documentatie</em>.</li>
+<li>de <em>Instances</em> knop waarmee je alle
+instanties(=objecten) opvraagt van de geselecteerde klasse. Vraag
+dit niet indien de klasse heel veel instanties heeft, want dan
+loopt het vast.<br>
+Het detailpaneel toont nu andere informatie. Er verschijnt een
+<strong>overzichtslijst van de objectinstanties</strong> van de
+geselecteerde klasse: één rij per object, één kolom per attribuut,
+zie ook <em>Help WMI CIM Studio / WMI CIM Studio / WMI CMI Studio
+Functions / Displaying Instances of an Existing Class / Displaying
+an Instance Table</em> .<br>
+Dubbelklikken op een objectinstantie produceert opnieuw het beeld
+met drie tabpagina's, nu echter niet corresponderend met de klasse,
+maar met een specifieke objectinstantie. Het
+<strong>Properties</strong>-tabblad bevat nu de informatie van de
+gekozen objectinstantie. De meeste reguliere attributen zijn nu wel
+ingevuld.</li>
+</ul>
+<p>Het detailpaneel kan dus informatie bevatten van een klasse of
+van een gekozen objectinstantie. De naam bovenaan dit detailpaneel
+bevat de <strong>beschrijving</strong> van de geselecteerde klasse,
+eventueel aangevuld met de <strong>name</strong> van de
+geselecteerde objectinstantie.</p>
+</li>
+</ul>
+<dl class="compact">
+<dt>2.</dt>
+<dd>Zoek in de namespace <em>root/CIMV2</em> de klasse
+<em>Win32_VideoController</em>. Bepaal op twee manieren van welke
+klassen deze klasse is afgeleid.<br>
+Klassenamen met prefix <strong>CIM_</strong> duiden op een
+implementatieonafhankelijke WBEM standaard klasse (een zogenaamde
+<em>Core and Common</em> klasse), terwijl klassen met
+<strong>Win32_</strong> prefix Microsoft specifieke
+<em>extentieklassen</em> zijn.<br>
+Deze klasse erft alle attributen en methodes van de bovenliggende
+klassen, ze heeft ook een aantal nieuwe attributen, hoe herken je
+die? Hoe kan je snel - zonder te tellen - achterhalen hoeveel
+nieuwe attributen er zijn?<br>
+Bepaal voor de klasse <em>Win32_VideoController</em> het
+sleutel-attribuut, en bepaal in welke bovenliggende klasse dit
+attribuut reeds werd toegevoegd. Merk op dat de 'sleutel'-functie
+van dit attribuut enkel in de klasse <em>Win32_videoController</em>
+is ingesteld.
+<p><a class="popout" href="02.pl">antwoord</a></p>
+</dd>
+<dt>3.</dt>
+<dd>Elke namespace bevat telkens opnieuw dezelfde
+<strong>systeemklassen</strong>, die je kan herkennen aan een naam
+met een <strong>dubbele</strong> underscore als prefix (in de root
+namespace zijn er enkel <strong>systeemklassen</strong>). Deze
+systeemklassen zijn vooral bedoeld om WMI zelf te configureren en
+te manipuleren. In elke namespace heeft de <em>__NAMESPACE</em>
+klasse als instanties de namespaces die qua naamgeving
+onmiddellijke kinderen zijn.<br>
+Hoe kan je <strong>in het rechter detail-paneel</strong> een
+overzicht krijgen van alle namespaces die kinderen zijn van de
+<em>root</em> namespace.
+<p><a class="popout" href="03.pl">antwoord</a></p>
+</dd>
+<dt>4.</dt>
+<dd>De meeste WMI klassen zijn gedocumenteerd in de
+<em>WMI&nbsp;Reference</em> / <em>WMI&nbsp;Classes</em> subtak van
+de WMI-documentatie (in de <strong>MSDN Library</strong>). Je vindt
+er een overzicht van alle klassen, opgedeeld in categorieën.<br>
+Dit kan handig zijn als je de naam van een klasse, die een bepaalde
+functionaliteit aanbiedt, niet kent en bovendien niet weet in welke
+namespace de klasse zich zou bevinden.<br>
+Van elke klasse vind je er ook een volledige beschrijving van zijn
+methodes en attributen. In de WMI-documentatie vind je geen
+informatie over de instanties (WMI objecten).<br>
+Zoek in de WMI-documentatie de klasse die de beschrijving van de
+registerkey's bevat. In welke namespaces staat deze klasse?<br>
+Zoek de klasse op in WMI&nbsp;CIM&nbsp;Studio. Hoeveel instanties
+heeft deze klasse? Heeft ze attributen en methodes ? Verklaar.
+<p><a class="popout" href="04.pl">antwoord</a></p>
+</dd>
+<dt>5.</dt>
+<dd>Ga in WMI&nbsp;CIM&nbsp;Studio (in de root/cimv2 namespace van
+het toestel waarop je ingelogd bent) achtereenvolgens <strong>op
+zoek</strong> naar de Win32-klasse die informatie bijhoudt in
+verband met:
+<ol type="a">
+<li>de vrije ruimte (<em>freespace</em>) van de schijfpartities (C:
+D: ...),</li>
+<li>de naam van de netwerkverbindingen (eth0, ...)</li>
+<li>de MAC adressen van de netwerkkaarten</li>
+<li>de IP adressen van de netwerkkaarten</li>
+<li>het laatst geïnstalleerd service pack van Windows Server
+2003</li>
+</ol>
+Ga bij elke zoekopdracht na:
+<ul>
+<li>van welke klassenhiërarchie de klasse afgeleid is,</li>
+<li>welke de sleutelattributen zijn,</li>
+<li>welke methodes de klasse ondersteunt,</li>
+<li>hoeveel objectinstanties er zijn,</li>
+<li>welke waarde het gezochte attribuut heeft voor een bepaalde
+instantie.</li>
+</ul>
+<p><a class="popout" href="05.pl">antwoord</a></p>
+</dd>
+<dt>6.</dt>
+<dd>Je kan soms ook de waarde van attributen wijzigen. Als
+eenvoudig voorbeeld zoek je de wijzigbare attributen op van de
+klasse <em>Win32_Environment</em>. De waarde van het attribuut
+<strong>VariableValue</strong> kan je wijzigen. Vraag nu alle
+instanties van deze klasse, en selecteer een klasse die het
+<em>Path</em> beschrijft.
+<p><strong>Noteer vooraf wat de huidige inhoud is.</strong></p>
+<p>Voeg een extra padnaam toe en bewaar deze aanpassing (druk op
+het <em>Save-icon</em> in de rechtse toolbar). Je kan dit
+controleren met <strong>c:\windows\system32\sysdm.cpl</strong><br>
+Vergeet niet om de waarde terug te herstelling!!</p>
+<p><strong>Merk op:</strong> Het is voor de meeste "wijzigbare"
+attributen niet mogelijk om waarden manueel te wijzigen in
+WMI&nbsp;CIM&nbsp;Studio. Wijzigbare attributen zijn dan enkel
+aanpasbaar met behulp van de juiste methodes.</p>
+<p><a class="popout" href="06.pl">antwoord</a></p>
+</dd>
+</dl>
+Klassen en instanties worden gekenmerkt door een <strong>absolute
+padnaam</strong>. Deze informatie wordt opgeslaan in het
+systeemattribuut <em>__PATH</em>. Er zijn ook systeemattributen die
+een deel van deze informatie bevatten. Controleer dat de absolute
+padnaam is opgebouwd uit de computernaam (<em>__SERVER</em>), de
+namespace-identificatie (<em>__NAMESPACE</em>) en de
+<strong>relatieve padnaam</strong> (<em>__RELPATH</em>). De opbouw
+van de relatieve padnaam is iets complexer:
+<ul>
+<li>Voor een klasse is de relatieve padnaam identiek met de
+klassenaam (<em>__CLASS</em>)</li>
+<li>Voor klassen die meerdere instanties kunnen hebben, wordt elke
+instantie gekenmerkt door een <strong>sleutel</strong>. Dit is een
+verzameling van sleutel-attributen die samen een unieke waarde
+garanderen voor elke instantie. De sleutel van de
+<em>Win32_BIOS</em> klasse bijvoorbeeld is samengesteld uit vijf
+sleutel-attributen. De relatieve padnaam van een WMI object is
+samengesteld uit de naam van de klasse en de opsomming van alle
+sleutelattributen en hun waarden (let op de " "-tekens voor waarden
+van het type <code>string</code>), vb.
+<pre>
+   Win32_BIOS.Name="Phoenix ROM BIOS PLUS Version 1.10 A14",
+              SoftwareElementID="Phoenix ROM BIOS PLUS Version 1.10 A14",
+              SoftwareElementState=3,
+              TargetOperatingSystem=0,
+              Version="DELL   - 27d40907"
+</pre></li>
+<li>Er zijn ook klassen die maximaal één enkele instantie kunnen
+opleveren, de zogenaamde <strong>singleton klassen</strong>. Deze
+klassen hebben geen <strong>sleutel-attributen</strong>. ( Ook
+abstracte klassen hebben dikwijls geen
+<strong>sleutel-attribuut</strong>, maar zijn daarom nog geen
+<strong>singleton klassen</strong>.) Het relatieve objectpad van de
+(eventuele) enige instantie van een singletonklasse bevat de naam
+van de klasse, aangevuld met de <strong>=@</strong> suffix.</li>
+</ul>
+<dl class="compact">
+<dt>7.</dt>
+<dd>Welke van onderstaande klassen zijn
+<strong>singletonklassen</strong>? Bepaal ook de <em>__RELPATH</em>
+van de (unieke) instantie.
+<p style="text-align: center"><em>Win32_WMISetting,
+Win32_OperatingSystem, Win32_ComputerSystem, CIM_LogicalDevice,
+Win32_LocalTime , Win32_CurrentTime</em></p>
+<p><a class="popout" href="07.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Qualifiers</h4>
+Behalve de beschrijving van attributen en methoden bevat de
+klassedefinitie in de CIM repository ook optionele
+<strong>qualifiers</strong>. Elke qualifier bestaat uit een
+(naam,waarde)-koppel. Met een qualifier kan een extra
+eigenschap/informatie worden toegevoegd. De waarde van een
+qualifier is afhankelijk van de taalinstelling.<br>
+Er zijn vier groepen qualifiers, die meer gedetailleerde informatie
+bevatten over de klasse (<strong>klassequalifiers)</strong>, hun
+attributen (<strong>attribuutqualifiers</strong>), hun methoden
+(<strong>methodequalifiers</strong>) of de methodeparameters
+(<strong>methodeparameterqualifiers</strong>).<br>
+Elk van de vier varianten kan met WMI&nbsp;CIM&nbsp;Studio
+geanalyseerd worden. In de WMI documentatie vind je informatie
+hierover in de tak <em>WMI Reference / WMI Infrastructure Objects
+and Values / WMI Qualifiers</em>. <br>
+In de <em>Help WMI CIM Studio</em> kan je in <em>WMI CIM Studio /
+WMI CIM Studio Functions / Displaying the Definition of an Existing
+Class</em> kan je terugvinden hoe je de drie eerste soorten
+qualifiers kan opvragen in WMI&nbsp;CIM&nbsp;Studio. Een paar
+opmerkingen:
+<ul>
+<li><strong>Klassequalifiers</strong> (worden in
+WMI&nbsp;CIM&nbsp;Studio <em>Object qualifiers</em> genoemd, maar
+behoren intrinsiek tot de klasse):
+<ul>
+<li><em>Description</em> geeft een informatie tekst over de klasse,
+die je ook kan terugvinden in alternatieve documentatie.</li>
+<li>De <em>Abstract</em>, <em>Dynamic</em> en <em>Singleton</em>
+qualifiers geven, indien ingevuld op <em>true</em>, respectievelijk
+aan dat de klasse abstract, dynamisch, en/of een singleton klasse
+is.</li>
+<li><em>Provider</em> helpt de WMI service bepalen welke provider
+moet aangesproken worden om instanties van die klasse te
+manipuleren.</li>
+</ul>
+</li>
+<li><strong>Attribuutqualifiers</strong> (ook <em>Property
+qualifiers</em> genoemd):
+<ul>
+<li>De <em>Description</em> attribuutqualifier heeft een analoge
+functie als de corresponderende klassequalifier, maar voor het
+geselecteerde attribuut.</li>
+<li><em>CIMType</em> geeft het type van het attribuut weer, zoals
+string, boolean, datetime, diverse real, signed of unsigned int (8,
+16, 32 of 64 bits) types of referenties naar absolute
+objectpaden.</li>
+<li>Een op true ingestelde <em>Write</em> qualifier kenmerkt
+rechtstreeks wijzigbare attributen, zonder hiervoor methodes te
+moeten aanspreken. Deze informatie is meestal niet
+betrouwbaar.</li>
+<li><em>Keys</em> geeft aan dat het attribuut deel uitmaakt van de
+sleutel van de klasse, en bijgevolg opgenomen moet worden in het
+objectpad van een instantie.</li>
+<li><em>ValueMap</em> geeft in een ééndimensionale tabel het
+<em>domein</em> weer van het attribuut: een expliciete opsomming
+van de toegelaten waarden.</li>
+<li><em>Values</em> geeft een meer informatieve interpretatie van
+de toegelaten waarden. Indien ook de <em>ValueMap</em> qualifier
+aanwezig is, kunnen <em>ValueMap</em> en <em>Values</em> best
+beschouwd worden als respectievelijk de <em>keys</em> en de
+<em>values</em> van een Perl <em>hash</em>. Indien een
+<em>ValueMap</em> ontbreekt, dan impliceert <em>Values</em> een
+<em>ValueMap</em> met oplopende gehele getallen, startend vanaf 0.
+<em>Values</em> kan dan geïnterpreteerd worden als een Perl
+<em>array</em>.</li>
+</ul>
+</li>
+<li><strong>Methodequalifiers</strong>:
+<ul>
+<li><em>Description</em> geeft terug een beschrijving van de
+methode.</li>
+<li>De <em>CIMType</em>, <em>Values</em> en <em>ValueMap</em>
+methodequalifiers hebben een analoge functie als de
+corresponderende attribuutqualifiers, maar hebben nu betrekking op
+de terugkeerwaarde van de methode (de <em>ReturnValue</em>
+uitvoerparameter). Indien de <em>CIMType</em> qualifier ontbreekt,
+is het type van de <em>ReturnValue</em> een geheel getal.</li>
+<li><em>Privileges</em> legt vast dat de methode enkel kan
+uitgevoerd worden indien de consumer over de vermelde lijst van
+<em>rechten</em> beschikt.</li>
+</ul>
+</li>
+<li><strong>Methodeparameterqualifiers</strong>: (staat niet
+bescheven in de <em>Help WMI CIM Studio</em>). In het tabblad
+<strong>Methods</strong> vraag je voor een methode naar keuze het
+overzicht van de parameters met
+<em>Edit&nbsp;Method&nbsp;Parameters</em> snelmenu. Elke parameter
+beschikt over eigen methodeparameterqualifiers:
+<ul>
+<li>De <em>Description</em>, <em>CIMType</em>, <em>Values</em> en
+<em>ValueMap</em> qualifiers hebben een analoge functie als de
+corresponderende attribuut- en methodequalifiers, nu toegepast op
+een individuele parameter van een methode.</li>
+<li><em>In/Out</em> geeft aan dat deze parameter een invoer- (resp.
+uitvoer-) parameter is. Een parameter kan ook invoer/uitvoer
+parameter zijn. Dit wordt ook gevisialiseerd met een pijltje (naar
+links, naar rechts of dubbele pijl).</li>
+<li><em>Optional</em>, indien ingevuld op <em>true</em>, geeft aan
+dat, indien voor de parameter bij de methodeaanroep geen waarde
+opgegeven wordt, een <em>default</em> waarde geldt.</li>
+<li><em>ID</em> geeft de volgorde aan (startend met de waarde 0)
+waarin de parameters als argumenten bij de methodeaanroep moeten
+opgegeven worden. In WMI&nbsp;CIM&nbsp;Studio wordt de
+overzichtlijst van de methodeparameters
+(<em>Edit&nbsp;Method&nbsp;Parameters</em> snelmenu) gesorteerd
+volgens deze <em>ID</em> qualifier.</li>
+</ul>
+</li>
+</ul>
+De <em>Help for class</em> knop in het detailpanneel van
+WMI&nbsp;CIM&nbsp;Studio doet niets anders dan een overzichtlijst
+produceren van de klasse, zijn attributen en methoden (en
+parameters), telkens aangevuld met de corresponderende
+<em>Description</em> qualifiers.
+<dl class="compact">
+<dt>8.</dt>
+<dd>Verifiëer voor de antwoorden op de vorige vraag dat de
+<strong>Singleton klassequalifier</strong> ingesteld is.
+<p><a class="popout" href="08.pl">antwoord</a></p>
+</dd>
+<dt>9.</dt>
+<dd>Voor welke van de attributen <em>Acces</em>,
+<em>BlockSize</em>, <em>Availability</em>, <em>DriveType</em> en
+<em>StatusInfo</em> van de <em>Win32_LogicalDisk</em> klasse is in
+de CIM repository een <strong>tekstuele interpretatie</strong>
+opgeslagen&nbsp;? Wat betekent voor elk van deze attributen de
+waarde&nbsp;4&nbsp;?
+<p><a class="popout" href="09.pl">antwoord</a></p>
+</dd>
+<dt>10.</dt>
+<dd>Welke van de methoden <em>BackupEventlog,
+ChangeSecurityPermissions, ClearEventlog ,
+GetEffectivePermission</em> van de <em>Win32_NTEventlogFile</em>
+klasse vereisen <strong>specifieke consumerrechten</strong>&nbsp;?
+<p><a class="popout" href="10.pl">antwoord</a></p>
+</dd>
+<dt>11.</dt>
+<dd>Welke methode van de <em>Win32_USBHub</em> klasse heeft zowel
+<strong>invoer-, uitvoer-</strong> als
+<strong>invoer/uitvoer</strong>&nbsp;parameters ?
+<p><a class="popout" href="11.pl">antwoord</a></p>
+</dd>
+<dt>12.</dt>
+<dd>Bepaal voor de methode <em>Create</em> van de
+<em>Win32_Share</em> klasse welke parameters
+<strong>verplicht</strong> en welke <strong>optioneel</strong>
+zijn. In welke volgorde moeten deze parameters opgeroepen worden?
+Geef de signatuur van deze methode.
+<p><a class="popout" href="12.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Associatorklassen</h4>
+Tussen de WMI-klassen zijn <strong>associaties</strong> /
+<strong>verbindingen</strong> die <strong>binaire</strong> logische
+verbanden beschrijven, en deze eventueel van extra attributen
+voorzien. Elke verbinding wordt gerepresenteerd door een
+<strong>associatorklasse</strong>.<br>
+Associatorklassen worden in WMI&nbsp;CIM&nbsp;Studio met een
+aangepast icoon voorgesteld (zoek het icoon op in de <em>Help WMI
+CIM Studio</em>). Je kan ook van een willekeurige klasse nagaan of
+ze een associatorklasse is of niet door de <em>Association</em>
+klassequalifier te raadplegen.<br>
+Zo heb je bijvoorbeeld een associatorklasse om directories en hun
+submappen te koppelen. Een andere associatorklasse koppelt
+partities aan de diskschijf. In de terminologie van relationele
+databanken vervult een associatorklasse de rol van een
+<em>doorsnedetabel</em>. <strong>Veel-op-veel</strong> verbindingen
+kunnen bijgevolg zonder probleem gerepresenteerd worden: elke
+verbinding tussen twee specifieke instanties wordt gerepresenteerd
+door één instantie van de corresponderende associatorklasse. Ook
+verbindingen tussen objecten van dezelfde klasse
+(<strong>recursieve</strong> verbindingen, bijvoorbeeld tussen
+directories en hun subdirectories) zijn op deze manier eenvoudig
+mogelijk.
+<p>Voor elke <strong>klasse</strong> kan je in de derde tabpagina
+(<em>Associations</em>) van het detailpaneel alle associaties met
+deze klasse opzoeken. Neem als voorbeeld de klasse
+<em>Win32_LogicalDisk</em>. In het detailpaneel van een
+<strong>klasse</strong>definitie worden enkel de "nieuwe"
+associatorklassen getoond, zoals in</p>
+<p style="text-align: center"><img src=
+"Logical_Disk_association.gif" height="200" width="450"></p>
+Er wordt dus <strong>geen</strong> rekening gehouden met de
+associatorklassen die via overerving beschikbaar zijn (via
+superklassen van hetzij de eindpuntklassen, hetzij de
+associatorklassen). Er zijn voor de klasse
+<strong>Win32_LogicalDisk</strong> een zestigtal associatorklassen
+beschikbaar!!<br>
+Als je voor een <strong>instantie</strong> van een klasse de derde
+tabpagina (<em>Associations</em>) aanklikt krijg je een volledig
+overzicht van alle instanties waaraan deze instantie geassocieerd
+is (ook via overerving). Bekijk dit voor een instantie van de
+klasse <em>Win32_LogicalDisk</em><br>
+Om de grafische uitvoer te simplificeren, wordt enkel van de
+eindpunten van de associatie de naam of het objectpad getoond. Toch
+kan ook de naam van de associatorklasse, en zelfs de attribuutnamen
+van de verwijzende sleutel, selectief getoond worden, door de muis
+respectievelijk over het icoontje van de associatorklasse of over
+een verbindingslijn met dat icoontje te schuiven. Dubbelklikken op
+het icoon van de associatorklasse of van een willekeurig eindpunt
+verschuift de focus naar de corresponderende klasse of instantie.
+Dit laat toe om doorheen een volledig kluwen van via associaties
+naar elkaar verwijzende klassen en objecten te <em>navigeren</em>.
+<dl class="compact">
+<dt>13.</dt>
+<dd>Vertrek van de <strong>Win32</strong>-klasse die een directory
+beschijft. Zoek de associatorklasse die directories en hun
+submappen koppelt. Wat is de <strong>sleutel</strong> van die
+associatorklasse?<br>
+Zoek ook de associatorklasse die directories koppelt aan een
+logische drive. Bepaal alle instanties van de laatste
+associatorklasse. Wat is de betekenis van de waarde voor de
+<strong>sleutelattributen</strong> voor die instanties?
+<p><a class="popout" href="13.pl">antwoord</a></p>
+</dd>
+</dl>
+<p>Alle associatorklassen hebben een <strong>samengestelde
+sleutel</strong>, opgebouwd uit twee attributen. Elk attribuut
+verwijst naar het absolute objectpad van het object waarnaar
+gerefereerd wordt. Hoe de sleutelattributen genoemd worden is niet
+aan voorwaarden onderworpen: toch hanteert men dikwijls duidelijke
+generische identifiers als
+<em>GroupComponent</em>/<em>PartComponent</em> en
+<em>Antecedent</em>/<em>Dependent</em>.</p>
+<dl class="compact">
+<dt>14.</dt>
+<dd>Wat is er bijzonder aan de verbinding gerealiseerd door de
+associatorklasse <em>Win32_DependentService</em>? Wat stelt de
+verbinding voor&nbsp;? Wat is de betekenis van het extra attribuut?
+Is dit ingevuld voor bepaalde instanties?
+<p><a class="popout" href="14.pl">antwoord</a></p>
+</dd>
+<dt>15.</dt>
+<dd>Er zijn meerdere WMI klassen die de belangrijkste logische en
+fysieke eigenschappen in verband met
+<strong>schijfpartities</strong>&nbsp; beschrijven. Ze zijn ook
+onderling verbonden met associatorklassen.<br>
+Zoek deze klassen en de associatorklassen op en bepaal enkele
+belangrijke attributen van elke WMI klasse.
+<p><a class="popout" href="15.pl">antwoord</a></p>
+</dd>
+<dt>16.</dt>
+<dd>Zoek in <strong>WMI CIM Studio</strong> de
+<strong>Win32</strong>-klasse die een
+<strong>netwerkverbinding</strong> representeert (zoek alle klassen
+die in hun naam <strong>network</strong> bevatten). Elke instantie
+komt overeen met een mogelijke netwerkverbinding.<br>
+Open (met c:\windows\system32\ncpa.cpl) de grafische interface voor
+netwerkverbindingen. Dit lukt enkel als je <strong>ingelogd bent
+als administrator op je PC</strong>. Met
+<em>Properties/Eigenschappen</em> kan je de details van een
+<strong>netwerkverbinding</strong> (bijvoorbeeld van <em>eth0</em>)
+verder bekijken. Via welke attributen van de corresponderende
+<strong>WMI</strong>-object wordt deze informatie ter beschikking
+gesteld&nbsp;? Zoek in de <strong>WMI</strong>-klasse de
+<em>Status</em> van een bepaalde netwerkverbinding.
+<p>Welke associaties zijn er? Zoek de associatorklassen en de
+corresponderende sleutelattributen op.<br>
+Bekijk in het bijzonder de informatie op het
+<em>Resources/Bronnen</em> tabpagina (bekomen na indrukken van de
+<em>Configure</em> ) en de <em>Internet Protocol (TCP/IP)
+Properties</em>. Deze informatie vind je terug in een geassocieerde
+klasse.<br>
+Zoek zoveel mogelijk informatie hierover op in
+WMI&nbsp;CIM&nbsp;Studio.</p>
+<p><a class="popout" href="16.pl">antwoord</a></p>
+</dd>
+<dt>17.</dt>
+<dd>Selecteer in WMI&nbsp;CIM&nbsp;Studio het object dat met de C:
+partitie van de harde schijf overeenstemt.
+<strong>Navigeer</strong> via <em>Associations</em> tabpagina's
+naar het object dat de eigenaar van het bestand
+c:\perl\bin\perl.exe representeert. Vermeld hierbij via welke
+associatorklassen (en de corresponderende sleutelattributen
+hiervan) je telkens gebruik maakt. Welke van die associatorklassen
+representeren recursieve verbindingen&nbsp;?
+<p><a class="popout" href="17.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>WMI Query Language (WQL)</h4>
+Consumers kunnen een specifiek WMI object/klasse opvragen door het
+opgeven van het absolute pad. Een consumer kan echter ook alle
+objecten/klassen opvragen die aan bepaalde criteria voldoen, op een
+analoge manier als in een relationele databankomgeving. De
+<strong>querytaal</strong> die men hierbij moet hanteren, de
+<em>WMI&nbsp;Query&nbsp;Language</em> (<strong>WQL</strong>), is
+gemodelleerd op een gereduceerde vorm van SQL, aangevuld met enkele
+WMI specifieke clausules. WQL ondersteunt <strong>geen
+join</strong> operaties. De syntax van deze beperkte querytaal kan
+je terugvinden in de subtakken van de WMI-documentatie:
+<em>WMI&nbsp;Reference / WMI and SQL / WQL (SQL for WMI)</em>
+<p>Je kan een <strong>WQL query</strong> opvragen in
+WMI&nbsp;CIM&nbsp;Studio met de drukknop in de het rechterpaneel.
+Je kan ook <strong>WbemTest</strong> gebruiken. Na connectie met de
+namespace vraag je een <strong>Query</strong>.</p>
+<h5>Zoek instanties van een bepaalde klasse</h5>
+De eenvoudigste WQL query haalt alle instanties op van één klasse,
+die aan bepaalde voorwaarden voldoen:
+<pre>
+         SELECT * FROM <em>klassenaam</em> [WHERE ...]
+</pre>
+De <strong>FROM clausule</strong> bevat de klassenaam als enig
+argument. Zonder <strong>WHERE clausule</strong> resulteert deze
+WQL query in een lijst met alle instanties van de opgegeven klasse
+(of tot een klasse die ervan afgeleid is). In deze WQL query worden
+alle attributen opgehaald van de objecten die voldoen. Je kan het
+*-teken vervangen door een lijst van attributen
+(<strong>projectie</strong>) maar dat wordt meestal niet gedaan.
+<dl class="compact">
+<dt>18.</dt>
+<dd>Bepaal met een WQL query alle instanties van de klasse
+<em>CIM_LogicalDisk</em>.<br>
+Bepaal ook alle instanties van <em>Win32_OperatingSystem</em>. Merk
+op dat je hier niet moet weten of deze klasse een singleton-klasse
+is.
+<p><a class="popout" href="18.pl">antwoord</a></p>
+</dd>
+</dl>
+Indien er veel objecten voldoen aan de WQL query (vb alle
+directories), dan krijg je problemen. In
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> blokkeert de applicatie,
+in <strong>WbemTest</strong> wordt maar een beperkt aantal objecten
+opgehaald. Je kan dit best oplossen door met een WHERE predicaat de
+lijst zelf te verkleinen.<br>
+In elementaire WHERE predicaten mogen enkel vergelijkingsoperatoren
+(=,!=,&lt;&gt;,&lt;,&lt;=,&gt; of &gt;=), de (NOT) LIKE en de IS
+(NOT) NULL operatoren gebruikt worden. Net zoals in SQL kan men
+eenvoudige predicaten willekeurig samenstellen met behulp van de
+logische operatoren AND, OR en NOT, en met ronde haakjes de
+evaluatievolgorde van predicaten aanpassen. Als de 'waarden' die je
+gebruikt in de WHERE predicaten van het type string zijn
+<strong>moet je ""</strong> of <strong>''</strong> toevoegen.
+Bovendien moet je in de WHERE clausule <strong>alle backslashen
+backslashen</strong>.<br>
+In de SELECT en WHERE clausules mag men <strong>ook
+systeemattributen</strong> opnemen: zo kan men bijvoorbeeld met
+behulp van <em>__CLASS</em> het resultaat beperken tot objecten die
+strikt tot de in de FROM clausule opgegeven klasse behoren, en niet
+tot een klasse die ervan afgeleid is.<br>
+<strong>Let op!</strong> je kan GEEN beperking opleggen op de
+qualifiers van de klasse, enkel op de attributen.
+<dl class="compact">
+<dt>19.</dt>
+<dd>Bepaal alle partities op de computer.<br>
+Bepaal daarna alle opslagelementen (subklassen van
+<em>CIM_StorageExtent</em>) die geen partitie voorstellen.
+<p><a class="popout" href="19.pl">antwoord</a></p>
+</dd>
+<dt>20.</dt>
+<dd>De rootdirectory van de C:partitie is een instantie van
+<em>Win32_Directory</em>. Zonder WQL lukt het niet om alle
+instanties van die klasse te vragen in WMI&nbsp;CIM&nbsp;Studio !
+Je kan natuurlijk eerst de <em>Win32_LogicalDisk</em> ophalen die
+hoort bij de C:-drive, en dan via het <em>Associations</em>
+tabpagina dit object terugvinden.<br>
+Een <strong>WQL-query</strong> is een zinvol alternatief. Met welke
+<strong>WQL-query</strong> kan je de instantie vinden dat de
+root<strong>directory</strong> van de C:partitie voorstelt ?<br>
+Stel ook de <strong>WQL-query</strong> op om de bijhorende
+C:partitie te zoeken. Hoe zijn beide instanties met elkaar
+verbonden?
+<p><a class="popout" href="20.pl">antwoord</a></p>
+</dd>
+<dt>21.</dt>
+<dd>Zoek met een <strong>WQL-query</strong> alle
+<strong>processen</strong> die ofwel minimaal 10 MB geheugenruimte
+innemen, ofwel voldoen aan de 2 voorwaarden: ze hebben meer
+schrijf- dan leesbewerkingen uitgevoerd en ze worden door minstens
+10 threads ondersteund.
+<p><a class="popout" href="21.pl">antwoord</a></p>
+</dd>
+<dt>22.</dt>
+<dd>Zoek eerst in WMI&nbsp;CIM&nbsp;Studio welke WMI klasse kan
+gebruikt worden om een <strong>ping</strong> - opdracht uit te
+voeren. In welk attribuut kan je het ip-adres opgeven, welk
+attribuut bevat informatie over het antwoord van deze request ?<br>
+Stel nu een <strong>WQL query</strong> op die een
+<strong>ping</strong>-opdracht aanvraagt naar het adres
+'google.com' (in de WHERE clausule). Bekijk het antwoord van deze
+<strong>ping request</strong>.
+<p><a class="popout" href="22.pl">antwoord</a></p>
+</dd>
+</dl>
+<h5>Zoek klassen in de CIM repository</h5>
+WQL kan ook gebruikt worden om de klassedefinities in de CIM
+repository op te vragen. Hiermee kan je klassen opzoeken die aan
+bepaalde criteria voldoen. Dergelijke queries worden
+<strong>schemaqueries</strong> genoemd.
+<p>Een schemaquery haalt enkel klassen op uit de namespace waaraan
+je geconnecteerd bent:</p>
+<pre>
+         SELECT * FROM meta_class [WHERE ...]
+</pre>
+Zonder <code>WHERE</code> clausule haal je dus álle klassen op uit
+de namespace waaraan je geconnecteerd bent.<br>
+Als je een schemaquery uitvoert in WbemTest wordt de bovenliggende
+klasse ook getoond in het resultscherm.
+<dl class="compact">
+<dt>23.</dt>
+<dd>Is het mogelijk om met één WQL query alle abstracte klassen op
+te halen ? Is het mogelijk om met één WQL query alle
+associatorklassen op te halen ?
+<p><a class="popout" href="23.pl">antwoord</a></p>
+</dd>
+<dt>24.</dt>
+<dd>Stel telkens een <strong>WQL query</strong> op voor volgende
+resultaatset:
+<ol type="a">
+<li>enkel de <em>CIM_Service</em> klasse,</li>
+<li>alle klassen die onmiddellijk van <em>CIM_Service</em> afgeleid
+zijn (zoek eerst het systeemattribuut dat de bovenliggende klasse
+bevat),</li>
+<li>alle klassen die niet van een andere klasse afgeleid zijn (lukt
+enkel in <strong>WbemTest</strong>)</li>
+</ol>
+<p><a class="popout" href="24.pl">antwoord</a></p>
+</dd>
+</dl>
+In schemaqueries kan je in de WHERE clausule gebruik maken van het
+sleutelwoord <em>__THIS</em> (verwijst naar één klasse in de
+resultaatset), in combinatie met de ISA operator:
+<pre>
+ WHERE __THIS ISA '<em>klassenaam</em>'
+</pre>
+Dit beperkt de lijst tot alle klassen die afgeleid zijn van de
+opgegeven klasse. Ook hier zijn de ' '-tekens (of " "-tekens)
+noodzakelijk.
+<dl class="compact">
+<dt>25.</dt>
+<dd>Bepaal alle klassen die rechtstreeks of onrechtstreeks van
+<em>CIM_Service</em> afgeleid zijn, met uitzondering van zichzelf.
+<p><a class="popout" href="25.pl">antwoord</a></p>
+</dd>
+</dl>
+<h5>Extra mogelijkheden met WQL</h5>
+Omdat WQL geen join-operaties ondersteunt is het niet evident om
+alle objecten op te halen die via
+<strong>associatorklassen</strong> aan een specifieke
+objectinstantie gelinkt zijn.<br>
+Er is wel voorzien in een oplossing hiervoor: vervang de <em>SELECT
+* FROM</em> opdracht door een <em>REFERENCES&nbsp;OF</em> {…} of
+een <em>ASSOCIATORS&nbsp;OF</em> {…} opdracht. Tussen de akkolades
+moet een <strong>relatief objectpad</strong> van een
+<em>doelobject</em> worden opgegeven - zoek het juiste relatief pad
+vooraf op zodat je geen fout krijgt.
+<ul>
+<li><em>REFERENCES&nbsp;OF</em> {…} achterhaalt alle instanties van
+<strong>associatorklassen</strong> die direct of indirect verbonden
+zijn met het <em>doelobject</em></li>
+<li><em>ASSOCIATORS&nbsp;OF</em> {…} bepaalt alle instanties van
+<strong>reguliere klassen</strong> die gelinkt zijn aan het
+<em>doelobject</em>, dus alle <em>eindpunten</em> van de
+associaties.</li>
+</ul>
+Aangezien hier enkel instanties worden opgehaald zal de resultset
+leeg zijn indien je voor het doelobject een klasse opgeeft.
+<p>Vooral de laatste clausule is interessant. We beperken de
+oefeningen dan ook tot deze clausule.<br>
+Zonder <strong>WHERE clausule</strong> (zie verder) levert een
+<em>ASSOCIATORS&nbsp;OF</em> opdracht <strong>alle</strong>
+objecten op, van om het even welke klasse, die via om het even
+welke associatorklasse met het doelobject verbonden zijn. Dit geeft
+een analoog resultaat als de output verkregen met
+WMI&nbsp;CIM&nbsp;Studio in de <em>Associations</em> tabpagina van
+het detailpaneel van het doelobject.</p>
+<p><strong>Let op!</strong> De syntax van dit soort WQL-query's is
+niet helemaal dezelfde als voor de <em>SELECT</em>-clausule. Als
+het objectpad (van het type string) een backslash en " bevat dan
+moet je de backslash backslashen, tenzij je " vervangt door ', dan
+behoud je de enkele backslash (zie volgende voorbeeld)</p>
+<dl class="compact">
+<dt>26.</dt>
+<dd>Alle objecten die geassocieerd zijn met de rootdirectory van de
+C:partitie kan je opvragen in het tabblad <em>Associations</em> van
+het bijhorend object Stel een <strong>WQL query</strong> op die
+hetzelfde overzicht geeft.
+<p><a class="popout" href="26.pl">antwoord</a></p>
+</dd>
+</dl>
+Er kan ook een <em>WHERE</em> clausule worden toegevoegd, maar deze
+heeft een compleet andere bedoeling, en ook een andere syntax! Meer
+informatie in de <em>WMI-documentatie</em>.<br>
+In de <em>WHERE</em> clausule kan je één of meerdere "predicaten"
+toevoegen, die telkens een beperking opleggen aan de resultaten.
+Alle predicaten moeten hierbij simultaan vervuld worden (de AND
+operator wordt impliciet verondersteld, en <strong>mag men niet
+vermelden</strong>). De meest interessante predicaten zijn:
+<ul>
+<li><strong>ClassDefsOnly</strong>: geeft de klasse-definities
+terug, in plaats van de instanties. </li>
+<li><strong>AssocClass =</strong> <em>klassenaam</em>: beperkt het
+resultaat tot objecten die <em>via de vermelde
+associatorklasse</em> met het doelobject verbonden zijn,</li>
+<li><strong>ResultClass =</strong> <em>klassenaam</em>: beperkt het
+resultaat tot <em>eindpunten van de vermelde klasse</em>,</li>
+<li><strong>ResultRole =</strong> <em>sleutelattribuutnaam</em>
+(van een associatorklasse): beperkt het resultaat tot eindpunten
+die via associaties zijn bekomen waarbij in het vermelde
+sleutelattribuut verwezen wordt naar een objectpad van het
+<em>eindpunt</em>,</li>
+<li><strong>Role =</strong> <em>sleutelattribuutnaam</em> (van een
+associatorklasse): beperkt het resultaat tot eindpunten die via
+associaties zijn bekomen waarbij in het vermelde sleutelattribuut
+verwezen wordt naar een objectpad van het <em>doelobject</em>.</li>
+</ul>
+De laatste twee predicaten zijn in het bijzonder nuttig bij
+recursieve associaties.
+<dl class="compact">
+<dt>27.</dt>
+<dd>Pas vorig overzicht aan zodat enkel de geassocieerde
+<strong>klassen</strong> getoond worden in plaats van alle
+instanties.
+<p><a class="popout" href="27.pl">antwoord</a></p>
+</dd>
+<dt>28.</dt>
+<dd>Bepaal in 3 stappen, met opeenvolgende WQL queries, het
+<strong>totaal aantal sectoren</strong> van de schijf van
+<strong>C:\</strong> partitie.<br>
+Vertrek hierbij van de rootdirectory <strong>C:\\</strong> van deze
+partitie, en gebruik onderstaande associaties om tot de gewenste
+attribuut <strong>Totalsectors</strong> te gaan.
+<pre>
+<em>Win32_Directory</em>   (Name="C:\\")
+         \ 
+          | <em>Win32_LogicalDiskRootDirectory</em>
+         / 
+<em>Win32_LogicalDisk</em>   
+         \ 
+          | <em>Win32_LogicalDiskToPartition</em>
+         / 
+<em>Win32_DiskPartition</em> 
+         \ 
+          | <em>Win32_DiskDriveToDiskPartition</em>
+         / 
+<em>Win32_DiskDrive</em>      (<strong>TotalSectors</strong>)
+</pre>
+<p><a class="popout" href="28.pl">antwoord</a></p>
+</dd>
+<dt>29.</dt>
+<dd>Bepaal door opeenvolgende WQL queries het MAC-adres, het
+IP-adres en het interruptnummer dat aan de <strong>eth0</strong>
+kaart is gekoppeld. Zoek zelf de WMI-klassen die deze informatie
+bevatten
+<p><a class="popout" href="29.pl">antwoord</a></p>
+</dd>
+<dt>30.</dt>
+<dd>Beschouw de <strong>map</strong> c:\perl\lib. Aan welke klassen
+is dit object geassocieerd ? Bepaal via WQL queries
+achtereenvolgens:
+<ol type="a">
+<li>alle bestanden in deze map,</li>
+<li>alle submappen van deze map,</li>
+<li>de map waarvan c:\perl\lib een submap is.</li>
+</ol>
+<p><a class="popout" href="30.pl">antwoord</a></p>
+</dd>
+</dl>
+Enkel met de clausule <strong>WHERE schemaonly</strong>, kan je
+voor het argument een klassenaam opgeven in plaats van een
+objectpad van een instantie. Men krijgt dan precies hetzelfde
+resultaat als verkregen met WMI&nbsp;CIM&nbsp;Studio in de
+Associations tabpagina van het detailpaneel van de klasse.
+<dl class="compact">
+<dt>31.</dt>
+<dd>Bepaal alle klassen die kunnen geassociëerd worden aan een
+Directory, zonder rekening te houden met overerving.
+<p><a class="popout" href="31.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Notification queries</h4>
+Voor deze oefeningen moet je inloggen als administrator, met
+volledige rechten.
+<p>Net zoals SNMP ondersteunt WMI niet alleen <strong>externe
+polling</strong>, waarbij de consumer telkens opnieuw het
+initiatief moet nemen, maar ook het equivalent van een
+<em>trap</em> mechanisme: event notification. Het <strong>ideale
+scenario</strong> hier is dat de provider zelf meldt dat een
+gebeurtenis is opgetreden waarin één of andere consumer zich heeft
+<em>geregistreerd</em> (a priori gemeld heeft geïnteresseerd te
+zijn). Dit gebeurt door het creëren van een objectinstantie in één
+van de subklassen van de <em>__Event</em> systeemklasse. Enkel
+wanneer de corresponderende voorwaarden vervuld zijn, wordt de
+consumer geactiveerd om te reageren op het event. Zolang het event
+niet optreedt, hoeven noch de consumers, noch de WMI service
+processortijd te besteden aan het monitoren van de voorwaarden.</p>
+<p>De <strong>registratie</strong> van een event gebeurt met behulp
+van WQL syntax, en wordt een <em>Notification&nbsp;Query</em>
+genoemd. Informatie in verband met
+<em>Notification&nbsp;Queries</em> kan je terugvinden in de
+<em>Using&nbsp;WMI</em> /
+<em>Supporting&nbsp;Tasks&nbsp;for&nbsp;WMI</em> /
+<em>Querying&nbsp;with&nbsp;WQL</em> /
+<em>Receiving&nbsp;Event&nbsp;Notification</em> subtak van de
+WMI-documentatie. Het uittesten ervan kan niet in
+WMI&nbsp;CIM&nbsp;Studio, maar lukt wel in het
+<strong>WbemTest</strong> hulpprogramma: na connectie met een
+namespace, vink je <em>Asynchronous</em> aan in het
+<em>Method&nbsp;Invocation&nbsp;Options</em> vak, druk je op de
+knop <em>Notification&nbsp;Query</em>. Het is nu belangrijk dat je
+een WQL query opgeeft, die een <em>__Event</em>-klasse analyseert.
+Als je een gewone WQL query opgeeft dan resulteert dit in een fout.
+De notification query heeft als basis-syntax</p>
+<pre>
+     SELECT * FROM <em>Eventklasse</em> 
+</pre>
+In <strong>WbemTest</strong> worden alle instanties getoond van de
+gevraagde <em>Eventklasse</em>. In een volgend labo zullen we dan
+zelf een gewenste 'actie' toevoegen.
+<dl class="compact">
+<dt>32.</dt>
+<dd>Er zijn meerdere Eventklassen (subklassen van de
+<em>__Event</em> klasse) waarin events kunnen gegenereerd worden.
+Zoek deze klassen op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong>.<br>
+Met welke gewone WQL query vraag je alle <em>__Event</em> klassen
+van de geconnecteerde namespace op.<br>
+Let op! Dit is een gewone query, en nog geen notification query.
+<p><a class="popout" href="32.pl">antwoord</a></p>
+</dd>
+<dt>33.</dt>
+<dd>Eenvoudig voorbeeld met periodieke events: De klasse
+<em>__TimerEvent</em> wordt gebruikt om <strong>periodieke
+taken</strong> te initialiseren. Je kan periodiek
+<em>__TimerEvent</em> objecten laten aanmaken met behulp van een
+<em>__TimerInstruction</em> object. Creeer in
+WMI&nbsp;CIM&nbsp;Studio, een <em>__IntervalTimerInstruction</em>
+object dat elke minuut een <em>__TimerEvent</em> aanmaakt (opgelet:
+het <em>IntervalBetweenEvents</em> attribuut wordt uitgedrukt in
+milliseconden !) (enkel voor administrator).<br>
+Maak nu in WbemTest een notificaton query die reageert op events
+van de eventklasse <em>__TimerEvent</em>.<br>
+Van zodra een __TimerEvent optreedt, verschijnt een popup venster
+waarin je de oorzaak van het event kan analyseren.
+<p><a class="popout" href="33.pl">antwoord</a></p>
+</dd>
+<dt>34.</dt>
+<dd>Construeer een notification query die een event genereert
+telkens de notepad toepassing <strong>opgestart of
+afgesloten</strong> wordt. Zoek eerst op welk soort object wordt
+aangemaakt/verwijdert bij het opstarten van notepad ?<br>
+Zoek in WMI&nbsp;CIM&nbsp;Studio de juiste subklasse van
+<em>__ExtrinsicEvent</em>.
+<p><a class="popout" href="34.pl">antwoord</a></p>
+</dd>
+</dl>
+Alhoewel in de specificaties voor de ontwikkeling van providers
+aangedrongen wordt op het ondersteunen van deze functionaliteit,
+zijn er momenteel slechts een beperkt aantal providers (ondermeer
+de <em>Event&nbsp;Log</em>, provider) die ook deze <strong>event
+provider functie</strong> implementeren, en specifieke
+__EVENT-klassen voorzien.<br>
+Gelukkig is er hier een generische tussenoplossing, die externe
+polling door de consumers toch kan vermijden. Deze oplossing, die
+het best als <strong>interne polling</strong> kan omschreven
+worden, komt er op neer dat de <strong>WMI service
+periodiek</strong> de toestand van specifieke objecten bij de
+corresponderende providers opvraagt en vergelijkt.
+<p>Het registreren in, en het verwerken van een event is voor een
+consumer nagenoeg eender, of het event gecreeerd werd door een
+event provider, of door interne polling door de WMI service. In de
+<strong>WMI-documentatie</strong> vind je ook extra informatie over
+de eventklassen in de tak <em>WMI Reference</em> / <em>WMI
+Classes</em> / <em>WMI System Classes</em>.<br>
+De meest interessante eventklassen zijn de subklassen van de
+<em>Instance<strong>Operation</strong>Event</em> klasse. Zoek
+volgende klassen op, zowel in de <strong>WMI-documentatie</strong>
+als in <strong>WMI CIM Studio</strong>:</p>
+<ul>
+<li><em>Instance<strong>Creation</strong>Event</em> en
+<em>Instance<strong>Deletion</strong>Event</em>, die
+respectievelijk gecreeerd worden bij creatie of verwijdering van
+een specifiek doelobject. Deze klassen hebben twee interessante
+attributen: <em>TIME_CREATED</em> en <em>TargetInstance</em>. Dit
+laatste attribuut is een <em>embedded</em> object waarvan de
+attributen precies zijn ingevuld met de gegevens van het doelobject
+op het ogenblik van de creatie of de verwijdering ervan.</li>
+<li><em>Instance<strong>Modification</strong>Event</em>, het gevolg
+van specifieke wijzigingen van de attributen van een doelobject. Nu
+is behalve een <em>TargetInstance</em> ook een
+<em>PreviousInstance</em> attribuut beschikbaar. Zowel de
+attributen voor als na de wijziging van het doelobject kunnen
+bijgevolg gerecupereerd worden.</li>
+</ul>
+<br>
+Bij interne polling wordt dus een <strong>snapshot
+techniek</strong> gehanteerd. De voorlaatste en de laatste
+snapshots worden, indien beschikbaar, de <em>PreviousInstance</em>
+en de <em>TargetInstance</em> genoemd. Op basis van de vergelijking
+van de attributen van beide snapshots wordt dan eventueel een
+eventobject (een instantie van een subklasse van <em>__Event</em>)
+gecreëerd.
+<p>Indien van het <strong>interne pollingmechanisme</strong> moet
+gebruik gemaakt worden (in de meeste gevallen !), dan moet de
+<em>pollingperiode</em> (uitgedrukt in seconden) met behulp van de
+<strong>WITHIN … extentie</strong> aan de FROM clausule toegevoegd
+worden. Je kan in WbemTest proefondervinderlijk vaststellen of dit
+nodig is: ontbreekt een noodzakelijke WITHIN … extentie, dan krijg
+je een <em>gepaste</em> foutcode (0x80042002).<br>
+Om overbelasting tegen te gaan zal je best altijd verder
+specifiëren welke klasse de event veroorzaakt. Hiervoor neem je in
+de WHERE clausule minstens één predicaat op die verwijst naar de
+klasse van het doelobject. Welke acties moet je ondernemen om
+events te laten genereren voor:</p>
+<pre>
+      SELECT * FROM __InstanceModificationEvent Within 5
+           WHERE TargetInstance ISA 'Win32_Service'
+</pre>
+Met het <em>TargetInstance</em> attribuut beschik je over het
+doelobject, en kan je met behulp van de <strong>ISA</strong>
+operator de klasse van dit doelobject vergelijken met de gewenste
+klasse (<strong>WHERE TargetInstance ISA
+'<em>Klassenaam</em>'</strong>).<br>
+In andere predikaten van de WHERE clausule wordt meestal ook
+verwezen naar de attributen van de <em>TargetInstance</em>
+snapshot, of van de <em>PreviousInstance</em> snapshot. Dit kan
+door een <em>gequalificeerde</em> syntax (bijvoorbeeld
+<em>TargetInstance</em>.<em>attribuutnaam</em>) te hanteren.
+<p>Indien je te weinig beperkingen oplegt aan de WQL-query kan het
+systeem blokkeren.</p>
+<dl class="compact">
+<dt>35.</dt>
+<dd>Construeer een notification query die een event genereert
+telkens een Windows service zijn <em>Running</em> <strong>toestand
+verliest</strong> (of dit veroorzaakt wordt door de service netjes
+te stoppen, of door het corresponderend proces abrupt af te breken,
+maakt niet uit).
+<p><a class="popout" href="35.pl">antwoord</a></p>
+</dd>
+<dt>36.</dt>
+<dd><br>
+Je kan oefening 34 ook oplossen zonder interne polling, door enkel
+gebruik te maken van de algemene event-klassen. De voorwaarde wordt
+wel iets complexer.
+<p><a class="popout" href="36.pl">antwoord</a></p>
+</dd>
+<dt>37.</dt>
+<dd>Construeer een notification query die een event genereert
+telkens in een specifieke directory (bijvoorbeeld c:\temp)
+<strong>een bestand gecreëerd</strong> wordt. Los deze vraag op
+twee manieren op, telkens vertrekkend van een andere WMI klasse.
+<p><a class="popout" href="37.pl">antwoord</a></p>
+</dd>
+</dl>
+WQL ondersteunt, enkel bij een notification query, de
+<em>GROUP&nbsp;WITHIN</em> clausule, met een aantal optionele
+extenties. <em>GROUP&nbsp;WITHIN</em> wordt gevolgd door een
+<em>tijdsperiode</em>, uitgedrukt in seconden. Indien deze clausule
+gebruikt wordt, veroorzaakt niet elke gebeurtenis die aan de
+voorwaarden voldoet een <em>__Event</em> object. In de plaats
+hiervan wordt per periode <strong>hoogstens één</strong>
+<em>__AggregateEvent</em> object gegenereerd. Dit vermijdt dat het
+systeem overbelast wordt door events die te frequent optreden. De
+periode van de <em>GROUP&nbsp;WITHIN</em> clausule is typisch een
+veelvoud van de periode vermeld in de WITHIN … extentie (voor zover
+die vereist is) van de FROM clausule.<br>
+Het <em>NumberOfEvents</em> attribuut van het
+<em>__AggregateEvent</em> object telt hoeveel gebeurtenissen er
+effectief opgetreden zijn. Het <em>Representative</em> attribuut
+verwijst naar één van deze gebeurtenissen. De informatie in verband
+met de andere gebeurtenissen uit de periode gaat verloren.<br>
+De optionele <strong>BY</strong> extentie, gevolgd door een
+attributenlijst, laat toe om in de periode een
+<em>__AggregateEvent</em> object te genereren voor elke unieke
+combinatie van de attributen in de lijst. De optionele
+<em>HAVING&nbsp;NumberOfEvents</em> … extentie laat toe om
+drempelwaarden op te leggen aan het aantal gebeurtenissen in de
+periode. Worden deze drempelwaarden niet bereikt, dan wordt ook
+geen <em>__AggregateEvent</em> object gecreëerd.
+<dl class="compact">
+<dt>38.</dt>
+<dd>In een specifieke directory (bijvoorbeeld c:\temp) kunnen
+<strong>zowel bestanden als submappen</strong> gecreëerd worden.
+Ontwikkel een notification query die per periode (bijvoorbeeld elke
+minuut) <strong>maximaal twee events</strong> genereert: één event
+groepeert de nieuwe bestanden, een ander event groepeert de nieuwe
+submappen. Bekijk in WbemTest de attributen van het
+<em>__AggregateEvent</em>
+<p><a class="popout" href="38.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Permante eventregistratie</h4>
+In de voorgaande methode kan je enkel zien dat er een
+<em>__Event</em> object wordt aangemaakt. In de volgende labo's zal
+aan een event ook een bepaalde "actie" gekoppeld worden. Er bestaat
+ook een tweede manier, waarbij de gewenste actie wordt opgeslaan in
+een klasse. Hiervoor beschik je over de
+<strong>Eventconsumer</strong>-klassen, die een actie kan
+beschrijven
+<p>Na een standaard WMI installatie worden dikwijls in de
+belangrijkste namespaces een vijftal <strong>configureerbare
+eventconsumers</strong> geregistreerd. Op de labotoestellen is dit
+reeds gebeurd in de root/cimv2 namespace. Zoek in
+WMI&nbsp;CIM&nbsp;Studio de volgende klassen op:</p>
+<ul>
+<li>de <em>LogFileEventConsumer</em> laat toe om detailinformatie
+van een gebeurtenis te loggen in een tekstbestand. Indien voor een
+bestand met een maximale grootte gekozen wordt, dan wordt
+automatisch een systeem toegepast met roterende bestandsnamen (met
+een numerieke suffix).</li>
+<li>de <em>NTEventLogEventConsumer</em> doet net hetzelfde, maar
+gebruikt de EventLog van Windows in plaats van een
+tekstbestand.</li>
+<li>de <em>SMTPEventConsumer</em> laat toe om na een specifieke
+gebeurtenis een volledig configureerbare email te sturen.</li>
+<li>de <em>CommandLineEventConsumer</em> kan een gebeurtenis laten
+volgen door de uitvoering van een willekeurig programma,
+geparametriseerd door detailattributen van de gebeurtenis, die
+bijvoorbeeld als argumenten bij de uitvoeringsopdracht van het
+programma kunnen worden meegegeven.</li>
+<li>de <em>ActiveScriptEventConsumer</em> kan bij een specifieke
+gebeurtenis een script laten uitvoeren, bijvoorbeeld een WMI
+consumerscript. In het kader van deze labo's ligt de keuze voor
+PerlScript als programmeertaal voor de hand.</li>
+</ul>
+Om eventueel ook thuis deze <em>EventConsumer-klassen</em> te
+registreren heb je de bestanden <a href=
+"scrcons.mof">scrcons.mof</a>, <a href=
+"smtpcons.mof">smtpcons.mof</a> en <a href=
+"wbemcons.mof">wbemcons.mof</a> nodig (voer in Vista of Windows
+Server 2008 eerst een download uit van deze bestanden, ter
+vervanging van de in de directory \WINDOWS\system32\wbem standaard
+geïnstalleerde bestanden). Zorg ervoor dat de oude bestanden worden
+overschrijven - indien dit niet lukt dan moet je de
+toegangseigenschappen aanpassen (zie theorie). Je voert éénmalig de
+volgende commando's uit (als administrator):
+<pre>
+   mofcomp scrcons.mof
+   mofcomp smtpcons.mof
+   mofcomp wbemcons.mof
+</pre>
+Meer gedetailleerde informatie over deze klassen vind je terug in
+de <em>WMI&nbsp;Reference</em> / <em>WMI&nbsp;Classes</em> /
+<em>Standard&nbsp;Consumer&nbsp;Classes</em> subtak van de
+<strong>WMI-documentatie</strong>. De eerste vier consumers uit de
+verzameling laten toe om, louter met behulp van
+WMI&nbsp;CIM&nbsp;Studio, te reageren op interessante
+gebeurtenissen. Aangezien de configuratie van deze eventconsumers
+gebeurt op basis van instanties van <em>statische klassen</em>,
+wordt deze <strong>permanent in de CIM repository</strong>
+opgeslagen, en moet ze dan ook maar éénmalig gebeuren. De
+eventconsumers worden geactiveerd van zodra de WMI service
+opgestart wordt. Na herbooten van het toestel moet er dan ook geen
+enkele extra handeling gebeuren. Deze eenvoudige vorm van
+<strong>permanente eventregistratie</strong> kan in de praktijk
+instaan voor een groot deel van beheersaspecten waarvoor een event
+mechanisme aangewezen is. In principe is het ook mogelijk om zelf
+meer specifieke consumers te ontwikkelen, die men vervolgens op een
+analoge manier kan gebruiken. Het ontwikkelen van een dergelijke
+consumer kan echter niet in een scripttaal, en heeft een
+moeilijkgraad die te hoog is voor deze labo's.
+<p>Om één van de hierboven vermelde standaard eventconsumers in
+WMI&nbsp;CIM&nbsp;Studio te configureren moeten <strong>drie
+objecten</strong> worden gemaakt:</p>
+<p style="text-align: center"><img src=
+"PermanenteEventRegistratie.GIF" height="120" width="450"></p>
+Er zijn twee objecten, die aan elkaar gekoppeld worden met een
+associator:
+<ol>
+<li><em>__EventFilter</em> object: hierin formuleer je de
+<strong>oorzaken</strong> die tot een event leiden. Naast het
+sleutelattribuut, moeten twee attributen worden ingesteld:
+<em>QueryLanguage</em> wordt ingevuld met <strong>WQL</strong> en
+<em>Query</em> wordt ingevuld met de WQL code van een notification
+query. Dit is dus een notification query die permanent wordt
+opgeslaan in een <em>__EventFilter</em> object. Het is aangeraden
+om deWQL query <strong>voorafgaand uit te testen</strong>,
+bijvoorbeeld met behulp van WbemTest.<br>
+Net als bij <strong>Notification queries</strong> zal automatisch
+een eventobject (<em>__Event</em> of <em>__AggregateEvent</em>)
+worden gemaakt telkens als het event optreedt. De attributen
+(<em>TargetInstance</em>, <em>__SERVER</em>,
+<em>NumberOfEvents</em>, <em>Representative</em>, ... ) van het
+eventobject bevatten de relevante informatie van het event.</li>
+<li><em>__EventConsumer</em> object : beschrijft de
+<strong>reactie</strong> die je wenst op een event. Dit is een
+abstracte klasse, je moet verder kiezen :
+<em>LogFileEventConsumer</em>, <em>NTEventLogEventConsumer</em>,
+<em>SMTPEventConsumer</em>, <em>CommandLineEventConsumer</em> of
+<em>ActiveScriptEventConsumer</em> object. Afhankelijk van de
+specifieke <em>__EventConsumer</em> klasse die gekozen werd,
+initialiseer je de reactie met behulp van de specifieke attributen.
+Voor een <em>CommandLineEventConsumer</em> bijvoorbeeld is het
+<em>CommandLineTemplate</em> attribuut (de uit te voeren opdracht,
+inclusief argument) essentiëel, terwijl men bij een
+<em>SMTPEventConsumer</em> doorgaans minimaal de <em>ToLine</em>,
+<em>FromLine</em>, <em>Subject</em>, <em>Message</em> en
+<em>SMTPServer</em> argumenten invult.</li>
+<li><em>__FilterToConsumerBinding</em> associatorobject :
+realiseert de <strong>koppeling</strong> van het
+<em>__EventFilter</em> object aan het <em>__EventConsumer</em>
+object. Je vult enkel de 2 sleutelattributen <em>Filter</em> en
+<em>Consumer</em> in met de juiste referentie naar de objecten die
+je in de twee eerste stappen hebt aangemaakt. Aangezien
+associatorklassen <strong>veel-op-veel verbindingen</strong>
+representeren, kan één event meerdere reacties teweegbrengen.
+Anderzijds kan men dezelfde consumer configureren als reactie op
+een aantal diverse bronnen. Handig hierbij is dat, indien een
+templatestring in de consumerinstantie verwijst naar een attribuut
+dat voor het optredende event niet van toepassing is, dit geen
+aanleiding geeft tot een fout. De template wordt in die situatie
+vervangen door een lege string.</li>
+</ol>
+Je moet deze drie objecten aanmaken, en ervoor zorgen dat de
+sleutelattributen de juiste inhoud hebben. Bovendien moet je een
+aantal attributen instellen die de gewenste actie zinvol maken.
+<dl class="compact">
+<dt>39.</dt>
+<dd>De eenvoudigste toepassing van het permanente
+eventregistratiemechanisme is het uitvoeren van <strong>periodieke
+taken</strong>. We vertrekken van het <em>__TimerInstruction</em>
+object uit oefening 33 en bepalen nu de reactie de we wensen voor
+events van de klasse <em>__TimerEvent</em>.<br>
+De gewenste reactie is dat <strong>periodiek</strong> (elke minuut
+dus) de SNMP service <strong>opnieuw gestart</strong> wordt. Je kan
+dit realiseren via de commandline-opdracht
+<nobr><strong>net&nbsp;start&nbsp;snmp</strong></nobr> (volledige
+pad opgeven voor de opdracht). Indien de SNMP service reeds actief
+is, dan heeft een dergelijke opdracht geen enkel effect (behalve
+een onnodige belasting). Indien de SNMP service echter om één of
+andere reden niet actief zou zijn, dan wordt op die manier
+periodiek gepoogd dit te corrigeren.<br>
+De opdracht die je vraagt wordt opgestart in <em>embedded
+mode</em>, en kan je dus nooit "zien".
+<p><a class="popout" href="39.pl">antwoord</a></p>
+</dd>
+<dt>40.</dt>
+<dd>Maak de permanente eventregistratie opnieuw ongedaan, van zodra
+deze met goed gevolg werd uitgetest.
+<p><a class="popout" href="40.pl">antwoord</a></p>
+</dd>
+</dl>
+Om meer complexe reacties te beschijven moet het
+<em>EventConsumer</em>object kunnen <strong>beschikken over de
+actuele informatie</strong> van het eventobject dat aan de oorzaak
+ligt van het event. Enkel bij de <em>ActiveScriptEventConsumer</em>
+gebeurt dit op een manier die afwijkend is als voor de andere
+eventconsumers. Dit zal pas in de volgende reeks besproken worden.
+Niet alle attributen van een <em>EventConsumer</em>klasse kunnen
+deze actuele informatie verwerken. Dit kan enkel indien de
+<em>Template</em> attribuutqualifier op <em>True</em> ingesteld
+staat. Bij het invullen van die attributen kan je
+<strong>templates</strong> toevoegen als deelstring. Deze templates
+verwijzen, tussen %-tekens, naar de attributen van het bijhorende
+eventobject. Enkele voorbeelden: %<em>__SERVER</em>%,
+%<em>NumberOfEvents</em>%, %<em>TargetInstance.Name</em>% en
+%<em>Representative.TargetInstance.Name</em>%. Telkens de consumer
+op een event reageert, wordt de template deelstring vervangen door
+de relevante informatie.
+<dl class="compact">
+<dt>41.</dt>
+<dd>Configureer de permanente eventregistratie die er voor zorgt
+dat er een <strong>email</strong> gestuurd wordt naar jezelf en
+naar de labobegeleiders, telkens je ofwel notepad, ofwel de
+calculator toepassing <strong>opstart</strong>. In het subject van
+de email moet verwezen worden naar zowel de naam van toepassing,
+als naar het labotoestel. Zoek hiervoor op welke attributen er in
+de EventConsumerklasse zijn waarvoor je <em>Templates</em> kan
+opgeven. Vervolgens moet het proces <strong>abrupt
+afgebroken</strong> worden. Om dit te doen, kan je gebruik maken
+van de opdracht <strong>taskkil&nbsp;/f&nbsp;/pid</strong>, met als
+argument het ProcessID dat ingevuld werd in het eventobject.<br>
+Indien het niet direct lukt, kan je eventueel zien wat er fout
+ging, door in de <strong>Logboeken</strong> te zoeken naar
+mogelijke fouten (in SysteemBeheer)
+<p>Maak de permanente eventregistratie opnieuw ongedaan, van zodra
+deze met goed gevolg werd uitgetest (in ieder geval ook voor het
+einde van de labosessie).</p>
+<p><a class="popout" href="41.pl">antwoord</a></p>
+</dd>
+</dl>
+
+        <div id="page-content-end"></div>
+    </div>
+    <div id="footer">    <div id="metadata">
+    Laatst gewijzigd
+            op
+        22-10-2013
+        om
+        13:53
+        
+                door
+                    <a href="mailto:Joris.Moreau@UGent.be">Joris Moreau</a>
+                
+        
+    </div>
+<div id="tag">intranetr/0.10.0</div>
+<div id="footer-end"></div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+<!-- 189 ms / 908 KB -->

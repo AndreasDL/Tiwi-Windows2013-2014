@@ -1,0 +1,48 @@
+#include <windows.h>
+#include <stdio.h>
+#include <winldap.h>
+
+void main( ){
+    PLDAP pldapSession;
+    PLDAPMessage plmsgSearchResponse;
+    PLDAPMessage plmsgEntry;
+    PCHAR pszDN;
+    PCHAR* ppszDomainDN = NULL;
+
+    pldapSession = ldap_init( NULL, LDAP_PORT );
+    ldap_bind_s( pldapSession, NULL, NULL, LDAP_AUTH_NEGOTIATE );
+
+    ldap_search_s ( pldapSession,
+                    NULL,
+                    LDAP_SCOPE_BASE,
+                    NULL,
+                    NULL,
+                    FALSE,
+                    &plmsgSearchResponse );
+
+    ppszDomainDN = ldap_get_values( pldapSession, plmsgSearchResponse, "defaultNamingContext");
+
+    printf("Listing objects at %s.\nPress CTRL+C to interrupt.\n", *ppszDomainDN);
+
+    ldap_search_s ( pldapSession,
+                    *ppszDomainDN,
+                    LDAP_SCOPE_ONELEVEL,
+                    NULL,
+                    NULL,
+                    FALSE,
+                    &plmsgSearchResponse );
+
+    plmsgEntry = ldap_first_entry( pldapSession, plmsgSearchResponse );
+
+    while ( plmsgEntry ) {
+        pszDN = ldap_get_dn ( pldapSession, plmsgEntry );
+        printf("%s\n", pszDN);
+        plmsgEntry = ldap_next_entry( pldapSession, plmsgEntry );
+        }
+
+    ldap_msgfree( plmsgSearchResponse );
+    ldap_value_free ( ppszDomainDN );
+    ldap_unbind( pldapSession );
+}
+
+

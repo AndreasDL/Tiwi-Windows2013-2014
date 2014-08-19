@@ -1,0 +1,17 @@
+Set objAgent = CreateObject("Agent.Control.2")
+
+objAgent.Connected = True
+objAgent.Characters.Load "Merlin"
+
+With objAgent.Characters("Merlin")
+	.Show
+	.Speak "COM just looks like magic."
+	.Play "DoMagic2"
+	.Speak "Now let's learn about Automation and Binding!"
+	.Play "Reading"
+	WScript.Sleep 17000
+	.Stop
+	.Hide
+	WScript.Sleep 5000
+End With
+

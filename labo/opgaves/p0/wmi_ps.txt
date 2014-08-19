@@ -1,0 +1,6 @@
+Set objService = GetObject("winmgmts:")
+
+For each process in objService.InstancesOf("Win32_process")
+   WScript.Echo process.Name & vbTab & process.processid
+Next
+

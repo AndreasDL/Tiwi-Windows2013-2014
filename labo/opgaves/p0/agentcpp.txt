@@ -1,0 +1,56 @@
+#include <comdef.h>				// C++ compiler COM support
+#include "AgtSvr.h"				// Microsoft Agent support
+#include "AgtSvr_i.c"				// Microsoft Agent class and interface IDs
+
+int APIENTRY WinMain(HINSTANCE hInstance,
+                     HINSTANCE hPrevInstance,
+                     LPSTR     lpCmdLine,
+                     int       nCmdShow)
+{
+	HRESULT				hResult;
+	_variant_t			varPath;
+	_bstr_t				bstrSpeak;
+	_bstr_t				bstrPlay;
+	long				lCharID;
+	long				lRequestID;
+	IAgentEx		   *pAgentEx;
+	IAgentCharacterEx  *pCharacterEx = NULL;
+
+	CoInitialize(NULL);
+	hResult = CoCreateInstance(	CLSID_AgentServer,
+								NULL,
+								CLSCTX_SERVER,
+								IID_IAgentEx,
+								(LPVOID *)&pAgentEx);
+	if ( SUCCEEDED( hResult ) )
+		{
+		varPath = "merlin.acs";
+		hResult = pAgentEx->Load( varPath, &lCharID, &lRequestID );
+		if ( SUCCEEDED( hResult ) )
+			{
+			pAgentEx->GetCharacterEx( lCharID, &pCharacterEx );
+			pCharacterEx->Show( FALSE, &lRequestID );
+			bstrSpeak = "COM just looks like magic.";
+			pCharacterEx->Speak( bstrSpeak, NULL, &lRequestID );
+			bstrPlay = "DoMagic2";
+			pCharacterEx->Play( bstrPlay, &lRequestID );
+			bstrSpeak = "Now let's learn about Automation and Binding!";
+			pCharacterEx->Speak( bstrSpeak, NULL, &lRequestID );
+			bstrPlay = "Reading";
+			hResult = pCharacterEx->Play( bstrPlay, &lRequestID );
+			Sleep(17000);
+			hResult = pCharacterEx->Stop( lRequestID );
+			hResult = pCharacterEx->Hide( FALSE, &lRequestID );
+			Sleep( 5000 );
+			}
+		}
+	if ( pCharacterEx )
+		{
+		pCharacterEx->Release();
+		pAgentEx->Unload( lCharID );
+		}
+	if ( pAgentEx )
+		pAgentEx->Release();
+	CoUninitialize();
+	return 0;
+}

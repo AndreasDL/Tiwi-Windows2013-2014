@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content="intranetr/0.10.0">
+<title>Perl - herhaling | iii intranet</title>    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../css/default.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../css/sites/default.css">
+    <script type="text/javascript" src="../../js/cache/0d6197553acf19ea859c96f7caf7d8fa6c6519b8.js?0.10.0"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css">
+<![endif]-->
+    <script type="text/javascript">
+    (function() {
+        var month = 8;
+        iii.semester = month == 1 ? 1
+            : month <= 6 ? 2
+            : month <= 9 ? 0 : 1;
+        if (iii.semester > 0) {
+            var hideOtherSemester = function() {
+                var other = iii.semester == 1 ? 2 : 1;
+                $('#breadcrumbs li.group-sem'
+                        + other
+                        + ':not(.group-sem'
+                        + iii.semester + '):not(.active)')
+                    .hide();
+            };
+            $(document)
+                .ready(hideOtherSemester)
+                .on("contentUpdate.iii", hideOtherSemester);
+        }
+    })();
+    </script>
+</head>
+
+<body>
+    <div id="header"><h1>
+    <a href="../../index.html" title="Naar de thuispagina">
+        intranet
+    </a>
+</h1>
+</div>
+<div id="main">    <div id="node-children">
+    <ul>
+            <li><a href="index.html"><span style="float: right">&#8593;</span>Omhoog</a></li>
+            </ul>
+    </div>
+
+<div id="content" class="">
+        <div id="breadcrumbs-container">
+    <span id="you-are-here">Je bent hier:</span>
+    <ul id="breadcrumbs">
+                            <li class="breadcrumb first"><a href="../../index.html" class="breadcrumb first">Intranet</a>
+                </li>
+                            <li class="breadcrumb"><a href="../index.html" class="breadcrumb">Windows</a>
+                    <ul class="breadcrumb-siblings">
+                                                <li class="separator"><span>Tweede bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../Besturingssystemen-I/index.html">Besturingssystemen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../Computernetwerken-I/index.html">Computernetwerken I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Informatica-II/index.html">Informatica II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../Softwareontwikkeling-I/index.html">Softwareontwikkeling 1</a></li>
+                                                                <li class="separator"><span>Derde bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../Algoritmen-I/index.html">Algoritmen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2 leaf"><a class="breadcrumb-sibling group-sem2 leaf" href="../../Computergrafiek/index.html">Computergrafiek</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Computernetwerken-II/index.html">Computernetwerken II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../Computernetwerken-III/index.html">Computernetwerken III</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Databanken/index.html">Databanken</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Design-Patterns/index.html">Design Patterns</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2"><a class="breadcrumb-sibling group-sem1 group-sem2" href="../../Hardware/index.html">Hardware</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../OGP/index.html">OGP</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../Systeemanalyse-I/index.html">Systeemanalyse I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../UNIX/index.html">UNIX</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Beveiliging/index.html">Beveiliging</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../Computernetwerken-IV/index.html">Computernetwerken IV</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2 leaf"><a class="breadcrumb-sibling group-sem1 group-sem2 leaf" href="../../Masterproef/index.html">Masterproef</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../Systeemanalyse-II/index.html">Systeemanalyse II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 active"><a class="breadcrumb-sibling group-sem1 active" href="../index.html">Windows</a></li>
+                                                                <li class="separator"><span>Algemeen</span></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Activiteiten/index.html">Activiteiten</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Huisregels-labos/index.html">Huisregels voor labo&#039;s</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Opleiding-Informatica/index.html">Opleiding Informatica GTI</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Andere-problemen/index.html">Probleemoplossende instanties</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling"><a class="breadcrumb-sibling" href="../../Roosters/index.html">Roosters</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="index.html" class="breadcrumb">Labo</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling active"><a class="breadcrumb-sibling active" href="index.html">Labo</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../Theorie/index.html">Theorie</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="perl_herhaling.html" class="breadcrumb">Perl - herhaling</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p0.1">Reeks 0</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p1.1">Reeks 1</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p2.1">Reeks 2</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p3.1">Reeks 3</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p4.1">Reeks 4</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p5.1">Reeks 5</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p6.1">Reeks 6</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p7.1">Reeks 7</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="p8.1">Reeks 8</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf active current"><a class="breadcrumb-sibling leaf active current" href="perl_herhaling.html">Perl - herhaling</a></li>
+                                        </ul>
+                </li>
+        </ul>
+    </div>
+    <h2>Perl - herhaling</h2>
+    <div id="page-content">
+        <p>De labotoestellen werden geïnstalleerd met volgende <a href=
+"https://intranet.tiwi.ugent.be/UNIX/Labo/perl-5.10.0-31.fc9.i386.rpm">Linux versie</a>,
+<a href=
+"https://intranet.tiwi.ugent.be/UNIX/Labo/ActivePerl-5.12.1.1201-MSWin32-x86-292674.msi">Windows
+versie</a> en <a href="../../UNIX/Labo/perldoc-html.zip">Perldoc
+documentatie</a>, die je kan openen met een link op de Desktop.</p>
+<p>We verwijzen in deze samenvatting naar de <em>ActivePerl User
+Guide</em>.<br>
+Om commentaar toe te voegen gebruik je <code>#</code></p>
+<h3>Locale en globale variabelen</h3>
+Perl kent geen type, maar interpreteert zelf de inhoud bij
+toekenning. Het is ook niet noodzakelijk om de variabelen te
+declareren. Perl voorziet wel twee mogelijkheden om variabelen te
+declareren : <code>my</code> en <code>our</code>. (Daarnaast
+bestaat het sleutelwoord <code>local</code> dat ongeveer dezelfde
+functionaliteit heeft als <code>my</code> - zie <em>perlsub</em>
+voor details over de verschillen).<br>
+Het verschil tussen <code>my/our</code> kan je best uittesten met
+een functie. Gebruik <code>my/our</code> om in de functie
+<code>$param</code> te declararen in onderstaand voorbeeld.
+<pre>
+$param=3;
+print "Voor sub - param=$param\n";
+doe();
+print "Na sub - param=$param\n";
+
+sub doe{
+   $param="gewijzigd";
+   print "In sub - param=$param\n";
+}
+</pre>
+Omdat je niet verplicht bent om variabelen te declareren kan het
+heel lastig zijn om domme typfouten in een variabelenaam op te
+sporen. Als je de regel <code>use strict;</code> toevoegt, dan ben
+je wel verplicht om alle variabelen te declareren.
+<h3>Zelfgeschreven functies/procedures (<em>perlsub /
+perlfunc</em>)</h3>
+Vorig voorbeeld toont reeds hoe je een procedure gebruikt zonder
+argumenten. Met argumenten wordt de aanroep :
+<code>doe(par1,par2,par3)</code>. In de functie/procedure worden de
+argumenten niet beschreven. Je gebruikt hiervoor de
+argumenten-array <code>@_</code>. Een aantal mogelijkheden :
+<pre>
+   $n=scalar(@_);  #aantal argumenten
+   
+   $first=shift(@_);  #eerste argument wordt uit de argumentenlijst gehaald.
+
+   ($key, $value) = @_; #twee volgende argumenten worden in lokale variabelen gestopt
+   
+   foreach $arg (@_) {  #zie verder 
+        #verwerk $arg 
+   } 
+</pre>
+Een functiewaarde geven gebeurt met het sleutelwoord
+<code>return</code>. Je kan ook heel eenvoudig een array of een
+hash als functiewaarde gebruiken.<br>
+Je kan de functies/procedures in een apart bestand opslaan, en
+inladen. Hiervoor moet het bestand met de functies/procedures
+eindigen met de regel <code>return 1;</code> (na alle functies).
+Het inladen van een bestand gebeurt met <code>require
+'<em>bestandsnaam</em>';</code>
+<p>Je kan ook aan het perl-programma argumenten meegeven (bij de
+aanroep). In de code gebruik je de array <code>@ARGV</code> om deze
+argumenten te overlopen, met analoge mogelijkheden als hiervoor
+beschreven. Controle op het toevoegen van argumenten :</p>
+<pre>
+   @ARGV &gt;= 1 || die "Geef minstens 1 argument bij het aanroepen van dit programma !\n";
+</pre>
+<h3>Variabelen : wat kan je meer ? (<em>perldata</em>)</h3>
+Gewone variabelen kan je op een bijzondere manier manipuleren zoals
+in onderstaand voorbeeld :
+<pre>
+   $naam="Jan";
+   $veld="naam";
+   $$veld="Piet";
+   print $naam; 
+</pre>
+Je kan 3 verschillende soorten variabelen gebruiken, met elk een
+speciaal symbool :
+<table border="1" align="center">
+<tr>
+<td width="7%" align="center"><code>$</code></td>
+<td>scalair</td>
+<td>bevatten 1 waarde</td>
+<td>vb. <code>$naam</code></td>
+</tr>
+<tr>
+<td align="center"><code>@</code></td>
+<td>array of tabel</td>
+<td>bevatten meerdere waarden</td>
+<td>vb. <code>@dagen</code></td>
+</tr>
+<tr>
+<td align="center"><code>%</code></td>
+<td>hash / associatieve array</td>
+<td>bevat meerdere koppels (sleutel-waarde paren)</td>
+<td>vb. <code>%f</code></td>
+</tr>
+</table>
+<p>Hieronder een beperkt overzicht van basis-bewerkingen op een
+array en een hash</p>
+<table border="1">
+<tr>
+<th>&nbsp;</th>
+<th>array</th>
+<th>hash</th>
+</tr>
+<tr>
+<td>initialiseren<br>
+(<em>List value constructors</em> )</td>
+<td>
+<pre>
+@dagen = ('za', 'zo', 'ma');
+@dagen = ("za", "zo", "ma");
+@dagen = qw (za zo ma di woe do vr);
+</pre></td>
+<td>
+<pre>
+%f = ( "a"=&gt;"Athena",
+       "b"=&gt;"Belgrado",
+       "c"=&gt;"Cairo" );
+</pre></td>
+</tr>
+<tr>
+<td>Alle waarden printen<br>
+(overlopen is analoog)</td>
+<td>
+<pre>
+print @dagen;
+
+#of
+foreach $dag (@dagen){ print "$dag \t";}
+
+#of nog
+print join(",",@dagen);
+</pre></td>
+<td>
+<pre>
+#gebruik de array's 
+@sleutels=keys %f;     
+@values=values %f;
+
+#of nog
+while (($key,$value)=each(%f)){ 
+   print "$key - $value \n";
+}
+</pre></td>
+</tr>
+<tr>
+<td>Eén waarde -&gt; gebruik <code>$</code> (en niet
+<code>@,%</code>)</td>
+<td>
+<pre>
+$dagen[0]
+</pre></td>
+<td>
+<pre>
+$f{"a"}
+</pre></td>
+</tr>
+<tr>
+<td>Aantal -&gt; index van laatste waarde</td>
+<td>
+<pre>
+$n=$#dagen;
+#of
+$n=scalar(@dagen);
+</pre></td>
+<td>
+<pre>
+$n=scalar(keys %f);
+</pre></td>
+</tr>
+<tr>
+<td>Een waarde toevoegen</td>
+<td>
+<pre>
+push @dagen, "di";
+</pre></td>
+<td>
+<pre>
+$f{"d"}="Gent";
+</pre></td>
+</tr>
+<tr>
+<td>Functie toepassen</td>
+<td>
+<pre>
+@res = map{verdubbel(verdubbel($_))} @dagen;
+
+sub verdubbel{
+  my $prop=shift;
+  return $prop.$prop;
+}
+</pre></td>
+<td>
+<pre>
+%f = ( "Athena"=&gt;20,
+       "Belgrado"=&gt;300,
+       "Cairo"=&gt;120 );
+
+foreach (sort {$f{$a}&lt; $f{$b}} keys %f){
+    printf ("%15s : %4d\n",$_,$f{$_});
+  }   
+</pre></td>
+</tr>
+<tr>
+<td>Opsplitsen (<em>Slices</em>)</td>
+<td>
+<pre>
+($first,$last) = @dagen[0,6];           
+ @week         = @dagen[2..6];
+($eerste)=@dagen;  #neemt een kopie van het eerste element 
+($eerste)=shift(@dagen); #verwijdert ook het eerste element uit de array
+</pre></td>
+<td>
+<pre>
+($stad1,$stad2)  = @f{"a", "b"};
+@array = @f{"c","a"}; 
+</pre></td>
+</tr>
+</table>
+<h3>Context</h3>
+Perl kent twee belangrijke contexten: <strong>scalar</strong> en
+<strong>list</strong>. Bewerkingen en functies reageren
+verschillend op beide contexten. Een paar voorbeelden met de array
+<p style="text-align: center">@dagen = qw (za zo ma di woe do
+vr);</p>
+<table border="1">
+<tr>
+<th>Voorbeeld</th>
+<th>context in het linkerlid</th>
+<th>Verklaring</th>
+</tr>
+<tr>
+<td>$v = @dagen;</td>
+<td><strong>scalar context</strong></td>
+<td>$v krijgt als waarde 7 (aantal elementen in de array)</td>
+</tr>
+<tr>
+<td>($w) = @dagen;</td>
+<td><strong>list context</strong> maar slechts 1 element</td>
+<td>$w krijgt als waarde het "za" - eerste element van de array
+@dagen</td>
+</tr>
+<tr>
+<td><nobr>$x = qw (za zo ma di woe do vr);</nobr></td>
+<td><strong>scalar context</strong></td>
+<td>De inhoud van $x krijgt achtereenvolgens alle waarden van de
+"list", en zal finaal als inhoud "vr" hebben.</td>
+</tr>
+</table>
+<h3>Syntax (zie <em>perlsyn</em>)</h3>
+In de manual vind je een uitgebreide beschrijving van <code>while,
+for, until- lussen, if-else, switch,...</code>. We vermelden een
+aantal speciale mogelijkheden, die handig kunnen zijn.
+<ul>
+<li><em>Conditionele uitdrukking</em> : verkorte vorm van if-else
+<pre>
+$n=0; #wijzig deze inhoud
+print ($n ? $n : "geen waarden");
+</pre></li>
+<li><em>Foreach - loop</em> : heel handig om snel een array of een
+reeks waarden te overlopen
+<pre>
+foreach (1..10){$som += $_;} # elke waarde 1..10 komt in de default variabele $_ 
+</pre></li>
+<li><em>Switch operator</em> : enkel beschikbaar nadat je de regel
+<code>use feature "switch";</code> &nbsp;toevoegt.
+<pre>
+use feature "switch";
+
+given($foo) {
+        when (undef) {
+            print '$foo is undefined';
+        }
+        when ("foo") {
+            print '$foo is the string "foo"';
+        }
+        when (/^A/) {
+            print '$foo begint met A';
+        }
+        when ([1,3,5,7,9]) {
+            print '$foo is an odd digit';
+            continue; #Niet uit de switch gaan
+        }
+        when ($_ &lt; 100) {
+            print '$foo is numerically less than 100';
+        }        
+        default {
+            die q(I don't know what to do with $foo);
+        }
+    }
+</pre></li>
+</ul>
+<h3>Speciale operatoren (zie <em>perlop</em>)</h3>
+<ul>
+<li>Strings samenvoegen met <code>.</code> (zie <em>Additive
+Operators</em>)
+<pre>
+     $naam=$voornaam . "  " . $achternaam;
+</pre></li>
+<li>De rest bepalen met <code>%</code> , een gehele deling van
+<em>integers</em> met <code>/</code> (zie <em>Multiplicative
+Operators</em> )</li>
+<li>Verschil tussen numerieke vergelijkingen en tekstuele
+vergelijkingen (<em>Relational Operators</em> en <em>Equality
+Operators</em>)
+<table border="1" align="center">
+<tr>
+<td></td>
+<th>numeriek</th>
+<th>tekst</th>
+</tr>
+<tr>
+<td>kleiner / groter</td>
+<td align="center">&lt;&nbsp; &nbsp; &nbsp; &nbsp;&gt;</td>
+<td align="center"><code>lt &nbsp;&nbsp;gt</code></td>
+</tr>
+<tr>
+<td>kleiner of gelijk / groter of gelijk</td>
+<td align="center">&lt;=&nbsp; &nbsp; &nbsp; &nbsp;&gt;=</td>
+<td align="center"><code>le &nbsp;&nbsp;ge</code></td>
+</tr>
+<tr>
+<td>gelijk / verschillend</td>
+<td align="center">= =&nbsp; &nbsp; &nbsp; &nbsp;! =</td>
+<td align="center"><code>eq &nbsp;&nbsp;ne</code></td>
+</tr>
+<tr>
+<td>vergelijk (resulteert in -1, 0, -1)</td>
+<td align="center">&lt;=&gt;</td>
+<td align="center"><code>cmp</code></td>
+</tr>
+</table>
+</li>
+<li>Bit per bit vergelijken met (<em>Bitwise And</em> / <em>Bitwise
+Or and Exclusive Or</em> ) : <code>&amp; &nbsp;&nbsp; |&nbsp;&nbsp;
+^</code></li>
+<li>Opsomming van getallen of lettertekens (<em>Range operator</em>
+)
+<pre>
+@hexwaarden=(0 .. 9, 'A' .. 'F');      #bevat de 16 hexadecimale tekens in juiste volgorde
+$num=11;
+$hexdigit = $hexwaarden[$num &amp; 15];    #bepaalt het laatste hexadicimale teken in $num
+</pre></li>
+<li>Logische operatoren (<em>C-style Logical And</em> / <em>C-style
+Logical Or</em> ) : <code>&amp;&amp; &nbsp;&nbsp; ||</code><br>
+Hiervoor kan je ook gebruik maken van <code>or</code> -
+<code>and</code>
+<pre>
+$n &lt; 5 || print "$n is te groot";
+$a &lt; $b &amp;&amp; print "$a is kleiner dan $b";
+</pre></li>
+</ul>
+<h3>Referenties gebruiken in perl (zie <em>perlreftut</em>)</h3>
+Om complexere data-structuren eenvoudig te beheren wordt heel
+dikwijls gebruik gemaakt van <strong>referenties</strong>, te
+vergelijken met pointers. Een <strong>referentie</strong> is een
+gewone variabele (met <code>$</code> gedeclareerd) die een
+verwijzing (referentie) bevat naar een scalar, een array, een hash,
+...<br>
+Ook indien een object wordt toegekend aan een variabele, bevat de
+variabele een referentie naar dit object. De syntax om attributen
+van objecten aan te spreken vertoont dan ook veel gelijkenis met
+het opvragen van informatie uit een referentie naar een hash.
+<p>Hieronder een kort overzicht</p>
+<table border="1">
+<tr>
+<th>&nbsp;</th>
+<th>referentie naar array</th>
+<th>referentie naar hash</th>
+</tr>
+<tr>
+<td>referentie maken met <code>\</code></td>
+<td><code>$aref = \@dagen;</code></td>
+<td><code>$href = \%f;</code></td>
+</tr>
+<tr>
+<td>type opvragen met <code>ref</code></td>
+<td><code>ref $aref</code></td>
+<td><code>ref $href</code></td>
+</tr>
+<tr>
+<td>initaliseren (andere haken gebruiken)</td>
+<td><code>$aref=['za', 'zo', 'ma'];</code></td>
+<td>
+<pre>
+
+$href = { "a"=&gt;"Athena",
+         "b"=&gt;"Belgrado",
+         "c"=&gt;"Cairo" };
+</pre></td>
+</tr>
+<tr>
+<td>derefereren : <code>{ }</code> en teken voor het type
+variabele</td>
+<td><code>@ndagen=@{$aref};</code></td>
+<td><code>%nff=%{$href};</code></td>
+</tr>
+<tr>
+<td>Eén waarde</td>
+<td><code>${$aref}[0]</code></td>
+<td><code>${$href}{"a"}</code></td>
+</tr>
+<tr>
+<td>Eén waarde : korte notatie</td>
+<td><code>$aref-&gt;[0]</code></td>
+<td><code>$href-&gt;{"a"}</code></td>
+</tr>
+</table>
+<p><strong>Voorbeeld 1. &nbsp;</strong>Gebruik de functie
+<strong>ref</strong> om informatie op te halen van een referentie.
+Voorspel de uitvoer van onderstaand voorbeels</p>
+<pre>
+$color = "darkblue";                 #scalar variabele
+@colors = qw(blue, red, yellow, brown);   #array
+%colors = (c1 =&gt; "blue", c2 =&gt; "green", c3 =&gt; "yellow"); #hash
+
+print ref $color,"\n";
+print ref \$color,"\n";
+print ref @colors,"\n";
+print ref \@colors,"\n";
+print ref %colors,"\n";
+print ref \%colors,"\n";
+</pre>
+<p><strong>Voorbeeld 2. &nbsp;</strong> Het is belangrijk dat je de
+syntax kent om deze referentievariabelen te gebruiken. Bekijk
+hiervoor onderstaand voorbeeld. Alhoewel je de pijl
+<code>-&gt;</code> dikwijls ook kan weglaten, lukt dit niet steeds
+bij objectreferenties. Je kan dus beter altijd de pijl gebruiken
+bij referentievariabelen.</p>
+<pre>
+    print "\n-------- ARRAYS -------------";
+    print "\n1) ARRAY-variabele  \nmy \@y;";
+    my @y;
+    $y[0]=0;
+    $y[4]=10;
+    print "\nlaatste index: ",$#y;
+    print "\naantal inhouden=", scalar(@y);
+    print "\naparte inhouden ",$y[0],"...",$y[4];
+    print "\nalle inhouden : ",join(",",@y);    
+    print "\n-------------------------------------";
+    print "\n2) REF naar ARRAY-variabele \nmy \$x=\\\@y; ";
+    my $x=\@y;
+    print "\nlaatste index: ",$#{$x};
+    print "\naantal inhouden=", scalar(@{$x});
+    print "\naparte inhouden ",$x-&gt;[0],"...",$x-&gt;[4];
+    print "\nalle inhouden : ",join(",",@{$x});
+    
+     
+    print "\n\n-------- HASHES --------------------";
+    print "\n1) HASH-variabele  \nmy \%f;";
+    my %f;
+    $f{0}=0;
+    $f{4}=10;    
+    print "\naantal keys : ",scalar (keys %f);
+    print "\naparte inhouden ",$f{0},"...",$f{4};
+    print "\nalle inhouden : ",join(",",values %f);
+    print "\n-------------------------------------";
+    print "\n2) REF naar HASH-variabele \nmy \$g=\\\%f;"; 
+    my $g=\%f;
+    print "\naantal keys : ",scalar (keys %{$g});
+    print "\naparte inhouden ",$g-&gt;{0},"...",$g-&gt;{4};
+    print "\nalle inhouden : ",join(",",values %{$g});
+    print "\n--------------------------------------";
+</pre>
+<strong>Voorbeeld 3. &nbsp;</strong> Met behulp van referenties kan
+je eenvoudig een tweedimensionele array maken. Bekijk het voorbeeld
+in <em>perlreftut</em>. Onderstaand voorbeeld manupuleert een
+tweedimensionale eenheidmatrix matrix.
+<pre>
+    my $mat;
+    my $n=5;
+    for( my  $i=0;$i&lt;$n;$i++){
+      for( my  $j=0;$j&lt;$n;$j++){
+          $mat-&gt;[$i][$j]=($i == $j ? 1 : 0);
+      }
+    }
+    #uitschrijven element per element
+    for( my  $i=0;$i&lt;$n;$i++){
+      for( my  $j=0;$j&lt;$n;$j++){
+          print $mat-&gt;[$i][$j]," ";
+      }
+      print "\n";
+    }
+    
+    #uitschrijven rij per rij : elke rij is referentie naar een array
+    foreach $rij (@{$mat}){
+        print "\n",join(" ",@{$rij});
+    }
+
+</pre>
+<h3>Reguliere expressies (zie <em>perlreref</em>)</h3>
+We bespreken kort een aantal mogelijkheden :
+<ul>
+<li>Controleer of de inhoud van een variabele voldoet aan een
+reguliere expressie :
+<pre>
+if ($getal =~ /regexp/)
+if ($getal !~ /regexp/)    #negatie hiervan
+
+if ($getal =~ /$regexp/)   #de reguliere expressie zit in een variabele vb. $regexp="[a-z]+";
+if ($getal =~ /^START\s*(.*?)\s*^END/gm ) #speciale mogelijkheden voor ^ en $ indien meerdere regels
+</pre></li>
+<li>Vervang in een variabele de string die voldoet aan een
+reguliere expressie door ... met
+<code>s/regexp/vervangstring/</code> . Wordt uitgevoerd op de
+huidige inhoud <code>$_</code>. Heeft meerdere opties (zie manual)
+en kan gecombineerd wordenen met <code>=~</code>
+<pre>
+$var=~s/[a-z]/./g; #vervangt elke kleine letter in $var door een punt
+
+#of eerste de reguliere expressie in een variabele opslaan
+$regexp="[a-z]";
+$var=~s/$regexp/./g; 
+</pre></li>
+<li>Gebruik van subreguliere expressies met <code>\1,\2,...</code>
+<pre>
+@getallen=qw ( 23 3f4 4 2222 34 4444 335 423 333 424);
+foreach (@getallen){
+   if (/^([0-9])\1*$/){print "$_\t" ;}
+ }
+</pre></li>
+<li>Vervang een deel van een string, beschreven door subreguliere
+expressies, met <code>s{}{}</code> (geen spaties toevoegen):
+<pre>
+$var="123abc989kat";
+$var=~s<strong>{</strong>([0-9]+)([a-z]+)<strong>}{</strong>\2\1<strong>}</strong>g;  #omwisselen van getallen en tekst
+</pre></li>
+<li>Variabelen invullen door deelstrings te beschrijven met een
+reguliere expressie. Onderstaand voorbeeld splitst een datum op in
+dag,maand en jaar:
+<pre>
+$date="12/01/2007";
+($dd, $mm, $yyyy) = ($date =~ m{([0-9]+)/([0-9]+)/([0-9]+)}); 
+($dd, $mm, $yyyy) = ($date =~ m{(\d+)/(\d+)/(\d+)});  #gebruikt \d ipv [0-9]
+</pre></li>
+<li>Filteren van gegevens met behulp van een reguliere expressie.
+Je gebruikt een subreguliere expressie om de gegevens die je wilt
+filteren te beschrijven. Vergeet de optie <code>g</code> niet zodat
+alle gegevens bepaald worden. Onderstaand voorbeeld haalt alle
+getallen op uit de gegeven variabele :
+<pre>
+$var="123 abc 989kat333tt";
+@getallen=($var =~ /([0-9]+)/g);
+</pre></li>
+<li>Vergangen van een variabelenaam door zijn inhoud :
+<pre>
+# tekst vervangen door inhoud van variabele 
+$AGE=20;
+$text = 'I am $AGE years old';      # note single quotes
+$text =~ s/\$(\w+)/${$1}/g;         # $1 bevat de naam van de variabele
+</pre></li>
+</ul>
+<h3>Interessante functies (zie <em>perlfunc</em>)</h3>
+Vraag in de documentatie een overzicht <em>Perl Functions by
+Category</em> om snel iets op te zoeken. Indien geen argumenten
+worden opgegeven wordt voor de meeste functie de default variable
+<code>$_</code> verwerkt.
+<p>We geven hier een paar interessante functies :</p>
+<ul>
+<li><em>Stringfuncties</em> : <code>uc</code> ,
+<code>length</code>, <code>chomp</code>,
+<code>substr(variabele,start,aantal),...</code>
+<pre>
+$getal=substr("zoek 772 woorden",5,3); #haalt de deelstring 772 op
+$extentie=substr($filenaam,-3);        #haalt de drie laatste tekens op uit de variabele
+chomp($zin);                           #Verwijder in een string alle whitespace die zich vooraan of achteraan bevindt.
+</pre></li>
+<li><em>Array manipuleren</em> : <code>join</code>,
+<code>sort</code>, <code>reverse</code> , <code>qw</code>
+<pre>
+$result = join(' ', @dagen);
+$result = join("\t", values %f);  #waarden van de hash is een array
+
+@result = sort @array;              #sorteert alfabetisch
+@result = sort {$b cmp $a} @array;  #sorteert alfabetisch, omgekeerde volgorde
+
+@result = sort {$a &lt;=&gt; $b} @array;  #sorteert numeriek
+@result = sort {$b &lt;=&gt; $a} @array;  #sorteert omgekeerd op numerieke waarden
+</pre></li>
+<li><em>Regular expressions</em> : we bespreken enkel
+<code>split</code> waarmee je een variabele kan opsplitsen in een
+array met behulp van een string (<code>" "</code>) of een reguliere
+expressie (<code>/ /</code>), die de delimiter beschrijft. Bekijk
+de verschillen en gelijkenissen tussen volgende voorbeelde, :
+<pre>
+@letters=split("",$zin); 
+@letters=split(//,$zin); 
+
+@woorden=split(" ",$zin);
+@woorden=split(/ /,$zin);
+@woorden=split(/ +/,$zin); 
+
+@woorden=split(/[^a-zA-Z]+/,$zin); #elk woord gescheiden door tekens die geen letter voorstellen
+</pre>
+Je kan dit combineren met een <em>slice</em> :
+<pre>
+($name,$voornaam)=split(/ +/,$zin);
+</pre></li>
+<li><em>Nieuwe lists maken</em> : met de functie <code>map</code>
+kan je heel snel en efficiënt een nieuwe array of hash maken.
+Bekijk onderstaand voorbeeld :
+<pre>
+   @gemeenten=qw [9420Aaigem 8511Aalbeke 9300AALST 9880AALTER 3200AARSCHOT 8700Aarsele 8211Aartrijke 2630AARTSELAAR 
+                  4557Abée 4280Abolens 3930Achel 5590Achêne 5362Achet 4219Acosse 6280Acoz 9991Adegem 8660Adinkerke 
+                  1790AFFLIGEM 9051Afsnee 5544Agimont 4317Aineffe 5310Aische-en-Refail 6250Aiseau 6250AISEAU-PRESLES 
+                  5070Aisemont 3570ALKEN 5550Alle 4432Alleur 1652Alsemberg 8690ALVERINGEM 4540AMAY 6680Amberloup 
+                  4770AMBLEVE 6953Ambly 4219Ambresin 4770AMEL 6997Amonines 7750Amougies 4540Ampsin 5300ANDENNE 
+                  1070ANDERLECHT 6150ANDERLUES 4821Andrimont ];
+
+   @postnummers = map{substr($_,0,4)} @gemeenten;
+
+   %h=map{substr($_,0,4),substr($_,4)}@gemeenten;
+</pre></li>
+</ul>
+<h3>Inlezen van toetsenbord</h3>
+Standaard wordt lijn per lijn ingelezen, je kan dit wijzigen met de
+variabele <code>$/</code>. Het inlezen zelf geef je de naam op van
+het bestand waaruit je wilt inlezen, eventueel <code>STDIN</code>
+<pre>
+   print "geef een woord";
+   $/=" ";  #andere delimiter
+   $lijn=&lt;STDIN&gt;;
+</pre>
+<p><strong>Voorbeeld 4. &nbsp;</strong>Lees een bestand in, en
+bepaal voor alle woorden het aantal keer dat ze voorkomen (niet
+hoofdletter-gevoelig). Schrijf alle woorden die voorkomen uit in
+alfabetische volgorde. Daarna schrijf je ze uit in dalende
+frequentie.</p>
+<pre>
+    local $/; #geen delimiter
+    open my $fh, "gegevens" ;
+    my @arr=split(/[^a-zA-Z]+/,&lt;$fh&gt;);
+    
+    foreach (@arr){
+        $index{lc($_)}++;
+    }
+    
+    print "Alfabetisch :\n\n";
+    print join("\t", sort {lc($a) cmp lc($b)} keys %index);
+    
+    print "\n---------------------\nVolgens aantal keer dat ze voorkomen :\n\n";
+    print join ("\t", sort { $index{$b} &lt;=&gt; $index{$a} } keys %index);
+
+</pre>
+        <div id="page-content-end"></div>
+    </div>
+    <div id="footer">    <div id="metadata">
+    Laatst gewijzigd
+            op
+        26-09-2012
+        om
+        09:59
+        
+                door
+                    <a href="mailto:Marleen.Denert@UGent.be">Marleen Denert</a>
+                
+        
+    </div>
+<div id="tag">intranetr/0.10.0</div>
+<div id="footer-end"></div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+<!-- 103 ms / 599 KB -->

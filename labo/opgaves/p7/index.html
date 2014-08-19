@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content="intranetr/0.10.0">
+<title>Reeks 7 | iii intranet</title>    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/default.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/sites/default.css">
+    <script type="text/javascript" src="../../../js/cache/0d6197553acf19ea859c96f7caf7d8fa6c6519b8.js?0.10.0"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css">
+<![endif]-->
+    <script type="text/javascript">
+    (function() {
+        var month = 8;
+        iii.semester = month == 1 ? 1
+            : month <= 6 ? 2
+            : month <= 9 ? 0 : 1;
+        if (iii.semester > 0) {
+            var hideOtherSemester = function() {
+                var other = iii.semester == 1 ? 2 : 1;
+                $('#breadcrumbs li.group-sem'
+                        + other
+                        + ':not(.group-sem'
+                        + iii.semester + '):not(.active)')
+                    .hide();
+            };
+            $(document)
+                .ready(hideOtherSemester)
+                .on("contentUpdate.iii", hideOtherSemester);
+        }
+    })();
+    </script>
+</head>
+
+<body>
+    <div id="header"><h1>
+    <a href="../../../index.html" title="Naar de thuispagina">
+        intranet
+    </a>
+</h1>
+</div>
+<div id="main">    <div id="node-children">
+    <ul>
+            <li><a href="../index.html"><span style="float: right">&#8593;</span>Omhoog</a></li>
+            </ul>
+    </div>
+
+<div id="content" class="">
+        <div id="breadcrumbs-container">
+    <span id="you-are-here">Je bent hier:</span>
+    <ul id="breadcrumbs">
+                            <li class="breadcrumb first"><a href="../../../index.html" class="breadcrumb first">Intranet</a>
+                </li>
+                            <li class="breadcrumb"><a href="../../index.html" class="breadcrumb">Windows</a>
+                    <ul class="breadcrumb-siblings">
+                                                <li class="separator"><span>Tweede bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Besturingssystemen-I/index.html">Besturingssystemen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Computernetwerken-I/index.html">Computernetwerken I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Informatica-II/index.html">Informatica II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Softwareontwikkeling-I/index.html">Softwareontwikkeling 1</a></li>
+                                                                <li class="separator"><span>Derde bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Algoritmen-I/index.html">Algoritmen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2 leaf"><a class="breadcrumb-sibling group-sem2 leaf" href="../../../Computergrafiek/index.html">Computergrafiek</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-II/index.html">Computernetwerken II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Computernetwerken-III/index.html">Computernetwerken III</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Databanken/index.html">Databanken</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Design-Patterns/index.html">Design Patterns</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2"><a class="breadcrumb-sibling group-sem1 group-sem2" href="../../../Hardware/index.html">Hardware</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../OGP/index.html">OGP</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-I/index.html">Systeemanalyse I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../UNIX/index.html">UNIX</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Beveiliging/index.html">Beveiliging</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-IV/index.html">Computernetwerken IV</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2 leaf"><a class="breadcrumb-sibling group-sem1 group-sem2 leaf" href="../../../Masterproef/index.html">Masterproef</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-II/index.html">Systeemanalyse II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 active"><a class="breadcrumb-sibling group-sem1 active" href="../../index.html">Windows</a></li>
+                                                                <li class="separator"><span>Algemeen</span></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Activiteiten/index.html">Activiteiten</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Huisregels-labos/index.html">Huisregels voor labo&#039;s</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Opleiding-Informatica/index.html">Opleiding Informatica GTI</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Andere-problemen/index.html">Probleemoplossende instanties</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling"><a class="breadcrumb-sibling" href="../../../Roosters/index.html">Roosters</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../index.html" class="breadcrumb">Labo</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling active"><a class="breadcrumb-sibling active" href="../index.html">Labo</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Theorie/index.html">Theorie</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../p7.1" class="breadcrumb">Reeks 7</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p0.1">Reeks 0</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p1.1">Reeks 1</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p2.1">Reeks 2</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p3.1">Reeks 3</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p4.1">Reeks 4</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p5.1">Reeks 5</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p6.1">Reeks 6</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf active current"><a class="breadcrumb-sibling leaf active current" href="../p7.1">Reeks 7</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p8.1">Reeks 8</a></li>
+                                        </ul>
+                </li>
+        </ul>
+    </div>
+    <h2>Reeks 7</h2>
+    <div id="page-content">
+        <h3>opzoeken van Active Directory objecten</h3>
+<p>In de vorige reeks, oefening 10 werd het commando
+<strong>dsquery</strong> toegelicht, waarmee je snel objecten in
+het domein kan opzoeken. Met de <strong>dsquery *</strong> versie
+kan je voor alle objecten in een container ook één, meerdere of
+alle LDAP-attributen opvragen. Bekijk de output van het
+commando</p>
+<pre>
+dsquery * ^
+ "OU=3IN,OU=Studenten,OU=iii,DC=iii,DC=hogent,DC=be"^
+ -attr name mail
+</pre>
+In deze reeks leer je <strong>ADO objecten</strong> in een script
+aanroepen om analoge en meer uitgebreide zoekopdrachten aan te
+vragen met behulp van een <strong>LDAP-query</strong>.
+<p>In de <strong>MSDN Library</strong> vind je specifieke
+informatie over deze zoek-methode vind je in een derde tak van
+<strong>Active Directory</strong> , nl.</p>
+<ul>
+<li>de tak <nobr><em>Directory Access Technologies</em></nobr> /
+<em><nobr>Active Directory Service Interfaces</nobr></em> /
+<em><nobr>Using Active Directory Service Interfaces</nobr></em> /
+<nobr><em>Searching Active Directory</em></nobr>, we refereren
+hiernaar met <strong><nobr>AD Search Library</nobr></strong>.</li>
+</ul>
+Het <strong>ADO Object Model</strong> dat gebruikt wordt, is verder
+toegelicht in de tak <em><nobr>Win32 and COM
+Development</nobr></em> / <em><nobr>Data Access and
+Storage</nobr></em> / <em><nobr>Windows Data Access Components
+SDK</nobr></em> / <em><nobr>Microsoft ActiveX Data Objects
+(ADO)</nobr></em> / <em><nobr>ADO Programmer's
+Reference</nobr></em> / <em><nobr>ADO API Reference</nobr></em> /
+<em><nobr>ADO Object Model</nobr></em>
+<dl class="compact">
+<dt>1.</dt>
+<dd>&nbsp;<strong><em>IDirectorySearch vs.
+ADO/OLE&nbsp;DB</em></strong>
+<p>Om in de AD&nbsp;tree objecten te vinden die aan bepaalde
+eigenschappen voldoen, onafhankelijk van de container waarin ze
+zich bevinden, zou men zoals in de vorige reeks, recursief alle
+containers kunnen aflopen, en hierin telkens met behulp van de
+IADsContainer interface de gezochte objecten <em>enumereren</em>.
+Uiteraard is deze oplossing <strong>weinig efficiënt,</strong> noch
+voor de server, noch voor de cliënt. Een andere beperking van de
+IADsContainer interface ligt in het feit dat men enkel kan filteren
+op basis van het objectClass attribuut.</p>
+<p>ADSI implementeert een <strong>IDirectorySearch</strong>
+interface, die voor beide problemen een betere oplossing aanbiedt:
+men kan hierbij een <strong>LDAP-query string</strong> specifiëren,
+met syntax gelijkaardig aan SQL, en in één enkele operatie de
+verzameling objecten (in deze context meestal
+<strong>records</strong> genoemd) bekomen die aan de zoekcriteria
+voldoen. Het <a class="popout" href=
+"../p6/LDAPEnumTop.txt">voorbeeld in §6.1</a> maakt trouwens van
+deze interface gebruik. Het volledige opzoekwerk wordt hier
+<strong>door de domeincontroller</strong> uitgevoerd. Helaas
+ondersteunt de IDirectorySearch interface <strong>geen
+automation</strong> cliënts, en kan hij bijgevolg niet aangesproken
+worden vanuit scriptomgevingen.</p>
+<p>Gelukkig bieden <strong>ActiveX Data Objects (ADO)</strong> en
+<strong>OLE DB for Microsoft Directory Services
+(OLE&nbsp;DB)</strong> componenten, <a class="popout" href=
+"../p6/adp0303.gif">bovenop de ADSI architectuur</a>, een interface
+die het mogelijk maakt om Active Directory aan te spreken, net
+zoals een andere (relationele) databank. <a class="popout" href=
+"../p6/adp0501.gif">OLE&nbsp;DB</a> zorgt voor de eigenlijke
+database interface boven Active Directory, en maakt hierbij zelf
+gebruik van de <a class="popout" href=
+"../p6/adp0501.gif">IDirectorySearch</a> interface, terwijl de
+<a class="popout" href="../p6/adp0501.gif">ADO</a> laag automation
+implementeert. Hierdoor wordt aan scriptomgevingen een
+functionaliteit aangeboden die volledig analoog is aan die van de
+IDirectorySearch interface. De ADO/OLE&nbsp;DB interface is in de
+huidige versie <strong>read-only</strong>: je kan ermee Active
+Directory data enkel raadplegen en filteren, niet wijzigen. Dit is
+geen groot probleem: je kan via een ADO query de DN van de objecten
+achterhalen, en vervolgens de objecten die moeten gewijzigd worden,
+<em>binden</em> met behulp van de DN in het ADsPath.</p>
+<p>De volgende vier oefeningen beschrijven stap voor stap aan men
+vanuit WSH gebruik kan maken van de ADO/OLE&nbsp;DB interface. De
+voorbeelden vormen samen één enkel script. Dit script gaat op zoek
+naar alle <strong>kleuren</strong>printers in het iii.hogent.be
+domein (in dit domein zijn meer dan 2750 verschillende printers
+geïnstalleerd&nbsp;!) die <strong>recto-verso</strong> afdrukken
+ondersteunen.</p>
+</dd>
+<dt>2.</dt>
+<dd>&nbsp;<strong><em>Initialisatie van de ADO
+objecten</em></strong>
+<p>Het eerste deel van een script dat van de ADO/OLE&nbsp;DB
+interface gebruik wilt maken, kan beschouwd worden als een vaste
+<em>header</em>, identiek voor alle dergelijke scripts. Het
+<strong>ADO Object Model</strong> omschrijft verschillende
+objecten, waarvan er twee "exposed" zijn met respectievelijk
+<strong>ADODB.Connection</strong> en <strong>ADODB.Command</strong>
+als ProgID. Dit vind je terug in <strong>AD Search Library</strong>
+in de subtak <nobr><em>Query Interfaces</em></nobr> /
+<nobr><em>Searching with ActiveX Data Objects (ADO)</em></nobr>.
+Beide objecten moeten vóór het uitvoeren van de LDAP-query correct
+geïnitialiseerd worden.</p>
+<ul>
+<li>Het <strong>ADO Connection</strong> object stelt een verbinding
+voor tussen het cliënt programma (het script), en de databank
+(Active Directory). Het <strong>Provider</strong> attribuut van het
+ADO Connection object moet hierdoor verwijzen naar de OLE DB for
+Microsoft Directory Services provider, waarvan <a class="popout"
+href="../p6/adp0501.gif">ADsDSOObject</a> de programmatorische naam
+is. Je moet het ADO Connection Object steeds expliciet openen met
+de methode <strong>open</strong> (dit is soms vergeten in de
+voorbeelden in de MSDN Library !!)<br>
+Het ADO Connection object kan ook aangesproken worden om
+verbindingen te leggen met de databank, <strong>in een andere
+gebruikerscontext</strong> dan die van de ingelogde gebruiker. Dit
+heb je nodig om van buiten het domein (bijvoorbeeld thuis) gegevens
+op te kunnen vragen over het domein <strong>iii.hogent.be</strong>.
+Hiervoor gebruik je de <strong>Properties</strong> collectie (van
+het ADO object model), dat met behulp van naam-waarde paren drie
+instellingen <nobr>(<em>"User ID"</em></nobr> <em>,
+<nobr>"Password"</nobr> , <nobr>"Encrypt
+Password"</nobr></em><nobr>)</nobr> kan toevoegen.  Alvorens het
+ADO Connection Object te openen stel je de juiste waarden in voor
+deze drie properties.</li>
+<li>Het <strong>ADO Command</strong> object moet via zijn
+<strong>ActiveConnection</strong> attribuut geassocieerd worden aan
+het pas geopende <strong>ADO Connection</strong> object.<br>
+In het <strong>ADO Command</strong> object wordt het
+<strong>CommandText</strong> attribuut ingevuld met de
+<strong><em>LDAP-querystring</em></strong> en de opties van de LDAP
+search (zie § 3). Het object kan 11 opties instellen met behulp van
+de <strong>Properties</strong> collection.Eén ervan, de
+paginagrootte of <strong>Page Size</strong>, kan je best steeds
+specifiëren. Met de paginagrootte wordt aangegeven uit hoeveel
+records de blokken (pagina's) bestaan die tussen server en cliënt
+uitgewisseld worden. Het feit dat er gepagineerd wordt, en
+bijgevolg ook de specifieke waarde van de paginagrootte is
+transparant voor het cliënt script. Indien je echter de
+paginagrootte niet instelt, wordt geen gebruik gemaakt van
+paginabuffering, en beperkt de server als randeffect het aantal
+records tot 1000. Je kan overigens zelf het aantal gevonden records
+moedwillig beperken, door instellen van de <strong>Size
+Limit</strong> optie.<br>
+Een andere interessante optie <strong>Sort On</strong> kan een
+sorteervolgorde opleggen aan de resultaten.<br>
+Tenzij de attributen, waarop gesorteerd moet worden, geïndexeerd
+zijn, wordt sorteren pas uitgevoerd nadat de volledige verzameling
+records is opgespoord. Er kan niet gesorteerd worden op het
+attribuut <em>distinguishedName</em>.<br>
+<strong>Active Directory ondersteunt enkel het sorteren op één
+attribuut.</strong></li>
+</ul>
+Gebruik <code>Win32::OLE-&gt;LastError()</code> om na te gaan of de
+initialisatie gelukt is.
+<p>Zoek uit hoe het in PowerShell werkt.</p>
+<p><a class="popout" href="02.pl">voorbeeld</a></p>
+</dd>
+<dt>3.</dt>
+<dd>&nbsp;<strong><em>LDAP-querystring</em></strong>
+<p>De eigenlijke informatie over de zoekopdracht bestaat uit
+<strong>vier delen : Waar ? Welke criteria ? Wat ? Hoe diep
+?</strong>.<br></p>
+<table>
+<tr>
+<td width="60%" valign="top">&nbsp;<br>
+Je kan vanuit tools zoals <strong>AdsiEdit</strong> analoge
+zoekopdrachten aanvragen. Klik hiertoe met de rechtermuisknop in
+het linkerpaneel op de domeingegevens, schema of
+configuratiegegevens container, en selecteer <strong>New
+Query</strong>. De gegevens die moeten worden ingevuld komen
+overeen met de informatie in de <strong>LDAP-querystring</strong>
+<ul>
+<li><strong>Waar ?</strong> wordt bepaald door de basis-container
+in <em>Root of Search</em></li>
+<li><strong>Welke criteria ?</strong> wordt bepaald in de <em>Query
+string</em></li>
+<li><strong>Wat ?</strong> wordt niet opgegeven - je haalt steeds
+het volledige object op - met alle attributen</li>
+<li><strong>Hoe diep ?</strong> wordt vastgelegd in <em>Query
+Scope</em></li>
+</ul>
+</td>
+<td><img src="AdsiEdit_query.JPG" height="220" width="220"></td>
+</tr>
+</table>
+<p>In je script moet alle informatie voor de zoekopdracht, worden
+doorgegeven in <strong>één</strong> "querystring". Het <strong>ADO
+Command</strong> object beschikt over het
+<strong>Commandtext</strong> attribuut dat deze
+<strong>querystring</strong> bevat. Bovendien moet je in de
+querystring opgeven welke <strong>Ldap-attributen</strong> je wenst
+op te halen. De querystring kan in twee verschillende dialecten
+gecodeerd worden: <strong>SQL</strong> of <strong>LDAP</strong>. In
+de voorbeelden van de MSDN Library kunnen beide dialecten
+voorkomen. De SQL vorm kent helaas een aantal vervelende
+beperkingen, waardoor we in deze labo's kiezen voor de LDAP syntax.
+Indien je vanuit&nbsp;C rechtstreeks de IDirectorySearch of zelfs
+de LDAP&nbsp;API zou aanspreken, heb je trouwens geen keuze: daar
+is het LDAP dialect de enige mogelijkheid. Alhoewel op zich
+beperkter in mogelijkheden dan SQL, laat de LDAP syntax alle
+opzoekingen toe die door Active Directory ondersteund worden.</p>
+<p>De <strong>LDAP-querystring</strong> is samengesteld uit
+<strong>vier deelstrings</strong>, in de juiste volgorde en van
+elkaar gescheiden door een kommapunt&nbsp;(<strong>;</strong>):</p>
+<p style="text-align: center">
+<strong>&lt;&nbsp;</strong><em>base</em><strong>&nbsp;&gt; ;
+(&nbsp;</strong> <em>filter</em> <strong>&nbsp;) ;</strong>
+<em>attributes</em> <strong>;</strong> <em>scope</em></p>
+We bespreken de vier deelstrings in de volgorde van voorkomen:
+<ol>
+<li><strong>Waar ? <em>search base</em></strong><br>
+Tussen <strong>&lt;</strong>- en <strong>&gt;</strong>-haakjes
+staat de <strong>moniker</strong> string die <strong>verwijst naar
+het startpunt van de zoekopdracht</strong>. Meestal is dit een
+containerobject, dikwijls de root van de domeingegevens of de
+schemacontainer. Zowel LDAP als GC kunnen als provider opgegeven
+worden. Indien je niet ingelogd bent in het domein, moet je hier
+ook het domein opgeven (zie reeks6, §1-2 ).<br>
+<br></li>
+<li><strong>Welk criteria ? <em>search filter</em></strong><br>
+Tussen <strong>ronde haakjes</strong> wordt het volledige
+<strong>criteria voor de zoekopdracht</strong> opgegeven. Dit is de
+meest complexe component van de LDAP-querystring. Een aantal
+voorbeelden van filters wordt toegelicht in de sectie <em>Search
+Filter Syntax</em> van de <strong>AD Search Library</strong> . (Je
+kan deze informatie ook vinden in de <strong>AD Library</strong>,
+subtak <nobr><em>Active Directory Domain Services</em></nobr> /
+<em><nobr>Using Active Directory Domain Services</nobr></em>
+/<nobr><em>Searching in Active Directory Domain
+Services</em></nobr> / <em>Creating a Query Filter</em>.)
+<p>We vatten hier het belangrijkste samen :</p>
+<ul>
+<li>Het criterium is opgebouwd uit 1 of meerdere
+<em>&lt;filter&gt;</em> strings, met volgende syntax:
+<table border="0" align="center">
+<tr>
+<td width="5%">&nbsp;</td>
+<td><tt>( <em>&lt;LDAP
+attribuut&gt;</em><em>&lt;operator&gt;</em><em>&lt;waarde&gt;</em>
+)</tt></td>
+</tr>
+</table>
+Het <em>&lt;LDAP attribuut&gt;</em> hierin mag men zowel laten
+identificeren door zijn <em>ldapDisplayName</em> als door zijn
+<strong>X.500 Object Identifier</strong> (<em>attributeID</em>).
+Het specifiëren van ADSI attributen is hier niet mogelijk. De
+<em>&lt;&nbsp;&gt;</em> tekens worden overal weggelaten ! De filter
+zelf moet tussen <strong>(&nbsp;)</strong>-tekens staan !</li>
+<li>De keuzemogelijkheden voor de <em>&lt;operator&gt;</em> zijn
+zeer beperkt, maar kunnen eenvoudig uitgebreid worden door gebruik
+te maken van de boolean !-operator (vóór de ronde haakjes van de
+filter geplaatst, en niet vóór de operator - zie volgende punt).
+<table border="1" align="center">
+<tr>
+<td>&nbsp;&nbsp;gelijk aan&nbsp;&nbsp;<br></td>
+<td><tt>&nbsp;&nbsp;=&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;groter dan of gelijk aan&nbsp;&nbsp;<br></td>
+<td><tt>&nbsp;&nbsp;&gt;=&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;kleiner dan of gelijk aan&nbsp;&nbsp;<br></td>
+<td><tt>&nbsp;&nbsp;&lt;=&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;ongeveer gelijk aan&nbsp;&nbsp;<br></td>
+<td><tt>&nbsp;&nbsp;~=&nbsp;&nbsp;</tt><br></td>
+</tr>
+</table>
+</li>
+<li>Indien het <em>&lt;LDAP attribuut&gt;</em> multi-valued is,
+wordt aan de filter voldaan van zodra één van de waarden
+voldoet.</li>
+<li>De <em>&lt;waarde&gt;</em> component mag (diverse keren) het
+*-<em>wildcard</em> bevatten (lukt niet echt altijd !!). Indien
+<em>&lt;waarde&gt;</em> enkel de *-<em>wildcard</em> bevat, wordt
+op zoek gegaan naar objecten waarvoor het attribuut is ingesteld.
+Wil men alle objecten ophalen van een AD&nbsp;tree, dan kan men dit
+eenvoudig bekomen via de filter (<em>objectClass</em>=*).</li>
+<li>Een filter kan recursief samengesteld zijn uit diverse
+subfilters en logische operatoren. Om een aantal subfilters te
+combineren tot één filter, plaats je alle subfilters (elk tussen
+ronde haakjes) onmiddellijk na elkaar, waarbij het geheel wordt
+voorafgegaan door een operator, en opnieuw tussen ronde haakjes
+geplaatst wordt. Op deze manier krijg je bijvoorbeeld volgende
+mogelijkheden:
+<table border="1" width="80%" align="center">
+<tr>
+<td>&nbsp;</td>
+<td><tt>(<em>&lt;filter&gt;</em>)</tt><br>
+Vb. <tt>(objectclass=user)</tt></td>
+</tr>
+<tr>
+<td>AND<br></td>
+<td>
+<tt>(&amp;(<em>&lt;filter<sub>1</sub>&gt;</em>)(<em>&lt;filter<sub>2</sub>&gt;</em>)...(<em>&lt;filter<sub>n</sub>&gt;</em>))</tt><br>
+
+Vb.
+<tt>(&amp;(objectCategory=person)(objectclass=user)(postalCode=9000))</tt></td>
+</tr>
+<tr>
+<td>OR<br></td>
+<td>
+<tt>(|(<em>&lt;filter<sub>1</sub>&gt;</em>)(<em>&lt;filter<sub>2</sub>&gt;</em>)...(<em>&lt;filter<sub>n</sub>&gt;</em>))</tt><br>
+
+Vb. <tt>(|(postalCode=9070)(postalCode=9000))</tt></td>
+</tr>
+<tr>
+<td>NOT<br></td>
+<td><tt>(!(<em>&lt;filter&gt;</em>))</tt><br>
+Vb. <tt>(!(postalCode&lt;=8999))</tt></td>
+</tr>
+</table>
+</li>
+<li>De meeste zoekopdrachten zijn <em>case</em> ongevoelig. Enkel
+attributen met syntax 2.5.5.5 (<em>Printable String)</em> vormen
+hierop een uitzondering. Attributen met syntax 2.5.5.8
+(<em>Boolean)</em> kunnen enkel de waarden TRUE of FALSE aannemen
+(niet true of false&nbsp;!).</li>
+<li>Sommige lettertekens hebben voor LDAP een bijzondere betekenis,
+waardoor ze, indien men ze letterlijk wil opgeven in een
+<em>&lt;waarde&gt;</em> component, moeten vervangen worden door een
+hexadecimale representatie.
+<table border="1" align="center">
+<tr>
+<td><tt>&nbsp;&nbsp;NULL&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\00&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td><tt>&nbsp;&nbsp;TAB&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\09&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td><tt>&nbsp;&nbsp;LF&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\0A&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td><tt>&nbsp;&nbsp;*&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\2A&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td><tt>&nbsp;&nbsp;(&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\28&nbsp;&nbsp;</tt><br></td>
+</tr>
+<tr>
+<td><tt>&nbsp;&nbsp;)&nbsp;&nbsp;</tt><br></td>
+<td><tt>&nbsp;&nbsp;\29&nbsp;&nbsp;</tt><br></td>
+</tr>
+</table>
+Ook indien je binaire data wil opzoeken, bijvoorbeeld via
+attributen met syntax 2.5.5.10 (<em>Octet String)</em>, kan je deze
+notatie gebruiken.</li>
+</ul>
+<br>
+<br></li>
+<li><strong>Welke informatie ? <em>search
+attributes</em></strong><br>
+De derde component van de LDAP-querystring omschrijft welke
+<strong>LDAP&nbsp;attributen</strong> van de gevonden objecten in
+het antwoord van de server opgenomen worden. De
+<em>ldapDisplayName</em> of <em>attributeID</em> van meerdere
+attributen worden hierbij door <strong>komma</strong>'s van elkaar
+gescheiden. Het is belangrijk dat er geen schrijffouten voorkomen
+in deze lijst van LDAP&nbsp;attributen ! Er is bovendien de
+interessante mogelijkheid om ook het <strong>ADSI&nbsp;attribuut
+<em>ADsPath</em></strong> als onderdeel van de search attributes te
+vermelden. Dit is het enige ADSI&nbsp;attribuut dat je hier kan
+opvragen. Het is een eenvoudiger alternatief voor de
+<strong>DistinguishedName</strong> om gevonden objecten te
+<em>binden</em>. Dit is de enige plaats waar je een
+ADSI&nbsp;attribuut kan opgeven in de querystring.<br>
+Deze component mag niet leeg zijn. Indien je voor deze component
+een *-<em>wildcard</em> invult, dan wordt enkel het ADsPath
+opgehaald.<br>
+<br></li>
+<li><strong>Hoe diep ? <em>search scope</em></strong><br>
+De laatste component van de LDAP-querystring bepaalt hoe diep in de
+hiërarchie de zoekopdracht uitgevoerd moet worden. Hiervoor zijn er
+drie mogelijkheden, waarvan doorgaans de derde gebruikt wordt:
+<ul type="disc">
+<li>de <em><strong>base</strong></em> scope onderzoekt enkel of het
+object, vermeld in de <em>search base</em>, aan de zoekcriteria
+voldoet,</li>
+<li>de <em><strong>onelevel</strong></em> scope beperkt de
+zoekopdracht tot de onmiddellijke kinderen van de <em>search
+base</em> container, exclusief de container zelf,</li>
+<li>de <em><strong>subtree</strong></em> scope voert een volledig
+recursieve zoekopdracht uit.</li>
+</ul>
+</li>
+</ol>
+<p>Je kan elke zoekopdracht ook opvragen met <strong>dsquery
+*</strong>, waarbij dezelfde <em>search base</em>, een <em>LDAP
+filter</em>, een <em>attributenlijst</em> en een <em>scope</em>
+wordt opgegeven, bijvoorbeeld :</p>
+<pre>
+dsquery * "DC=iii,DC=hogent,DC=be" ^
+  -filter  "(&amp;(objectCategory=printQueue)(printColor=TRUE)(printDuplexSupported=TRUE))"
+  -attr printerName printRate ^
+  -scope subtree ^
+</pre>
+Plaats de filter en de search base tussen <strong>"
+"</strong>-tekens om te vermijden dat de shell vooraf interpretatie
+doet van speciale tekens.
+<p><a class="popout" href="03.pl">voorbeeld</a></p>
+</dd>
+<dt>4.</dt>
+<dd>&nbsp;<strong><em>Uitvoeren van de query, verwerken van de
+gegevens</em></strong>
+<p>Tot slot moet alle informatie opgestuurd worden naar de server,
+die de zoekopdracht effectief uitvoert. Hiervoor gebruik je de
+methode <strong>Execute()</strong> van het ADO Command object. Dit
+resulteert niet in een uitvoer op het scherm. Deze methode heeft
+als terugkeerwaarde een referentie naar een <strong>ADO
+Recordset</strong> collection, ook al beantwoordt er geen enkel
+object aan de zoekcriteria. Indien deze methode een
+<strong>Error</strong> oplevert zit er waarschijnlijk een fout in
+de LDAP-querystring. Gebruik
+<code>Win32::OLE-&gt;LastError()</code> om dit na te gaan.</p>
+<p>Het <strong>ADO Recordset</strong> collection object is niets
+anders dan een verzameling van records (rijen), waarbij elke record
+de informatie bevat voor een gevonden AD-object. Alle opgevraagde
+informatie wordt opgeslaan in de recordset. Meer informatie over
+alle attributen en methodes van deze collectie kan je opzoeken in
+de de <strong>MSDN Library</strong>, in de reeds eerder vermelde
+tak <em>ADO Object Model</em>. Het aantal AD-objecten kan je
+opvragen met <strong>RecordCount</strong>.<br>
+Op elk ogenblik kan het cliënt programma slechts één enkele record
+(rij van de recordset) aanspreken. Deze record wordt de
+<strong>cursor</strong> van de recordset genoemd. Na het uitvoeren
+van de Execute method staat de cursor ingesteld op de eerste
+record.<br>
+Het belangrijkste attribuut van het <strong>ADO Recordset</strong>
+object is het <strong>Fields attribuut</strong>. Dit attribuut
+levert een collection van <strong>Field objecten</strong> op. Het
+<strong>Count</strong> bekom je het aantal opgehaalde attributen
+(in de <strong>Ldap Query</strong> opgegeven).<br>
+Elk <strong>Field Object</strong> beschijft een LDAP-attribuut
+(opgegeven in de <em>search base</em>) voor die record. Dit Field
+object hebben we al gebruikt in reeks 1, §13, en beschikt over de
+attributen <strong>Name, Value</strong> en <strong>Type</strong>.
+Het <strong>Value</strong> -attribuut kan zowel een enkelvoudige
+inhoud als een array opleveren. Het <strong>Type</strong> verwijst
+naar het <a class="popout" href="MicrosoftADOtype.html">Microsoft
+ADO type</a> van de inhoud. Het voorbeeld toont het aantal gevonden
+AD-objecten en toont ook de inhoud van alle opgevraagde attributen
+van de eerste record uit de Recordset.</p>
+<p><a class="popout" href="04.pl">voorbeeld</a></p>
+</dd>
+<dt>5.</dt>
+<dd>Om alle records te overlopen beschikt het Recordset object,
+o.a. over de methode <strong>MoveNext()</strong> die de cursor
+verplaatst naar de volgende record, en <strong>MoveFirst()</strong>
+die de cursor opnieuw naar de eerste record verplaatst. Met het
+attribuut <strong>EOF</strong> kun je nagaan of de cursor wijst
+naar een object, met andere woorden of de recordset objecten bevat
+die nog niet verwerkt zijn.<br>
+De <strong>Fields</strong> collection kan je ook numeriek
+indexeren, of (hardgecodeerd) met de ldapDisplayname van de
+opgevraagde LDAP-attributen (in de <em>search base</em>). Indien je
+eenvoudige LDAP-attributen opvraagt, kan het uitschrijven van de
+inhoud eenvoudiger, zoals onderstaand voorbeeld illustreert. Wijzig
+hiervoor de opgevraagde LDAP-attributenlijst in :
+<p style="text-align: center">
+<tt>"printerName,printRate,printMaxResolutionSupported,printMaxResolutionSupported,printStaplingSupported"</tt></p>
+Na het verwerken van de gegevens sluit je best de ADO Recordset en
+Connection objecten expliciet af, met behulp van hun
+respectievelijke <strong>Close()</strong> methods. Hierdoor worden
+alle gebruikte server resources netjes opgeruimd.
+<p><a class="popout" href="05.pl">voorbeeld</a></p>
+</dd>
+<dt>6.</dt>
+<dd>De LDAP-attributenlijst mag NIET leeg zijn, want dit levert een
+lege recordset op. Indien je de LDAP-attibutenlijst invult met
+<strong>"*"</strong> dan wordt slechts 1 attribuut opgehaald.
+Welk?<br>
+Gebruik serverless binding om je te connecteren met de juiste
+partitie.
+<p><a class="popout" href="06.pl">antwoord</a></p>
+</dd>
+<dt>7.</dt>
+<dd>Geef een overzicht van de naam en het adres van alle studenten
+in het <em>iii</em> domein die in dezelfde gemeente wonen als
+jijzelf. Geef de postcode van de gemeente mee als enig argument bij
+het aanroepen van het script. Sorteer her overzicht op gemeente. Je
+kan geen tweede sorteerwaarde opgeven.<br>
+Test vooraf uit met <strong>dsquery *</strong>
+<p><a class="popout" href="07.pl">antwoord</a></p>
+</dd>
+<dt>8.</dt>
+<dd>Bepaal het aantal objecten in het domein met een LDAP-query (de
+filter mag leeg zijn). Pas de filter aan zodat je enkel de users
+telt. Experimenteer met * in de filter. Wat is een verschil tussen
+een lege filter en bijvoorbeeld de filter (cn=*). Merk op dat de
+filter (distinguishedName=*) wel lukt, maar van zodra je de filter
+verder verfijnt dan is de recordset leeg.<br>
+Het gebruik van een wildcard is dus niet altijd op dezelfde manier
+ondersteund.
+<p><a class="popout" href="08.pl">antwoord</a></p>
+</dd>
+<dt>9.</dt>
+<dd>Zoek alle klassen in het domein waarvoor een bepaald
+LDAP-attribuut is ingesteld. Geef de naam van het LDAP-attribuut
+mee als enig argument.<br>
+Test vooraf uit met <strong>dsquery *</strong>, waarbij je het
+LDAP-attribuut uiteraard gewoon intypt. Voor het LDAP-attribuut
+<em>postalCode</em> bekom je enkel objecten van de klasse
+<em>user</em>. Voor het LDAP-attribuut <em>UserAccountControl</em>
+bekom je objecten van de klassen <em>user</em> of
+<em>computer</em>. Welk attribuut moet je opvragen voor deze
+informatie ?
+<p>Als je het script (en dsquery) uittest met het LDAP-attribuut
+<em>canonicalName</em>, bekom je geen enkele klasse. Kan je
+verklaren hoe dit komt? (zie verder in § 14)</p>
+<p><a class="popout" href="09.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Opzoeken in andere partities: de configuratie-partitie / het
+reële schema</h4>
+Je kan met een LDAP-query ook opzoekingen doen in de andere
+partities.
+<dl class="compact">
+<dt>10.</dt>
+<dd>Pas je vorige oefening aan zodat je informatie opzoekt in de
+<em>Configuration container</em>. Zoek in die container alle
+klassen waarvoor het attribuut <em>fromServer</em> is
+ingesteld.<br>
+<strong>Opmerking:</strong> Als je in de filter meer beperkingen
+oplegt, vb "(fromServer=*be)" dan bekom je geen enkel resultaat
+(ook niet met dsquery). Dit komt omdat het LDAP-attribuut
+fromServer van het "syntaxtype" DN is. Voor dit type attributen kan
+je "wildcards" maar beperkt gebruiken. In de manual vind je meer
+informatie in de <strong>AD Library</strong>, in de sectie
+<nobr><em>Active Directory Domain Services</em></nobr> /
+<nobr><em>Using Active Directory Domain Services</em></nobr> /
+<nobr><em>Searching in Active Directory Domain Services</em></nobr>
+/ <nobr><em>Creating a Query Filter</em></nobr> / <nobr><em>How to
+Specify Comparison Values</em></nobr>
+<p><a class="popout" href="10.pl">antwoord</a></p>
+</dd>
+<dt>11.</dt>
+<dd>Produceer (gescheiden) lijsten van alle <strong>abstracte
+klassen</strong> en alle <strong>hulpklassen</strong>. Gebruik
+hierbij één <strong>LDAP query</strong>.<br>
+Los dit eerst op <strong>dsquery *</strong> waarbij alle abstracte
+klassen en hulpklassen door elkaar staan.
+<p>In het script kan je er bovendien voor zorgen dat deze lijsten
+gescheiden zijn, en geordend op naam. Gebruik hierbij geen hash of
+array.<br>
+Dit is veel performanter dan de techniek uit reeks 6 waar je de
+schema container kon <em>enumereren</em>.</p>
+<p><a class="popout" href="11.pl">antwoord</a></p>
+</dd>
+<dt>12.</dt>
+<dd>Zoek in het reële schema het (unieke) attribuutschema waarvan
+je de ldapdisplayname kent. Geef de naam van het gezochte
+LDAP-attribuut op als enige argument. Test je oplossing uit voor
+het LDAP-attribuut <em>cn</em>.
+<p><a class="popout" href="12.pl">antwoord</a></p>
+</dd>
+<dt>13.</dt>
+<dd>&nbsp;<strong><em>Extensible matching rules</em></strong>
+<p>In de <strong>AD Seach Library</strong> vind je uitleg over deze
+meer complexe syntaxen. We bespreken eerst de mogelijkheid om op
+"bits" te vergelijken.</p>
+<p>Sommige attributen, zoals <strong>systemFlags</strong> en
+<strong>searchFlags</strong>, slaan specifieke informatie op in een
+<strong>bitpatroon</strong>. De standaard LDAP-query syntax laat
+niet toe om in een query string de individuele bits van een
+attribuut uit te testen. De Active Directory van
+Windows&nbsp;Server bevat echter twee <strong>matching rule
+extenties</strong>, waarmee bitsgewijze AND en OR testen eenvoudig
+kunnen verwezenlijkt worden. De syntax lijkt wat vreemd:</p>
+<table border="0" width="100%">
+<tr>
+<td width="2%">&nbsp;</td>
+<td>bitsgewijze AND</td>
+<td width="5%">&nbsp;</td>
+<td><tt><strong>(</strong><em>&lt;LDAP
+attribuut&gt;</em><strong>:1.2.840.113556.1.4.803:=</strong><em>&lt;waarde&gt;</em><strong>)</strong></tt></td>
+</tr>
+<tr>
+<td width="2%">&nbsp;</td>
+<td>bitsgewijze OR</td>
+<td width="5%">&nbsp;</td>
+<td><tt><strong>(</strong><em>&lt;LDAP
+attribuut&gt;</em><strong>:1.2.840.113556.1.4.804:=</strong><em>&lt;waarde&gt;</em><strong>)</strong></tt></td>
+</tr>
+</table>
+Je vindt dit ook terug in de sectie <em>Search Filter Syntax</em>
+van de <strong>AD Search Library</strong> .
+<p>Gebruik een <strong>LDAP-query</strong> om een lijst samen te
+stellen van LDAP-attributen, die <strong>geïndexeerd</strong> en/of
+<strong>niet gerepliceerd</strong> en/of
+<strong>geconstrueerd</strong> worden - enkel de LDAP-attributen
+die aan tenminste 1 eigenschap voldoen worden hierbij
+opgehaald.<br>
+Probeer dit eerst met <strong>dsquery *</strong>.<br>
+Schrijf nu een script dat een overzicht maakt, waarin de naam van
+elk LDAP-attribuut wordt voorafgegaan door een indicatie aan welke
+van de gestelde eigenschappen voldaan is. Controleer of de uitvoer
+van het script in overeenstemming is met deze van de oefening in
+§6.30</p>
+<p><a class="popout" href="13.pl">antwoord</a></p>
+</dd>
+<dt>14.</dt>
+<dd>Er is nog een tweede type "matching rule" waarmee je relaties
+tussen objecten kan beschrijven. Bepaal alle users van een bepaalde
+groep, en omgekeerd alle groepen van een bepaalde user.<br>
+Wanneer kan je eenvoudig een extra informatie opvragen,
+bijvoorbeeld de inhoud van het LDAP-attribuut <em>description</em>.
+<p><a class="popout" href="14.pl">antwoord</a></p>
+</dd>
+<dt>15.</dt>
+<dd>&nbsp;<strong><em>Beperkingen voor geconstrueerde
+ldap-attributen</em></strong>
+<p>In de filter van een LDAP-query mag je <strong>geen
+geconstrueerde</strong> attributen gebruiken. Doe je dit wel dan
+bekom je een lege recordset. Een geconstrueerd attribuut wordt niet
+opgeslagen in Active Directory, maar telkens erom gevraagd wordt
+opnieuw berekend, op basis van de andere attributen. Voorbeelden
+van geconstrueerde attributen zijn <em>canonicalName</em>,
+<em>parentGUID</em> en <em>possibleInferiors</em> (zie vorige
+oefening).</p>
+<p>Bij voorkeur neem je bovendien enkel
+<strong>geïndexeerde</strong> attributen in de <em>search
+attributes</em> component van de search querystring op. Dit geeft
+de beste performantie.</p>
+<p>Toon voor alle computers uit de container
+<strong>iii.hogent.be/iii/pc's</strong> waarvan de naam met de
+letter A eindigt, de waarde van het <em>geconstrueerde</em>
+attribuut <strong>canonicalName</strong>. Je zal ondervinden dat je
+de filter moet formuleren op het attribuut <strong>cn</strong> of
+<strong>name</strong> en dus niet op het attribuut
+<strong>canonicalName</strong>.<br>
+Test vooraf uit met <strong>dsquery *</strong></p>
+<p><a class="popout" href="15.pl">antwoord</a></p>
+</dd>
+<dt>16.</dt>
+<dd>Produceer een lijst van alle <em>forward-link</em> attributen
+en hun corresponderende <em>back-link</em> attribuut. Gebruik
+hiervoor <em>geneste</em> LDAP queries. De <em>forward-link</em>
+attributen zonder corresponderend <em>back-link</em> attribuut mag
+je negeren.<br>
+Dit lukt niet meer met <strong>dsquery</strong>.
+<p><a class="popout" href="16.pl">antwoord</a></p>
+</dd>
+<dt>17.</dt>
+<dd>Met een LDAP-querystring kan je heel snel alle AD-objecten
+ophalen die tot dezelfde "klasse" behoren, maar verspreid liggen in
+de AD-tree van het domein. Er zijn twee mogelijkheden om de klasse
+van een AD-object te beschrijven :
+<ul>
+<li>het LDAP attribuut <strong>objectClass</strong> is een
+<strong>niet geïndexeerd</strong> en <strong>multi-valued</strong>
+attribuut, dat zowel de klasse van het object bevat, als alle
+hiërarchische superklassen (top inclusief, hulpklassen
+exclusief).</li>
+<li>het LDAP attribuut <strong>objectCategory</strong> daarentegen
+is <strong>single-valued</strong>, en wordt
+<strong>geïndexeerd</strong>. Het wordt echter niet noodzakelijk
+ingevuld met de klasse van het object: <em>objectCategory</em>
+bevat de <em>meest typische</em> vertegenwoordiger uit de
+verzameling bestaande uit de klasse zelf en alle hiërarchische
+superklassen.</li>
+</ul>
+<p>Schrijf een script dat één of meerdere argumenten meekrijgt, die
+elk de naam van een <em>objectCategory</em> voorstellen
+(bijvoorbeeld DnsNode, printQueue, person, computer, ...). Voor
+elke objectcategorie worden <strong>in het domein</strong> alle
+objecten opgezocht die tot deze category behoren. Vraag van alle
+gevonden objecten de waarde van het (multivalued) LDAP attribuut
+<em>objectClass</em>, en van het corresponderende (singlevalued)
+ADSI attribuut <em>Class</em>. Vraag ook de waarde van de
+<em>ObjectCategory</em> en vergelijk dit met het argument dat je
+opgaf.<br>
+Merk op voor de meeste <em>objectCategory's</em> maar 1 waarde
+voorkomt voor <em>objectClass</em> (zie volgende oefening).</p>
+<p>Test vooraf uit met <strong>dsquery *</strong> waarbij je
+uiteraard maar 1 <em>objectCategory</em> opzoekt. Ook de waarde van
+het ADSI attribuut <em>Class</em> kan je hier niet ophalen. Test
+dit uit voor de objectcategorie person en ook voor de
+objectcategorie DnsNode. Wat valt je op voor de laatste
+objectCategorie?</p>
+<p><a class="popout" href="17.pl">antwoord</a></p>
+</dd>
+<dt>18.</dt>
+<dd>De informatie, die je in de vorige oefening bekomt, onderzoekt
+enkel de gegevens van het domein. Het domein bevat echter niet
+noodzakelijk objecten van <strong>elke</strong> beschikbare klasse.
+De informatie over alle beschikbare klassen vind je wel in het
+reële schema. Het antwoord op deze oefening moet dan ook gezocht
+worden in het reeel schema !!<br>
+Bij het aanmaken van een nieuw object wordt <em>objectCategory</em>
+automatisch ingevuld met de waarde van
+<em>defaultObjectCategory</em> van de bijhorende klasse. Hierbij
+kan dezelfde waarde van <em>defaultObjectCategory</em> gebruikt
+worden voor verschillende klassen.<br>
+Vraag vooraf met <strong>dsquery *</strong> de waarde van
+<em>defaultObjectCategory</em> voor elke klasse in het reeel
+schema.
+<p>Schrijf nu een script dat alle objectcategorieën bepaalt die
+voor meer dan één klasse de <em>defaultObjectCategory</em> zijn en
+geef voor deze objectcategorieën een overzicht van de
+<em>ldapDisplayname</em> van alle klassen die deze objectcategory
+als <em>default</em> hebben. Werk dit uit op twee manieren: met of
+zonder LDAP-query.</p>
+<p>Bij het uitvoeren van dit programma zal je opmerken dat er
+slechts twee objectcategorieën zijn die voor meer dan 1 klasse de
+defaultobjectcategorie zijn, nl.<strong>person</strong> en
+<strong>domain-DNS</strong><br>
+Dikwijls moet men goed overwegen of men nu van <em>objectClass</em>
+dan wel van <em>objectCategory</em> in query filters gebruik maakt.
+Voor het opzoeken van printers is
+(<em>objectCategory</em>=<em>printQueue</em>) duidelijk de beste
+keuze, aangezien dit de opzoeking toelaat om op indexering een
+beroep te doen. Indien men gebruikers opzoekt via het weliswaar
+performante (<em>objectCategory</em>=<em>person</em>), zal dit niet
+alleen <em>users</em> opleveren die over een account beschikken,
+maar ook <em>contacts</em> met enkel een e-mail adres. Indien men
+dit wil uitsluiten, zou men (<em>objectClass</em>=<em>user</em>)
+kunnen overwegen. Dit heeft echter het nadeel dat de query nu niet
+alleen users zal opleveren, maar ook computers. De enige juiste
+mogelijkheid in dit geval is de querystring</p>
+<table border="0" width="100%">
+<tr>
+<td width="5%">&nbsp;</td>
+<td>
+(&amp;(<em>objectCategory</em>=<em>person</em>)(<em>objectClass</em>=<em>user</em>))</td>
+</tr>
+</table>
+<p><a class="popout" href="18.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Extra opgaven</h4>
+De onderstaande oefeningen die in reeks&nbsp;6 reeds aan bod
+kwamen, kunnen efficiënter opgelost worden met LDAP-query's.
+<dl class="compact">
+<dt>19.</dt>
+<dd>Voor de opgave zie §6.18. Vervang de recursieve functie door
+een LDAP-query om alle objecten van het domein op te vragen.
+Gebruik hierbij het LDAP-attribuut <strong>objectclass</strong>.
+<p><a class="popout" href="19.pl">antwoord</a></p>
+</dd>
+<dt>20.</dt>
+<dd>Schrijf een script dat de <em>ldapDisplayName</em> van een
+attribuut als enige parameter heeft en dat voor dit attribuut de
+volgende informatie opzoekt: <em>is het attribuut</em>
+<strong>single-valued</strong>, <strong>geïndexeerd</strong> <em>en
+wat is de</em> <strong>syntax</strong> <em>van de inhoud van dit
+attribuut</em> ?
+<p>De <strong>syntax</strong> en het <strong>single-valued</strong>
+zijn van een attribuut kan je zowel in het reële als (eenvoudiger)
+in het abstracte schema opzoeken. Om aan een individueel attribuut
+in het <em>reële attribuutschema</em> te binden heb je de
+<em>rdnName</em> van het attribuutschema object nodig. Deze is niet
+gelijk aan de <em>ldapDisplayName</em>&nbsp;! Vervolgens moet je de
+LDAP-attributen <em>attributeSyntax</em>, <em>oMSyntax</em> en
+<em>isSingleValued</em> interpreteren.Om aan een individueel
+attribuut in het <em>abstracte attribuutschema</em> te binden
+daarentegen heb je enkel de <em>ldapDisplayName</em> nodig.
+Vervolgens kun je de ADSI-attributen <em>syntax</em> en
+<em>multiValued</em> gebruiken.</p>
+<p>Om het attribuut in een LDAP-query te gebruiken is het best
+<strong>geïndexeerd</strong>. Deze eigenschap kan je niet opzoeken
+in het abstracte schema, maar wel in het reële schema. Gebruik
+bijgevolg een LDAP-query om het gevraagde attribuut via zijn
+<em>ldapDisplayName</em> in het reële schema op te zoeken.</p>
+<p><a class="popout" href="20.pl">antwoord</a></p>
+</dd>
+<dt>21.</dt>
+<dd>In §6.22 vonden we dat de zesde bit van het LDAP-attribuut
+<em>UserAccountControl</em> van een <strong>user</strong> object
+aangeeft of een paswoord verplicht is. Zoek met een LDAP-query alle
+users die geen paswoord vereisen. Controleer met het ADSI-attribuut
+<em>PasswordRequired</em> .<br>
+Test dit vooraf uit met <strong>dsquery *</strong>
+<p><a class="popout" href="21.pl">antwoord</a></p>
+</dd>
+<dt>22.</dt>
+<dd>Voor de opgave zie §6.28, waarbij je de zoekopdracht uitbreidt
+tot de volledige domeingegevens. Indien het <em>LDAP-attribuut</em>
+niet-geconstrueerd is kan je dit snel oplossen met één enkele
+LDAP-query waarin je de zoekopdracht volledig beschrijft. Voor een
+geconstrueerd attribuut is dit niet mogelijk.
+<p><a class="popout" href="22.pl">antwoord</a></p>
+</dd>
+</dl>
+
+        <div id="page-content-end"></div>
+    </div>
+    <div id="footer">    <div id="metadata">
+    Laatst gewijzigd
+            op
+        03-12-2013
+        om
+        19:40
+        
+                door
+                    <a href="mailto:Marleen.Denert@UGent.be">Marleen Denert</a>
+                
+        
+    </div>
+<div id="tag">intranetr/0.10.0</div>
+<div id="footer-end"></div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+<!-- 140 ms / 698 KB -->

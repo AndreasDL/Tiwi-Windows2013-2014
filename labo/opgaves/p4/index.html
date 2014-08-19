@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content="intranetr/0.10.0">
+<title>Reeks 4 | iii intranet</title>    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/default.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css?0.10.0">
+    <link rel="stylesheet" type="text/css" media="screen,handheld" href="../../../css/sites/default.css">
+    <script type="text/javascript" src="../../../js/cache/0d6197553acf19ea859c96f7caf7d8fa6c6519b8.js?0.10.0"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css">
+<![endif]-->
+    <script type="text/javascript">
+    (function() {
+        var month = 8;
+        iii.semester = month == 1 ? 1
+            : month <= 6 ? 2
+            : month <= 9 ? 0 : 1;
+        if (iii.semester > 0) {
+            var hideOtherSemester = function() {
+                var other = iii.semester == 1 ? 2 : 1;
+                $('#breadcrumbs li.group-sem'
+                        + other
+                        + ':not(.group-sem'
+                        + iii.semester + '):not(.active)')
+                    .hide();
+            };
+            $(document)
+                .ready(hideOtherSemester)
+                .on("contentUpdate.iii", hideOtherSemester);
+        }
+    })();
+    </script>
+</head>
+
+<body>
+    <div id="header"><h1>
+    <a href="../../../index.html" title="Naar de thuispagina">
+        intranet
+    </a>
+</h1>
+</div>
+<div id="main">    <div id="node-children">
+    <ul>
+            <li><a href="../index.html"><span style="float: right">&#8593;</span>Omhoog</a></li>
+            </ul>
+    </div>
+
+<div id="content" class="">
+        <div id="breadcrumbs-container">
+    <span id="you-are-here">Je bent hier:</span>
+    <ul id="breadcrumbs">
+                            <li class="breadcrumb first"><a href="../../../index.html" class="breadcrumb first">Intranet</a>
+                </li>
+                            <li class="breadcrumb"><a href="../../index.html" class="breadcrumb">Windows</a>
+                    <ul class="breadcrumb-siblings">
+                                                <li class="separator"><span>Tweede bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Besturingssystemen-I/index.html">Besturingssystemen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Computernetwerken-I/index.html">Computernetwerken I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Informatica-II/index.html">Informatica II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Softwareontwikkeling-I/index.html">Softwareontwikkeling 1</a></li>
+                                                                <li class="separator"><span>Derde bachelor</span></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Algoritmen-I/index.html">Algoritmen I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2 leaf"><a class="breadcrumb-sibling group-sem2 leaf" href="../../../Computergrafiek/index.html">Computergrafiek</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-II/index.html">Computernetwerken II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../Computernetwerken-III/index.html">Computernetwerken III</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Databanken/index.html">Databanken</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Design-Patterns/index.html">Design Patterns</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2"><a class="breadcrumb-sibling group-sem1 group-sem2" href="../../../Hardware/index.html">Hardware</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem2"><a class="breadcrumb-sibling group-sem2" href="../../../OGP/index.html">OGP</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-I/index.html">Systeemanalyse I</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../UNIX/index.html">UNIX</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Beveiliging/index.html">Beveiliging</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1"><a class="breadcrumb-sibling group-sem1" href="../../../Computernetwerken-IV/index.html">Computernetwerken IV</a></li>
+                                                                                                                                                                                                                                                            <li class="breadcrumb-sibling group-sem1 group-sem2 leaf"><a class="breadcrumb-sibling group-sem1 group-sem2 leaf" href="../../../Masterproef/index.html">Masterproef</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 leaf"><a class="breadcrumb-sibling group-sem1 leaf" href="../../../Systeemanalyse-II/index.html">Systeemanalyse II</a></li>
+                                                                                                                                                                                                                <li class="breadcrumb-sibling group-sem1 active"><a class="breadcrumb-sibling group-sem1 active" href="../../index.html">Windows</a></li>
+                                                                <li class="separator"><span>Algemeen</span></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Activiteiten/index.html">Activiteiten</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Huisregels-labos/index.html">Huisregels voor labo&#039;s</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Opleiding-Informatica/index.html">Opleiding Informatica GTI</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../../Andere-problemen/index.html">Probleemoplossende instanties</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling"><a class="breadcrumb-sibling" href="../../../Roosters/index.html">Roosters</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../index.html" class="breadcrumb">Labo</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling active"><a class="breadcrumb-sibling active" href="../index.html">Labo</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../../Theorie/index.html">Theorie</a></li>
+                                        </ul>
+                </li>
+                            <li class="breadcrumb"><a href="../p4.1" class="breadcrumb">Reeks 4</a>
+                    <ul class="breadcrumb-siblings">
+                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p0.1">Reeks 0</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p1.1">Reeks 1</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p2.1">Reeks 2</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p3.1">Reeks 3</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf active current"><a class="breadcrumb-sibling leaf active current" href="../p4.1">Reeks 4</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p5.1">Reeks 5</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p6.1">Reeks 6</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p7.1">Reeks 7</a></li>
+                                                                                                                                                                    <li class="breadcrumb-sibling leaf"><a class="breadcrumb-sibling leaf" href="../p8.1">Reeks 8</a></li>
+                                        </ul>
+                </li>
+        </ul>
+    </div>
+    <h2>Reeks 4</h2>
+    <div id="page-content">
+        <h3>WMI scripting</h3>
+<h3>Inleiding</h3>
+De volledige WMI infrastructuur kan, ondermeer vanuit scripttalen,
+benaderd worden via <strong>COM objecten</strong> met een
+<strong>automation interface</strong>. De verzameling van deze COM
+objecten wordt de <em>WMI&nbsp;Scripting&nbsp;Library</em> genoemd.
+Zoek informatie over de COM objecten en hun onderlinge relatie op
+in de <em>WMI&nbsp;Reference</em> /
+<em>Scripting&nbsp;API&nbsp;for&nbsp;WMI</em> subtak van de
+<em>WMI-documentatie</em>. De tak <em>Scripting API Constants</em> 
+beschrijft een aantal <strong>constanten</strong>, die je ook
+terugvindt in de TypeLibrary. Je kan in Perl de symbolische naam
+van deze constanten gebruiken, op voorwaarde dat de juiste
+<strong>TypeLibrary</strong> werd ingeladen, zie labo1:
+<pre>
+     use Win32::OLE::Const 'Microsoft WMI Scripting';
+</pre>
+Het vereenvoudigd <a class="popout" href="w2.bmp">objectmodel</a>
+van de <em>Scripting&nbsp;Library</em> bestaat uit een twintigtal
+COM objecten, die in deze reeks in diverse stappen zullen
+bestudeerd worden. In de <em>WMI-documentatie</em> vind je het
+objectmodel in de subtak <em>Scripting&nbsp;API&nbsp;for&nbsp;WMI /
+Scripting API Object Model</em>.
+<h4>Connecteren aan een WMI namespace</h4>
+De eerste stap in een consumerscript is het <strong>initialiseren
+van de WMI service</strong> van een toestel (al dan niet hetzelfde
+toestel als waarop het script uitgevoerd wordt). Net als in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> moet je hierbij
+<strong>connecteren</strong> aan één WMI
+<strong>namespace</strong>. Het <em>SWbemServices</em> object is de
+<strong>COM representatie</strong> van de <strong>WMI
+service</strong> voor een bepaalde <strong>namespace</strong> op
+een bepaald toestel. De naam van het toestel wordt met de DNS-naam
+of het IP-adres vastgelegd. Indien het doeltoestel het lokale
+toestel is, dan gebruik je <em>localhost</em> of "." als
+identificatie.
+<p>Het <em>SWbemServices</em> object initialiseren kan op twee
+manieren:</p>
+<ul>
+<li>Initialiseer het basis COM-object, een <em>SWbemLocator</em>
+object. Dit COM-object is geregistreerd in het register, zoek de
+<em>ProgId</em> op. De functie
+<strong>ConnectServer<em>(Server,Namespace)</em></strong> van dit
+<em>SWbemLocator</em> object resulteert in een
+<em>SWbemServices</em> object. De eerste twee parameters zijn de
+DNS-naam (of het IP-adres) van het doeltoestel, en de naam van de
+namespace. De <em>ConnectServer</em> methode aanvaardt optioneel
+ook een gebruikersnaam en bijhorend paswoord. Hierdoor kan je
+connecteren aan een WMI service <strong>in een andere
+gebruikerscontext</strong> dan deze waarin het consumerscript
+uitgevoerd wordt (vb thuis). Dit kan je niet gebruiken om op het
+lokale toestel te connecteren in een andere gebruikerscontext.</li>
+<li>Je kan elk WMI-object initialiseren met de <strong>moniker
+string</strong> die het object beschrijft. In Perl gebruik je
+hiervoor de functie
+<nobr><strong>Win32::OLE-&gt;GetObject(<em>moniker</em>)</strong></nobr>.
+De monikerstring vb. <code>"winmgmts://Localhost/root"</code>
+bestaat uit 3 delen:
+<ul>
+<li>de protocolspecificatie, <strong>winmgmts:</strong></li>
+<li>de DNS-naam of het IP-adres van het doeltoestel</li>
+<li>de namespace</li>
+</ul>
+Deze techniek is niet bruikbaar indien je in een andere
+gebruikerscontext wilt connecteren.<br>
+Bovendien zijn er situaties waar, om beveiligingsredenen, het
+gebruik van de <em>GetObject</em> niet toegelaten wordt.
+Bijvoorbeeld indien <em>Internet Explorer</em> de rol van
+<em>scripting host</em> vervult.</li>
+</ul>
+<dl class="compact">
+<dt>1.</dt>
+<dd>Connecteer je achtereenvolgens:
+<ul>
+<li>aan de root/cimv2 namespace van het toestel waarop je ingelogd
+bent, <strong>in je eigen gebruikerscontext</strong></li>
+<li>aan de root/cimv2 namespace <strong>van een ander
+labotoestel</strong> (dan het toestel waarop je ingelogd bent), in
+de gebruikerscontext van de (lokale) administrator van dat
+toestel.</li>
+</ul>
+Probeer de twee methodes uit. Verifiëer in beide gevallen met de
+<strong>Win32::OLE-&gt;QueryObjectType</strong> methode welk type
+object geconnecteerd is. Geef een foutmelding indien het
+connecteren niet gelukt is (zie labo1 voor een aantal
+alternatieven)
+<p><a class="popout" href="01.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Het WMI object (klasse of instantie)</h4>
+Voor elk WMI object dat men wil raadplegen, moet een
+<em>SWbemObject</em> geïnitialiseerd worden. Dit kan ook op twee
+manieren:
+<ul>
+<li>Gebruik de
+<strong>Win32::OLE-&gt;GetObject(<em>moniker</em>)</strong> methode
+van PerlScript. De <strong>monikerstring</strong> bevat nu de
+volledige absolute padnaam (zoek dit op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> in het juiste
+systeemattribuut van de klasse of de instantie). Deze methode is
+maar beperkt bruikbaar, zie hiervoor.</li>
+<li>Gebruik de <strong>Get(<em>relpad</em>)</strong> methode van
+het <em>SWbemServices</em> object. De parameter is de kortere
+<strong>relatieve padnaam</strong>.</li>
+</ul>
+Een <em>SWbemObject</em> zal, afhankelijk van de moniker of het
+relpad dat werd opgegeven, <strong>een WMI klasse</strong> of
+<strong>een instantie</strong> ervan voorstellen.
+<dl class="compact">
+<dt>2.</dt>
+<dd>Initialiseer op twee manieren het WMI object dat de klasse van
+een <em>netwerkadapter</em> voorstelt. Creeer een tweede WMI object
+dat 1 instantie van die klasse voorstelt (zoek de naam van de
+klasse en het sleutelattribuut op in de <em>WMI-documentatie</em>
+of in <strong>WMI&nbsp;CIM&nbsp;Studio</strong>). Schrijf ook de
+waarde uit van het attribuut <em>Name</em> voor deze instantie. Je
+kan dit attribuut opvragen met
+<strong>-&gt;{</strong><em>Name</em><strong>}</strong> (zie
+verder).<br>
+Verifiëer met de <strong>Win32::OLE-&gt;QueryObjectType</strong>
+methode welk type object je bekomt. Merk op dat
+<em>SWbemObjectEx</em> het <em>extended</em> objecttype is.<br>
+Ook hier kan je een foutmelding geven indien het niet lukt.
+<p><a class="popout" href="02.pl">antwoord</a></p>
+</dd>
+<dt>3.</dt>
+<dd>Zoek in <strong>WMI&nbsp;CIM&nbsp;Studio</strong> welk WMI
+object de directory voorstelt die gekoppeld is aan de rootdirectory
+van de C:partitie (zie oefening 17 uit reeks3).<br>
+Initialiseer een WMI object met deze directory, en schrijf het
+'filetype uit' (zoek het attribuut op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong>).
+<p><a class="popout" href="03.pl">antwoord</a></p>
+</dd>
+<dt>4.</dt>
+<dd>Zoek in <strong>WMI&nbsp;CIM&nbsp;Studio</strong> welk WMI
+object informatie bevat over het geïnstalleerde "servicepack".
+Welke andere attributen van dit WMI object bevatten informatie over
+de Windows-versie?<br>
+Initialiseer het WMI object en schrijf deze informatie uit.
+<p><a class="popout" href="04.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>WMI-collecties (klassen of instanties)</h4>
+In de voorgaande methodes moet je de padnaam kennen van de klasse
+of het object dat je wilt ophalen. Het is handiger om objecten en
+klassen op te halen met behulp van <em>criteria</em>. De eerste
+stap is nog steeds dat je een <em>SWbemServices</em> object
+initialiseert door te connecteren aan de gewenste namespace. In
+<em>WMI&nbsp;Reference</em> /
+<em>Scripting&nbsp;API&nbsp;for&nbsp;WMI</em> /
+<em>Scripting&nbsp;API&nbsp;Objects</em> subtak van de
+<em>WMI-documentatie</em> vind je alle methodes van het
+<em>SWbemServices</em> - object. Een aantal methodes resulteren in
+een WMI-collectie, een <em>SWbemObjectSet</em> object. Dit is een
+<em>collection</em> van <em>SWbemObject</em>en. Deze methodes
+resulteren altijd in een <em>SWbemObjectSet</em>-object, ook al is
+er maar 1 of geen enkel object dat aan de beschrijving voldoet.
+<p>In <em>WMI&nbsp;Reference</em> /
+<em>Scripting&nbsp;API&nbsp;for&nbsp;WMI</em> /
+<em>Scripting&nbsp;API&nbsp;Objects</em> subtak van de
+<em>WMI-documentatie</em> vind je ook alle methodes van een
+<em>SWbemObjectSet</em> - object. Je vindt er de
+<strong>Count</strong>-property die het aantal objecten in de
+collectie bepaalt. Individuele <em>SWbemObject</em>en in de
+<em>SWbemObjectSet</em> collectie kan je adresseren met de
+<em>Item</em> methode, geïndexeerd met het relatieve objectpad.
+Aangezien men het objectpad meestal niet kent, is dit niet erg
+praktisch.<br>
+Je kan echter, met behulp van de <strong>Win32::OLE::in</strong>
+functie, de <em>SWbemObjectSet</em> transformeren in een Perl
+<strong>array</strong> van <em>SWbemObject</em>en, en vervolgens
+elke objectinstantie aflopen met de <strong>foreach</strong>
+opdracht.</p>
+<p>Indien de <em>SWbemObjectSet</em> maar 1 object bevat kan je dit
+unieke object dus ook eenvoudig ophalen met:</p>
+<pre>
+       my ($Object)=in $ObjectSet;
+</pre>
+Je kan ook een numerieke index gebruiken om een welbepaald object
+uit een collectie op te halen:
+<pre>
+       my $Object=(in $ObjectSet)[2];
+</pre>
+Indien je maar 1 attribuut (vb <em>Name</em>) nodig hebt van elk
+<em>SWbemObject</em> in de <em>SWbemObjectSet</em>, dan kan je
+gebruik maken van <strong>map</strong>, vb.
+<pre>
+   @Names=map{$_-&gt;{Name}} in $ObjectSet;
+</pre>
+Een eerste eenvoudige methode van het <em>SWbemServices</em> object
+die een WMI-collecties ophaalt:
+<ul>
+<li>de <em>InstancesOf(classname)</em> methode, met als parameter
+een <strong>klassenaam</strong>, resulteert in een
+<em>SWbemObjectSet</em> met <strong>ALLE instanties</strong> van
+die specifieke klasse, of met die klasse als ouderklasse.<br>
+Dezelfde collectie kan bekomen worden als je éérst het
+<em>SWbemObject</em> initialiseert dat de <strong>klasse</strong>
+representeert (bijvoorbeeld door de <em>Get</em> methode van een
+<em>SWbemServices</em> object op te roepen met als parameter de
+naam van de klasse) en vervolgens hiervan de
+<em>Instances_(&nbsp;)</em> methode uit te voeren, zonder
+parameters.
+<p>Vermijd deze techniek indien er zeer veel instanties zijn van de
+klasse.</p>
+</li>
+</ul>
+Een tweede interessante methode gebruikt een <strong>WQL
+query</strong>:
+<ul>
+<li>de <em>ExecQuery(WQLquery)</em> methode, met als parameter een
+<strong>WQLquery</strong> die de gewenste WMI objecten beschrijft.
+Dit resulteert in een verbetering van de performantie. Het
+<strong>performantieverschil</strong> komt nog meer tot uiting
+indien de doelcomputer niet de lokale computer is: de functie wordt
+immers volledig op de doelcomputer uitgevoerd.<br>
+Je kan de WQL-query vooraf uittesten in <strong>WBemTest</strong>
+of in <strong>WMI&nbsp;CIM&nbsp;Studio</strong>.</li>
+</ul>
+Controleer in de MSDN-Library het type van de return-waarde van
+beide methodes. Merk op dat beide methodes nog andere parameters
+hebben, die echter optioneel zijn (zie verder).
+<dl class="compact">
+<dt>5.</dt>
+<dd>Herneem de vorige opgave, maar gebruik de twee methodes die
+hiervoor beschreven werden om het WMI object te initialiseren.
+<p><a class="popout" href="05.pl">antwoord</a></p>
+</dd>
+<dt>6.</dt>
+<dd>Bepaal het aantal instanties van <em>netwerkadapter</em>s,
+probeer de twee methodes die hiervoor beschreven werden.<br>
+Bepaal ook voor elke netwerkverbinding de waarde van het
+sleutelattribuut (zoek de naam van het sleutelattribuut op in de
+<em>WMI-documentatie</em> of in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> ).
+<p><a class="popout" href="06.pl">antwoord</a></p>
+</dd>
+<dt>7.</dt>
+<dd><strong><a name="CIM">CIM repository analyseren</a></strong>:
+Een eerste stap is steeds een WMI service initialiseren voor een
+bepaalde namespace. Je kan dan ook maar een beperkt deel van de CIM
+repository bekijken. Het is niet altijd handig dat je de naam van
+de namespace moet "hard-coderen". Bovendien is het niet echt
+haalbaar om de volledige CIM repository op die manier te overlopen.
+<p>In deze oefening worden alle namespaces op een toestel recursief
+bepaald, zodat je een start hebt om later de volledige CIM
+repository te analyseren met één script.<br>
+Geef een <strong>hiërarchisch</strong> (maar op elk niveau
+<strong>op naam gesorteerd</strong>) overzicht van <strong>alle
+namespaces</strong> in de CIM repository. Ontwikkel hiervoor een
+subroutine <em>GetNameSpaces</em> met als parameter de naam van een
+namespace. Deze namespace wordt geconnecteerd en vervolgens worden
+alle namespaces opgevraagd die in deze namespace voorkomen. Dit
+zijn alle instanties van de klasse <strong>__NAMESPACE</strong>
+(zie ook vraag 3 uit de vorige reeks)<br>
+Voor elke gevonden namespace roep je de subroutine
+<em>GetNameSpaces</em> <strong>recursief</strong> aan. Gebruik
+hierbij dat de naam van de namespaces hiërarchisch wordt opgebouwd.
+Zoek in <strong>WMI&nbsp;CIM&nbsp;Studio</strong> het attribuut dat
+je hiervoor nodig hebt. Je start uiteraard met de
+<strong>root</strong>-namespace.<br>
+Enkel met administrator-rechten kan je de volledige hiërarchie
+doorlopen. Vang de eventuele fout op, zodat dit ook lukt zonder
+administrator-rechten, maar uiteraard beperkt tot de namespaces
+waar je wel toegang toe hebt.</p>
+<p><a class="popout" href="07.pl">antwoord</a></p>
+</dd>
+</dl>
+<p>Een andere veelgebruikte methode van het <em>SWbemServices</em>
+object die resulteert in een <em>SWbemObjectSet</em> (ook al
+voldoet er maar één enkel WMI object aan de selectie) is:</p>
+<ul>
+<li>de <em>AssociatorsOf(relpad)</em> method met als eerste
+parameter het relatieve objectpad van het doelobject (dat
+overeenkomt met het argument dat tussen de akkolades van een
+<em>ASSOCIATORS&nbsp;OF</em> {…} <strong>WQL query</strong>
+geplaatst wordt).<br>
+Dezelfde collectie kan bekomen worden door eerst het
+<em>SWbemObject</em> te initaliseren en vervolgens de
+<em>Associators_(&nbsp;)</em> methode uit te voeren.<br>
+Beide methodes hebben nog tien optionele parameters (mogen ingevuld
+worden met <strong>undef</strong>, of via een anonieme hash
+doorgegeven worden). De eerste vier optionele parameters komen
+overeen met de <strong>argumenten</strong> van de diverse
+predikaten in de overeenkomstige <em>WHERE</em> clausule van de
+<em>ASSOCIATORS&nbsp;OF</em> {…} WQL query, nl <em>AssocClass</em>
+= …, <em>ResultClass</em> = …, <em>ResultRole</em> = …,
+<em>Role</em> = …. De vijfde en zesde optionele parameter komen
+overeen met <strong>de waarden</strong> van de predikaten
+<em>ClassDefsOnly</em> en <em>SchemaOnly</em>. Meer informatie vind
+je in de documentatie van deze methodes.</li>
+</ul>
+<dl class="compact">
+<dt>8.</dt>
+<dd>Bepaal enkel het aantal klassen die kunnen geassociëerd worden
+aan een Directory-klasse, zie oefening 31 uit reeks 3. Controleer
+met de informatie in WMI&nbsp;CIM&nbsp;Studio.<br>
+Merk op dat, net als in WMI&nbsp;CIM&nbsp;Studio geen rekening
+wordt gehouden met de associatorklassen die via overerving
+beschikbaar zijn.
+<p><a class="popout" href="08.pl">antwoord</a></p>
+</dd>
+<dt>9.</dt>
+<dd>Bepaal het aantal objecten(instanties) die geassocieerd zijn
+met de rootdirectory van de C:partitie.<br>
+Bepaal ook het aantal verschillende klasse(n) voor deze
+geassocieerde objecten.<br>
+Controleer je antwoorden met de informatie die je in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> terugvindt.
+<p><a class="popout" href="09.pl">antwoord</a></p>
+</dd>
+<dt>10.</dt>
+<dd>Zoek in <em>WMI&nbsp;CIM&nbsp;Studio</em> de instantie die een
+<strong>Interrupt Request</strong> beschrijft, met
+<em>IRQNumber</em>=18. Deze instantie is geassocieerd met objecten
+van verschillende klassen.<br>
+Bepaal enkel de netwerkverbinding(en) die gekoppeld zijn aan deze
+instantie. Geef de "beschrijving" van elke netwerkverbinding - zoek
+het juiste attribuut op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong>.
+<p><a class="popout" href="10.pl">antwoord</a></p>
+</dd>
+<dt>11.</dt>
+<dd>Geef een op naam gesorteerde lijst van <strong>environment
+variabelen</strong> en hun waarde.<br>
+Voor elke <strong>environment variabele</strong> geef je de naam,
+de inhoud en de naam van de user die de variabele initialiseert.
+Merk het onderscheid op tussen <em>SYSTEEM</em>-variabelen en
+gewone variabelen.
+<p><a class="popout" href="11.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="attrib">Opvragen van attributen van een
+SWbemObject</a></h4>
+Om een <strong>attribuutwaarde</strong> op te vragen van een
+SWbemObject werd in de vorige oefeningen reeds
+<nobr><strong>-&gt;{"</strong><em>attibuteName</em><strong>"}</strong></nobr>
+gebruikt, maar deze methode werkt niet altijd. We moeten eerst
+opmerken dat er twee soorten attributen zijn:
+<ul>
+<li><strong>WMI systeemattributen</strong> die typisch zijn voor de
+fundamentele bewerking in WMI, ze zijn beschikbaar voor alle
+SWbemObjecten,</li>
+<li>attributen die <strong>specifiek zijn voor de klasse</strong>
+waartoe het SWbemObject behoort.</li>
+</ul>
+De WMI systeemattributen zijn gemakkelijk te herkennen omdat de
+attribuutnaam begint met een <strong>dubbel</strong> _-teken,
+bijvoorbeeld <em>__CLASS, __RELPATH</em>,.... Deze attributen zijn
+ook altijd ingesteld, zowel voor de klasse als voor zijn
+instanties, en bevatten algemene informatie over het object.<br>
+De andere attributen bevatten specifieke informatie voor een
+bepaalde instantie of klasse, ze zijn niet altijd ingesteld. Het
+opvragen van een attribuut is fundamenteel verschillend voor beide
+types. Bovendien zijn er telkens twee verschillende technieken om
+de inhoud van een attribuut op te vragen.
+<h6>Formele methode</h6>
+Elk <strong>SWbemObject</strong> komt overeen met een COM-object
+van het type <em>SWbemObjectEx</em>, dat zelf is afgeleid van
+<em>SWbemObject</em>. In de <em>WMI-documentatie</em> vind je het
+<em>SystemProperties_</em>-attribuut (van <em>SWbemObjectEx</em>)
+dat alle <strong>WMI systeemattributen</strong> opvraagt, en ook
+het <em>Properties_</em>-attribuut (van <em>SWbemObject</em>)
+waarmee alle andere attributen beschikbaar gesteld worden. Zoals je
+ook in de <em>WMI-documentatie</em> terugvindt, bekom je telkens
+een <em>SWbemPropertySet</em> collectie van <em>SWbemProperty</em>
+objecten. Elk van deze <em>SWbemProperty</em> objecten stelt één
+attribuut voor van het SWbemObject. De naam, het type,... van dit
+WMI attribuut te bekomen, moet men de <em>Name</em>,
+<em>CIMType</em> , <em>IsArray</em>,... attributen van het
+<em>SWbemProperty</em> object raadplegen.<br>
+Hiermee kan je programmatorisch een overzicht maken van alle
+attributen van een bepaald SWbemObject.
+<dl class="compact">
+<dt>12.</dt>
+<dd>Geef een overzicht van alle attributen (ook systeemattributen)
+van een klasse, waarvoor je de naam meegeeft als enig argument.
+Bepaal ook het CIMtype van elk attribuut, en geef aan of de inhoud
+samengesteld (een array) is.<br>
+Test dit uit voor de klasse <em>Win32_Directory</em> en ook voor de
+associatorklasse <em>Win32_Subdirectory</em>.
+<p><a class="popout" href="12.pl">antwoord</a></p>
+</dd>
+</dl>
+Nu kunnen we ook de uiteindelijke waarde opvragen van een bepaald
+attribuut. Het <em>Value</em> attribuut van elk
+<em>SWbemProperty</em> object bevat de uiteindelijke waarde. Zoals
+hiervoor beschreven kan je met het <em>IsArray</em> attribuut van
+het <em>SWbemProperty</em> object bepalen of de waarde een
+<em>enkelvoudige</em> of een <em>samengestelde</em> waarde heeft.
+In Perl beschik je ook over de <strong>ref</strong> operator
+toegepast op het <em>Value</em> attribuut.
+<dl class="compact">
+<dt>13.</dt>
+<dd>Geef van de SNMP service een op naam gesorteerde lijst van
+<strong>alle attributen en systeemattributen</strong>, en hun
+waarden. Zorg er ook voor dat <strong>meervoudige waarden
+geconcateneerd</strong> op één lijn getoond worden.<br>
+Wijzig je oplossing zodat je die informatie ophaalt voor de
+bijhorende klasse. Wat merk je op ?
+<p><a class="popout" href="13.pl">antwoord</a></p>
+</dd>
+<dt>14.</dt>
+<dd>Bepaal voor het actief "Operating System" de waarde van alle
+attributen (ook systeemattributen). Om een datum mooi voor te
+stellen kan je gebruik maken van het <em>SWbemDateTime</em> COM
+object - zoek dit op in de <em>WMI-documentatie</em>. Bovendien
+moet je hiervoor het <em>Variant</em> type inladen
+<p><a class="popout" href="14.pl">antwoord</a></p>
+</dd>
+</dl>
+Men is niet verplicht om de <em>SWbemPropertySet</em> collectie
+element per element af te lopen: de <em>SWbemPropertySet</em>
+collectie wordt geïndexeerd met het <em>Item</em> attribuut. Zo kan
+men uiteindelijk de waarde van een specifiek attribuut van een
+SWbemObject in Perl bekomen via volgende syntax:
+<pre>
+    $WBemObject-&gt;{Properties_}-&gt;Item("<em>attribuutname</em>")-&gt;{Value}
+</pre>
+wat ingekort kan worden tot:
+<pre>
+    $WBemObject-&gt;Properties_("<em>attribuutname</em>")-&gt;{Value}
+</pre>
+Analoog voor een specifiek systeemattribuut van een SWbemObject :
+<pre>
+    $WBemObject-&gt;SystemProperties_("<em>systemattribuutname</em>")-&gt;{Value}
+</pre>
+<h6>Directe techniek</h6>
+Een alternatief is een <strong>directere techniek</strong> die
+toelaat om een <strong>verkorte notatie</strong> toe te passen,
+waardoor het <strong>lijkt alsof</strong> een COM
+<em>SWbemObject</em> de <strong>attributen overerft</strong> van
+het SWbemObject dat het representeert. Uiteraard lijkt het opvragen
+van een specifiek attribuut hierdoor heel wat eenvoudiger:
+<pre>
+    $WBemObject-&gt;{"<em>attribuutname</em>"}   of    $WBemObject-&gt;{<em>attribuutname</em>} 
+</pre>
+Men kan de directe techniek echter <strong>niet toepassen op de
+systeemattributen</strong>.<br>
+Merk op dat je ook voor de formele techniek vooraf moet weten of
+het een systeemattribuut betreft.
+<dl class="compact">
+<dt>15.</dt>
+<dd>Herneem oefening 14, maar beperk je tot het ophalen van de
+attributen die worden meegegeven als argumenten van het script. Je
+mag veronderstellen dat er geen systeemattributen worden gevraagd.
+Experimenteer met de twee technieken en bekijk de voor- en nadelen
+van beide methodes.<br>
+Schrijf ook het relatief pad uit van de klasse (enkel met de
+formele techniek).
+<p><a class="popout" href="15.pl">antwoord</a></p>
+</dd>
+</dl>
+Voor de meeste <strong>systeemattributen</strong> is er een ander
+alternatief beschikbaar: het <em>Path_</em> attribuut van een
+<em>SWbemObject</em> resulteert in een <em>SWbemObjectPath</em>
+object. Zoek in de MSDN-Library welke "properties" beschikbaar zijn
+voor een <em>SWbemObjectPath</em>. Een aantal properties zoals
+<em>Class</em>, <em>Namespace</em>, <em>ParentNamespace</em>,
+<em>Path</em>, <em>Relpath</em> en <em>Server</em> komen overeen
+met de "gelijknamige" systeemattributen van het SWbemObject. Een
+aantal andere properties bevatten extra informatie, die echter niet
+altijd ingevuld is.
+<dl class="compact">
+<dt>16.</dt>
+<dd>Bepaal de inhoud van alle properties (behalve Security_) van
+het <em>Path_</em> attribuut voor een aantal klassen. De naam van
+de klassen geef je mee als parameter.<br>
+Welke properties bevatten niet de inhoud die je had verwacht?
+<p>Zoek nu voor elke klasse een instantie in
+<em>WMI&nbsp;CIM&nbsp;Studio</em> en controleer dat je voor
+instanties wel de verwachte informatie krijgt voor de properties
+<strong>IsSingleton</strong> en <strong>Keys</strong>. Deze laatste
+is een 'set' waarvan je ook de inhoud bepaalt.</p>
+<p><a class="popout" href="16.pl">antwoord</a></p>
+</dd>
+</dl>
+Ook om een attribuut-waarde te <strong>wijzigen</strong> kan men
+beide technieken gebruiken. Wil men de wijzigingen ook effectief
+doorvoeren, dan moet men de <em>Put_()</em> methode van het
+<em>SWbemObject</em> uitvoeren. Dan pas geeft de
+<em>WMI&nbsp;Service</em> aan de provider de opdracht om de
+noodzakelijke stappen te ondernemen. In de WMI omgeving doen veel
+attributen zich voor als <em>wijzigbaar</em>. Nochtans komt het
+vrij veel voor dat een wijziging ervan niet door de provider
+ondersteund wordt. Veel toestandswijzigingen worden enkel door het
+<em>uitvoeren van methodes</em> geïmplementeerd. Met LastError()
+kan je nakijken of een wijziging is uitgevoerd of een fout heeft
+gegenereerd.
+<dl class="compact">
+<dt>17.</dt>
+<dd>Schrijf een eenvoudig script dat hetzelfde realiseert als
+oefening 6 uit de vorige reeks, maar nu met behulp van een script.
+<p><strong>Noteer vooraf wat de huidige inhoud is van het attribuut
+dat je zal aanpassen.</strong></p>
+<p><a class="popout" href="17.pl">antwoord</a></p>
+</dd>
+<dt>18.</dt>
+<dd>In de <em>System</em> Eventlog registreert het eventlog
+mechanisme zelf regels met <em>EventCode</em> 6005 en 6006, telkens
+het systeem respectievelijk opgestart of afgesloten wordt. Zoek
+eventueel in <strong>WMI&nbsp;CIM&nbsp;Studio</strong> welke
+klasse(n) het attribuut <em>EventCode</em> voorzien. Deze klasse
+heeft heel veel instanties, die je dus beter niet allemaal
+ophaalt.<br>
+Stel een WQL-query om enkel de gewenste WMI objecten op te halen,
+je kan deze WQL-query best vooraf uittesten.<br>
+Maak van deze feiten gebruik om een overzicht te produceren wanneer
+Windows op jouw <strong>computer is opgestart en
+afgesloten</strong>. Vermeld bij een shutdown eveneens
+<strong>hoelang</strong> het toestel actief is geweest.
+<p><a class="popout" href="18.pl">antwoord</a></p>
+</dd>
+</dl>
+Om informatie te bekomen over een Office2007-applicatie kan je WMI
+objecten uit twee namespaces gebruiken. Bij het opstarten van het
+programma zal een instantie van de klasse
+<strong>Win32_Process</strong> uit de namespace
+<strong>root/cimv2</strong> worden aangemaakt. Bij manipulaties in
+de Office2007-applicatie zullen instanties worden aangemaakt van
+klassen in de <strong>root/msapps12</strong>.<br>
+<strong>Merk op:</strong> De namespace
+<strong>root/msapps12</strong> wordt niet meer toegevoegd door
+Office2010.
+<dl class="compact">
+<dt>19.</dt>
+<dd>Schrijf een functie <em>geefstatus</em> die informatie (schrijf
+alle eigenschappen van de aangemaakte instanties) geeft over de
+manipulaties die worden uitgevoerd bij volgend script :
+<pre>
+geefstatus("Begin ");
+my $Excel =  Win32::OLE-&gt;new('Excel.Application', 'Quit');
+geefstatus("Nieuwe Excel Applicatie gestart");
+my $Excel = Win32::OLE-&gt;GetActiveObject('Excel.Application');
+geefstatus("Draaiende Excel-applicatie gebruiken");
+my $Book = $Excel-&gt;Workbooks-&gt;Add();
+geefstatus("Werkbook toegevoegd");
+$Book-&gt;Save();
+geefstatus("Werkboek opgeslaan");
+</pre>
+<p><a class="popout" href="19.pl">antwoord</a></p>
+</dd>
+<dt>20.</dt>
+<dd>Geef een overzicht van enkele interessante eigenschappen
+(minimaal de eigenschappen vermeld in de <em>General</em> tabpagina
+van de <em>Services</em> applet) van <strong>actieve
+services</strong> op jouw computer. Geef ook de afhankelijkheden
+zoals die in de <em>Dependencies</em> tabpagina getoond worden.
+Beperk je hierbij tot <strong>rechtstreekse
+afhankelijkheden</strong> (niet via één of meer andere services).
+Probeer het probleem van de afhankelijkheden zo efficiënt mogelijk
+te laten uitvoeren.
+<p><a class="popout" href="20.pl">antwoord</a></p>
+</dd>
+<dt>21.</dt>
+<dd>Schrijf een recursieve functie
+<strong>DirectorySize(<em>directory, depth</em></strong> ) die de
+som berekent van de <strong>groottes van alle bestanden</strong>
+die zich in de opgegeven <em>directory</em>, op een willekeurig
+niveau diep. Schrijf op het scherm ook de <strong>detailinformatie
+van alle subniveau's</strong>, beperkt tot de opgegeven
+<em>depth</em>&nbsp;. Indien bijvoorbeeld deze <em>depth</em> op 0
+ingesteld is, dan mag enkel de globale informatie van de
+<em>directory</em> getoond worden. Test uit op een lokale
+<em>directory</em> met weinig submappen.<br>
+Bij het initialiseren van een string met <strong>\</strong>-tekens
+moet je een dubbele <strong>\\</strong> geven.
+<pre>
+   my $DirectoryName="c:\\emacs";
+</pre>
+Indien je deze string wilt gebruiken in een <em>query</em> moet je
+vier <strong>\\\\</strong> ingeven.
+<p><a class="popout" href="21.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>CIM repository analyseren</h4>
+De WMI <em>Scripting Library</em> kan ook uitstekend gebruikt
+worden om de <strong>klassedefinities</strong> in de CIM repository
+te analyseren. Na connecteren met een bepaalde <em>Namespace</em>
+op een bepaald toestel, kan je met een <strong>schemaquery</strong>
+alle klassen ophalen.<br>
+Voor elke namespace initialiseer je een <em>SWbemServices</em>
+object en van daaruit kan je alle klassen van deze namespace verder
+te onderzoeken. Volgende methodes (de twee eerste methodes werden
+al gebruikt in de vorige oefeningen), resulteren in een
+<em>SWbemObjectSet</em> collectie van <em>SWbemObject</em>en die
+<strong>enkel klassen</strong> representeren:
+<ul>
+<li><em>ExecQuery(WQLquery)</em> methode, met als parameter een
+<strong>WQL schemaquerystring</strong>
+(SELECT&nbsp;*&nbsp;FROM&nbsp;meta_class&nbsp;…): bepaalt
+<strong>alle</strong> klassen in de namespace.</li>
+<li><em>AssociatorsOf(relpad,...,True)</em> methode, met een
+<strong>objectpad van een klasse</strong> als eerste parameter, en
+de zevende parameter (<em>SchemaOnly</em>) ingesteld op
+<em>True</em> - zie oefening 8.</li>
+<li><em>SubclassesOf(&nbsp;)</em> methode. Zonder parameters
+bepaalt dit <strong>alle</strong> klassen in de namespace.<br>
+Deze methode heeft twee interessante optionele parameters:
+<ul>
+<li>De eerste parameter beperkt het resultaat tot subklassen die
+van een specifieke klasse afgeleid zijn.<br>
+In plaats van deze methode te gebruiken, kan je dan ook vertrekken
+van een <em>SWbemObject</em> dat de gewenste specifieke klasse
+representeert. Met de methode <em>Subclasses_(&nbsp;)</em> bekom je
+dezelfde <em>ObjectSet</em>.</li>
+<li>De tweede parameter geeft de mogelijkheid om de
+<em>wbemQueryFlagShallow</em> bit aan te zetten, dan levert de
+methode enkel <strong>onmiddellijke subklassen</strong> van de
+eerste parameter (of indien deze ontbreekt, subklassen die niet
+zijn afgeleid van een andere klasse). Deze WMI constante moet je
+correct "inladen" met de TypeLibrary.</li>
+</ul>
+</li>
+</ul>
+<dl class="compact">
+<dt>22.</dt>
+<dd>Vertrek van oefening 7 waarbij je alle namespaces overloopt.
+Pas dit aan zodat voor elke namespace ook het totaal aantal klassen
+bepaald wordt. Vergelijk dit met het aantal klassen die in de
+eerste tak van de hiërarchie staan (onmiddellijke subklassen).<br>
+Vang de eventuele fout op, zodat dit ook lukt zonder
+administrator-rechten<br>
+Met een kleine aanpassing kan je ook alle namespaces bepalen die
+een bepaalde klasse, bijvoorbeeld "StdRegProv", bevatten.
+<p><a class="popout" href="22.pl">antwoord</a></p>
+</dd>
+<dt>23.</dt>
+<dd>Pas vorige oefening aan zodat niet enkel het aantal klassen,
+maar ook de naam van <strong>alle klassen</strong> in één bepaalde
+namespace <strong>hiërarchisch</strong> getoond wordt. Zorg hierbij
+voor een <strong>gepaste indentering</strong>, die de niveau's van
+overerving duidelijk weergeeft. Bovendien moet elk niveau
+<strong>gesorteerd zijn op naam</strong>. Test dit uit met de
+namespace "root/cimv2" en "root/msapps12", en vergelijk met het
+overzicht in <strong>WMI&nbsp;CIM&nbsp;Studio</strong>
+<p><a class="popout" href="23.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="qual">Qualifiers</a></h4>
+Zoals we in de vorige reeks gezien hebben bevat de CIM repository
+ook allerlei qualifiers. Deze informatie kan je ook programmatisch
+onderzoeken.<br>
+Je kan geen informatie over qualifiers opnemen in een WQL-query.
+<p><strong>Opmerkingen vooraf:</strong><br>
+(1) Indien je informatie wil opvragen over <em>qualifiers</em>, kan
+je best bij het ophalen van het WMI object de
+<em>wbemFlagUseAmendedQualifiers</em> bit van de <em>iflags</em>
+parameter van de diverse <em>SWbem</em> methodes (<em>get,
+subclassesOf, getObject, ExecQuery...</em>) <em>aan</em> zetten,
+anders worden niet alle qualifiers opgehaald. Deze WMI constante
+(die moet worden ingeladen !!) wordt op de juiste positie in de
+parameterlijst opgegeven (afhankelijk van de specifieke
+methode).<br>
+(2) Aangezien <em>qualifier</em>-informatie enkel afhangt van de
+klasse waartoe een WMI object behoort is het efficiënter om de
+<em>qualifiers</em> te bepalen van het WMI object dat de bijhorende
+WMI klasse voorstelt: zo wordt vermeden dat men dit moet herhalen
+voor elk individueel WMI object van dezelfde klasse. Bovendien is
+de <em>SWbemQualifierSet</em> collectie van een instantie maar een
+deelset van de <em>SWbemQualifierSet</em> collectie van de
+overeenkomstige klasse !!</p>
+<h5>Klassequalifiers</h5>
+Voor elk <em>SWbemObject</em> vraag je met het <em>Qualifiers_</em>
+-attribuut de <em>SWbemQualifierSet</em> collectie van
+<em>SWbemQualifier</em> objecten, die elk individueel een
+<strong>klassequalifier</strong> representeren. Deze bevatten meer
+gedetailleerde informatie over de klasse. Elk
+<em>SWbemQualifier</em> object heeft een <em>Name</em> en een
+<em>Value</em>. Je kan dus geen informatie vragen over het type van
+de qualifier (zie documentatie).
+<dl class="compact">
+<dt>24.</dt>
+<dd>Bepaal voor de namespace <strong>root/CIMV2</strong> welke
+providers worden aangesproken. Bepaal ook voor elke provider het
+aantal klassen dat wordt ondersteund. Geef een overzicht, geordend
+op aantal klassen.<br>
+Voor hoeveel klassen is de provider niet opgegeven?
+<p><a class="popout" href="24.pl">antwoord</a></p>
+</dd>
+<dt>25.</dt>
+<dd>Vergelijk de <em>SWbemQualifierSet</em> collectie van een
+klasse met de <em>SWbemQualifierSet</em> collectie van een
+instantie van die klasse. De naam van de klasse kan bijvoorbeeld
+als enig argument worden opgegeven. Een instantie kan je zelf
+ophalen.<br>
+Kan je voor de instantie ook alle qualifiers ophalen?
+<p>Test je script uit met de klasses
+<strong>Win32_LocalTime</strong>, <strong>Win32_DiskDrive</strong>
+en <strong>Win32_Product</strong></p>
+<p><a class="popout" href="25.pl">antwoord</a></p>
+</dd>
+<dt>26.</dt>
+<dd>Hoe kan je van een klasse opvragen of het een
+<strong>Singleton</strong> klasse is. Geef een lijst met
+klassenamen mee als argumenten.<br>
+Test je script uit met de klasses <strong>Win32_LocalTime</strong>,
+<strong>Win32_DiskDrive</strong>,
+<strong>Win32_CurrentTime</strong>,
+<strong>Win32_WMISetting</strong> en
+<strong>CIM_LogicalDevice</strong><br>
+Waarom kan je hier geen gebruik maken van het "IsSingleton"
+attribuut van "Path_" (zie oefening 16).<br>
+<strong>Tip:</strong> Schrijf een functie die nagaat of een
+bepaalde klassequalifier in <em>ingesteld</em> voor een bepaalde
+klasse (== de klassequalifier komt voor EN is ingesteld op
+<em>TRUE</em>).
+<p><a class="popout" href="26.pl">antwoord</a></p>
+</dd>
+<dt>27.</dt>
+<dd>Bepaal hoeveel klassen in de root\cimv2 namespace:
+<ul>
+<li><strong>abstract</strong> zijn, of niet,</li>
+<li><strong>associatorklassen</strong> zijn, of niet,</li>
+<li><strong>dynamisch</strong> zijn, of niet,</li>
+<li><strong>singletonklassen</strong> zijn, of niet,</li>
+</ul>
+Zoek eerst op welke <strong>klassequalifier</strong> de gevraagde
+informatie bevat, en gebruik de functie uit de vorige oefening.
+<p><a class="popout" href="27.pl">antwoord</a></p>
+</dd>
+<dt>28.</dt>
+<dd>Van een aantal klassen, vb <strong>Win32_Process</strong> kan
+je zelf ook instanties toevoegen en/of verwijderen, van andere
+klassen vb <strong>Win32_Product</strong> kan dit niet. Zoek op
+welke <strong>klassequalifiers</strong> deze informatie
+bevatten.<br>
+Meer hierover in de subtak <em>WMI&nbsp;Reference / WMI
+Infrastructure Objects and Values / WMI Qualifiers / Standard
+Qualifiers</em> van de <em>WMI-documentatie</em><br>
+Bepaal nu voor alle klassen in de root\cimv2 namespace of je zelf
+instanties kan maken en/of verwijderen van die klasse, en indien
+dit kan, bepaal dan ook welke <em>methode</em> je hiervoor zal
+moeten gebruiken. We komen hier later op terug.
+<p><a class="popout" href="28.pl">antwoord</a></p>
+</dd>
+</dl>
+<h5>Attribuutqualifiers</h5>
+Elk attribuut wordt voorgesteld als een <em>SWbemProperty</em>
+object. We bespraken reeds de <em>Name</em>, <em>CIMType</em>,
+<em>Value</em> en <em>IsArray</em> attributen van een
+<em>SWbemProperty</em> object. Met het <em>Qualifiers_</em>
+attribuut van dit <em>SWbemProperty</em> object wordt een
+<em>SWbemQualifierSet</em> opgehaald van <em>SWbemQualifier</em>
+objecten, die elk individueel een
+<strong>attribuutqualifier</strong> representeren. Op deze manier
+kunnen de attribuutqualifiers ondervraagd worden, bijvoorbeeld om
+via het <em>Values</em>/<em>ValueMap</em> mechanisme de waarde van
+de attributen op een meer informatieve manier te kunnen
+interpreteren.
+<dl class="compact">
+<dt>29.</dt>
+<dd>Bepaal alle <strong>attribuutqualifiers</strong> van alle
+attributen die <em>specifiek</em> zijn voor een klasse. Voor bijna
+alle attributen beschik je over de attribuutqualifier
+<em>CIMTYPE</em>, vergelijk zijn waarde met de waarde van het
+attribuut <em>CIMType</em> dat je hebt voor elk
+<em>SWbemProperty</em> object. Wat kan je hieruit besluiten ?<br>
+De naam van de klasse kan bijvoorbeeld als enig argument worden
+opgegeven.
+<p><strong>Merk op</strong>: in de TypeLybrary 'Microsoft WMI
+Scripting' vind je ook informatie over de WbemCimTypes. Gebruik
+oefening 10 uit reeks1 om een hash te maken die de cimtypes kan
+converteren van numeriek naar tekst. Verwerk die informatie ook in
+deze oefening.</p>
+<p><a class="popout" href="29.pl">antwoord</a></p>
+</dd>
+<dt>30.</dt>
+<dd>Zoek de <strong>attribuutqualifier</strong> die bepaalt of een
+attribuut als sleutelattribuut wordt gebruikt. Geef een overzicht
+van alle klassen in de root\cimv2 namespace met een
+<strong>samengestelde index</strong>, en toon dan meteen ook
+<strong>welke attributen</strong> in die index opgenomen zijn.<br>
+(Waarom kan je hier geen gebruik maken van het attribuut "Keys" van
+het "Path_" attribuut ?)<br>
+Met een minimale aanpassing kan je enkel de associatorklassen
+ophalen, bepaal nu ook het "CIMTYPE" van de sleutelattributen - wat
+merk je dan op ?
+<p><a class="popout" href="30.pl">antwoord</a></p>
+</dd>
+<dt>31.</dt>
+<dd>Zoek in <em>WMI&nbsp;CIM&nbsp;Studio</em> de klasse
+<em>Win32_BaseService</em>, deze beschikt over een
+<strong>recursieve associatie</strong> via de associatorklasse
+<em>Win32_DependentService</em>. De gebruikte sleutelattributen
+zijn <em>(Antecedent,Dependent)</em> - zoek uit hoe je in de
+associatorklasse eenvoudig kan detecteren dat het om een recursieve
+associatie gaat. Bepaal nu <strong>alle</strong> klassen in de
+root\cimv2 namespace waarvoor een <strong>recursieve
+associatie</strong> bestaat, beperk je tot niet-abstracte klassen.
+Geef daarbij niet enkel de naam van de klasse, maar ook de
+<strong>associatorklasse</strong> die deze recursieve associatie
+realiseert en de <strong>sleutelattributen</strong> die gebruikt
+worden.
+<p><a class="popout" href="31.pl">antwoord</a></p>
+</dd>
+<dt>32.</dt>
+<dd>Geef een overzicht van alle specifieke attributen van een
+klasse uit de <strong>root/cimv2</strong> - namespace, die
+beschikken over het <em>ValueMap</em>-mechanisme&nbsp;. Voor deze
+attributen geef je de beschrijving en alle <em>overeenkomstige</em>
+waarden van zowel het <em>Values</em>, als het <em>ValueMap</em> -
+qualifierItem. Gebruik een hash om de koppeling op te slaan.<br>
+De naam van de klasse, vb Win32_NetworkAdapter, wordt als enig
+argument opgegeven.
+<p><a class="popout" href="32.pl">antwoord</a></p>
+</dd>
+<dt>33.</dt>
+<dd>Geef een overzicht van alle <strong>netwerkadapters</strong>
+waarvan de status van de verbinding (<em>NetConnectionStatus</em>)
+ingesteld is. Geef ondermeer de waarde van volgende eigenschappen
+(zie ook oefening 16 uit de vorige reeks):
+<ul>
+<li>de naam, het type, de toestand, de beschikbaarheid en het MAC
+adres van de adapter, en de naam en de status van de verbinding.
+Zorg ervoor dat je de waarde van de beschikbaarheid van de adapter
+en van de status van de verbinding weergeeft met een
+<strong>tekstuele waarde</strong>, niet met een numerieke waarde
+(en zonder dat je het verband tussen beiden <em>hard</em> codeert).
+Schrijf eventueel een functie om dit verband in een hashMap te
+plaatsen.</li>
+<li>resource informatie zoals IRQ bronnen, DMA kanalen, I/O poorten
+en geheugenadressen.</li>
+<li>IP-, DHCP-configuratie en DNS-configuratie.</li>
+</ul>
+De informatie over de <strong>tekstuele waarde</strong> is enkel
+afhankelijk van de klasse, en haal je om performantieredenen dus
+beter maar één keer op.
+<p><a class="popout" href="33.pl">antwoord</a></p>
+</dd>
+<dt>34.</dt>
+<dd>Er zijn ook properties die enkel de qualifier <em>Values</em>
+hebben. Geef een overzicht van alle specifieke attributen van een
+klasse uit de <strong>root/cimv2</strong> - namespace, die enkel
+beschikken over de <em>Values</em>-qualifier. Voor deze attributen
+geef je de ook alle mogelijke waarden, en de numerieke waarden
+waarmee die overeenstemmen.<br>
+De naam van de klasse, vb Win32_LogicalDisk of Win32_DiskDrive ,
+wordt als enig argument opgegeven.
+<p><a class="popout" href="34.pl">antwoord</a></p>
+</dd>
+<dt>35.</dt>
+<dd>Geef een overzicht van alle <strong>diskpartities</strong> op
+jouw toestel. Voer het script bij voorkeur uit terwijl je een USB
+of externe harddrive ingeplugd hebt. Geef telkens de naam en de
+waarde van <strong>alle</strong> ingestelde <strong>fysieke en
+logische</strong> karakteristieken (<em>Win32_DiskPartition</em>,
+<em>Win32_DiskDrive</em> en <em>Win32_LogicalDisk</em> klassen).
+Van de <em>DriveType</em>, <em>MediaType</em> en
+<em>Capabilities</em> attributen moet je de waarde met een
+<strong>tekstuele waarde</strong> weergeven.
+<p><a class="popout" href="35.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="Methode">Methodes van een SWbemObject</a></h4>
+De methodes van een SWbemObject worden beschreven met een vrij
+complexe objecten-hiërarchie, die alle informatie verpakt in aparte
+objecten, die we nu zullen bespreken.<br>
+Voor elk <em>SWbemObject</em>, ongeacht of dit een klasse of een
+object representeert, verwijst het <em>Methods_</em> attribuut naar
+een <em>SWbemMethodSet</em> collectie van <em>SWbemMethod</em>
+objecten. (Dit is NIET toepasbaar op het <em>SWbemServices</em>
+object).
+<p>Elke individuele methode van een WMI klasse/object kan benaderd
+worden met een <em>SWbemMethod</em> object. Zoals je in de
+WMI-documentatie kan terugvinden, heeft dit <em>SWbemMethod</em>
+object volgende interessante properties:</p>
+<ul>
+<li>het <em>Name</em> attribuut: een string die ook kan gebruikt
+worden om een individueel element van de <em>SWbemMethodSet</em>
+collectie te indexeren,</li>
+<li>het <em>Qualifiers_</em> attribuut: representeert de
+<strong>methodequalifiers</strong> (zie reeks3) als een
+<em>SWbemQualifierSet</em> collectie van <em>SWbemQualifier</em>
+objecten.</li>
+<li>de <em>InParameters</em> bevatten informatie over de
+invoerparameters als <em>SWbemObject</em>,</li>
+<li>de <em>OutParameters</em> bevatten informatie over de
+uitvoerparameters als <em>SWbemObject</em>.</li>
+</ul>
+De twee laatste attributen zijn, misschien onverwacht, ook vrij
+complex omdat ze refereren naar een <em>SWbemObject</em> (en dus
+niet naar een collectie!!). Van dit laatste object is enkel het
+<em>Properties_</em> attribuut interessant. Dit resulteert in een
+<em>SWbemPropertySet</em> collectie die de uiteindelijk
+<em>SWbemProperty</em> objecten bevat, die elk een
+<strong>individuele invoer- of uitvoerparameter</strong>
+voorstellen. Deze <em>SWbemProperty</em> objecten, die we al in
+oefening 12 gebruikt hebben, beschikken over een <em>Name</em>,
+<em>CIMType</em>, <em>Value</em> en <em>IsArray</em> attribuut.
+Bovendien zal het <em>Qualifiers_</em> attribuut verwijzen naar een
+<em>SWbemQualifierSet</em> van
+<strong>methodeparameterqualifiers</strong> die bij een specifieke
+parameter horen (zie reeks 3).
+<dl class="compact">
+<dt>36.</dt>
+<dd>Geef voor 1 klasse uit de
+<strong>root/cimv2</strong>-namespace, waarvan je de naam als
+argument opgeeft, een overzicht van <strong>alle methoden</strong>
+, aangevuld met een lijst van <strong>methodequalifiers</strong> en
+hun waarde.<br>
+Test je script uit met de klassen
+<strong>Win32_Process,Win32_Share, Win32_Volume</strong>.<br>
+Merk op dat in de beschrijving van elke methode ook de juiste
+overeenkomst wordt getoond tussen de methodequalifiers
+<em>ValueMap</em> en <em>Values</em>. (dit ontbreekt indien er
+enkel Values zijn)<br>
+(Als je start van een <em>instantie</em> i.p.v. een <em>klasse</em>
+bekom je soms minder methodequalifiers).
+<p><a class="popout" href="36.pl">antwoord</a></p>
+</dd>
+<dt>37.</dt>
+<dd>Indien een methode beschikt over een <em>ValueMap</em> en/of
+<em>Values</em> qualifier, dan kan je de
+<strong>ReturnValue</strong> van de methode interpreteren op een
+meer informatieve manier. Bepaal voor de klassen uit de
+<strong>root/cimv2</strong>-namespace, waarvan je de na(a)m(en) als
+argument(en) opgeeft, een overzicht van <strong>alle
+methoden</strong>, die over een tekstuele interpretatie beschikken
+voor de <strong>ReturnValue</strong>. Toon ook alle mogelijke
+interpretaties.<br>
+Test je script uit met de klassen <strong>Win32_Group, Win32_Share,
+Win32_Volume</strong>.<br>
+Indien je aan het script geen argumenten meegeeft, moet je alle
+klassen in <strong>root/cimv2</strong> behandelen.
+<p><a class="popout" href="37.pl">antwoord</a></p>
+</dd>
+<dt>38.</dt>
+<dd>Geef voor 1 klasse uit de
+<strong>root/cimv2</strong>-namespace, waarvan je de naam als
+argument opgeeft, een overzicht van <strong>alle methoden</strong>,
+en wel als volgt:
+<ul>
+<li>geef per methode een lijst met de invoerparameters, in de
+volgorde zoals ze bij de methode-aanroep moeten gespecificeerd
+worden. Elke invoerparameter die <strong>optioneel</strong> is
+plaats je bovendien tussen <strong>[ ]</strong>-tekens.</li>
+<li>indien de methode <strong>meer dan 1 uitvoerparameter</strong>
+heeft, vermeld deze dan op een aanvullende lijn.</li>
+<li>duid aan of dit een statische methode is, die moet worden
+uitgevoerd op de klasse.</li>
+</ul>
+Test je script met de klassen <strong>Win32_Process,Win32_Share,
+Win32_Volume</strong>. Indien je aan het script geen argumenten
+meegeeft, moet je alle klassen in <strong>root/cimv2</strong>
+behandelen.
+<p><a class="popout" href="38.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Oproepen van methoden</h4>
+De meeste methodes zijn enkel zinvol indien ze worden opgeroepen op
+een instantie. Een aantal klassen beschikken echter ook over
+'statische' methodes, zie vorige oefening. Controleer dit voor je
+een methode oproept.<br>
+We hebben reeds intuïtief methodes opgeroepen van
+<em>SWbemServices</em>, en ook van een <em>SWbemObject</em>, door
+gebruik te maken van de <strong>directe</strong> techniek. Daarbij
+moet je alle informatie (methodenaam, argumentenlijst,&nbsp;...)
+vooraf opzoeken.<br>
+Net zoals bij het raadplegen van attributen, is er ook een
+<strong>formele</strong> techniek om WMImethodes van een WMI
+klasse/object aan te roepen, eens men beschikt over een
+<em>SWbemObject</em> (<code>$WBemObject</code>) dat de klasse of
+het object representeert. We bespreken de twee methodes:
+<ul>
+<li>De directe techniek <strong>insinueert</strong> dat het COM
+<em>SWbemObject</em> de <strong>methoden van de WMI klasse
+overerft</strong>. Hierdoor is een eenvoudige syntax mogelijk:
+<pre>
+      $ReturnStatus = $WBemObject-&gt;WMImethode(parameterlijst)
+</pre>
+De parameterlijst moet hierbij ingevuld worden met de lijst van de
+actuele argumenten, <strong>in de juiste volgorde</strong> zoals
+die door de ID methodeparameterqualifiers opgelegd wordt. Waar
+nodig, moet <em>undef</em> gespecificeerd worden. Enkel een rij
+trailing <em>undef</em> argumenten mag weggelaten worden. Je moet
+hierbij de objecthiërarchie van de methodes niet gebruiken. Deze
+methode schiet echter soms wel tekort (zie verder).</li>
+<li>De meer formele techniek om een WMImethode uit te voeren op een
+gegeven <em>$SWBemObject</em> vereist volgende stappen:
+<ol>
+<li>initialiseer het <em>SWbemMethod</em> object voor de WMI
+methode</li>
+<li>initialiseer, met het <em>InParameters</em>-attribuut, het
+<em>SWbemObject</em> dat via zijn <em>Properties_</em> collectie de
+volledige verzameling <strong>invoerparameters</strong> voorstelt
+die bij deze WMI methode horen. Dit object mag enkel ontbreken
+indien de methode geen invoerparameters heeft. Indien er enkel
+optionele parameters zijn, die je niet invult, moet je dit object
+wel initialiseren, en meegeven als parameter.</li>
+<li>vul de actuele waarden in van de noodzakelijke
+invoerparameters. Dit kan op een directe manier, net alsof het
+laatste <em>SWbemObject</em> de invoerparameters als attributen zou
+hebben overgeerfd, of via de <em>Properties_</em> collectie ervan,
+geïndexeerd met de naam van de invoerparameter, en daarvan dan weer
+het <em>Value</em> attribuut.
+<pre>
+     $InParameters-&gt;{Name} = ...;   #directe methode
+     $InParameters-&gt;{Properties_}-&gt;Item(Name)-&gt;{Value} = ....;   #indirect
+</pre></li>
+<li>voer de <em>ExecMethod_(WMImethode,[InParameters])</em> methode
+uit op het <code>$WBemObject</code> dat de WMI object (of klasse)
+representeert. De eerste verplichte parameter is de naam van de
+WMImethode. De tweede optionele parameter is het
+<em>SWbemObject</em> dat de verzameling invoerparameters
+voorstelt.</li>
+<li>De terugkeerwaarde van de <em>ExecMethod_</em> methode bevat
+alle <em>OutParameters</em>. Dit is dus een <em>SWbemObject</em>
+dat, via zijn <em>Properties_</em> collectie, de volledige
+verzameling <strong>uitvoerparameters</strong> voorstelt. Het
+ophalen van de uitvoerparameters kan opnieuw op een directe, of op
+de formele manier. De meeste WMImethoden hebben maar één
+uitvoerparameter, die systematisch <em>ReturnValue</em> noemt.</li>
+</ol>
+De formele techniek biedt het voordeel dat men geen rekening moet
+houden met de <strong>correcte volgorde van de
+invoerparameters</strong>. Het is ook de enige mogelijkheid indien
+de methode <strong>meerdere uitvoerparameters</strong> vertoont, en
+je die waarden ook nodig hebt.<br>
+Tot slot bestaat nog de mogelijkheid om een methode te laten
+uitvoeren zonder eerst het <em>SWbemObject</em> te initialiseren:
+men kan namelijk gebruik maken van de <em>ExecMethod_</em> methode
+van het <em>SWbemServices</em> object. In dit geval moet het
+<em>SWbemObjectPath</em> (het <em>Path_</em> attribuut van het
+<em>SWbemObject</em>) als eerste argument toegevoegd worden.</li>
+</ul>
+<dl class="compact">
+<dt>39.</dt>
+<dd>Gebruik de methode <em>Terminate</em> om alle opgestarte
+<em>notepad</em>-processen te killen. Je kan een WQL-query
+gebruiken om deze processen op te halen. Schrijf voor elk process
+de juiste tekstuele boodschap op het scherm. Werk dit uit met beide
+technieken (direct en formeel)<br>
+De parameter <em>reason</em> is een verplichte parameter, maar het
+lukt ook als je die parameter niet invult...<br>
+Kan je ook de processen killen die in een andere gebruikerscontext
+opgestart zijn?
+<p><a class="popout" href="39.pl">antwoord</a></p>
+</dd>
+<dt>40.</dt>
+<dd>Ontwikkel een script dat een <strong>specifieke
+service</strong> <strong>opstart</strong>, indien de service nog
+niet actief is, en anders de service <strong>stopt</strong>. Dit is
+een methode zonder invoerparameters. Vorm de numerieke
+terugkeerwaarde van de methodes om in een <strong>tekstuele
+boodschap</strong>, zonder deze <em>hard</em> te coderen. Maak
+<em>opzettelijk</em> logische fouten, om de feedback bij fouten
+snel uit te kunnen testen.<br>
+Probeer de twee technieken uit.
+<p><a class="popout" href="40.pl">antwoord</a></p>
+</dd>
+<dt>41.</dt>
+<dd>Geef een <strong>hiërarchisch overzicht</strong> van een
+specifieke <strong>registertak</strong>. Welke klasse heb je hier
+nodig, zie oefening 4 uit Reeks3.<br>
+In de <strong>WMI documentatie</strong> vind je meer uitleg over
+deze methodes. Je kan meer informatie vinden bij deze opgave in de
+tak <em><nobr>Using WMI</nobr> / <nobr>Supporting Tasks for
+WMI</nobr> / <nobr>Modifying the System Registry</nobr> /
+<nobr>Obtaining Register Data</nobr></em>.<br>
+Toon de volledige boomstructuur van subtakken van een
+<strong>registertak</strong> waarvan je de <em>key</em>
+<em>hard</em> codeert. Gebruik een functie die je recursief
+aanroept.
+<p>Je mag gebruik maken van de volgende Hash met constanten:</p>
+<pre>
+my %RootKey = ( HKEY_CLASSES_ROOT   =&gt; 0x80000000
+              , HKEY_CURRENT_USER   =&gt; 0x80000001
+              , HKEY_LOCAL_MACHINE  =&gt; 0x80000002
+              , HKEY_USERS          =&gt; 0x80000003
+              , HKEY_CURRENT_CONFIG =&gt; 0x80000005
+              , HKEY_DYN_DATA       =&gt; 0x80000006 );
+</pre>
+Deze constanten zijn niet terug te vinden in de TypeLibrary.
+<p><a class="popout" href="41.pl">antwoord</a></p>
+</dd>
+<dt>42.</dt>
+<dd><strong>Vrij complexe opdracht:</strong> maak nu ook voor elke
+subtak een lijst van alle (naam,waarde)-koppels. Zoek in de
+<em>WMI-documentatie</em> hoe je dit opvraagt. Je moet bepaalde
+informatie <em>hard</em> coderen.
+<p><a class="popout" href="42.pl">antwoord</a></p>
+</dd>
+</dl>
+Sommige WMI methoden vergen bij aanroep specifieke rechten. Deze
+kunnen herkend worden aan de <em>Privileges</em> methodequalifier.
+Bekijk in <strong>WMI&nbsp;CIM&nbsp;Studio</strong> de ingestelde
+<em>Privileges</em> van de methode <strong>Create</strong> van de
+<strong>Win32_Process</strong> - klasse.<br>
+De meest eenvoudige techniek om een <strong>meer strikt beveiligde
+methode</strong> aan te kunnen roepen vanuit een script, bestaat er
+in om tijdens het connecteren aan een namespace, de
+protocolspecificatie, winmgmts:, van de moniker te laten volgen
+door een <strong>{(…)}!</strong> string, meer informatie in de
+<em>WMI-documentatie</em> in de tak <em><nobr>Using WMI</nobr></em>
+/ <em><nobr>Creating a WMI Application or Script</nobr></em> /
+<em><nobr>Creating a WMI Script</nobr></em> /
+<em><nobr>Constructing a Moniker String</nobr></em> . Tussen de
+haakjes moet dan een lijst gegeven worden, van elkaar gescheiden
+door komma's, van de vereiste privileges. Hierbij moet de prefix
+<em>Se</em> en de suffix <em>Privilege</em> telkens weggelaten
+worden.
+<dl class="compact">
+<dt>43.</dt>
+<dd>Geef een overzicht van <strong>alle methoden</strong> (en de
+klasse waartoe ze behoren) in de root\cimv2 namespace die bij
+aanroep expliciete vermelding van één of <strong>meer specifieke
+rechten</strong> vereisen. Vermeld deze rechten dan in het formaat
+zoals dit in de connectiemoniker verwacht wordt.
+<p><a class="popout" href="43.pl">antwoord</a></p>
+</dd>
+<dt>44.</dt>
+<dd>In oefening 39 werd een script geschreven dat alle notepad
+processen <strong>afbreekt</strong>. Indien je een proces wilt
+afbreken dat je niet zelf hebt opgestart moet je ook hiervoor
+privileges instellen (Je kan dit nalezen in de beschrijving van de
+<strong>Terminate()</strong>-methode van de
+<strong>Win32_Process</strong> klasse in de tak
+<em><nobr>WMI&nbsp;Reference</nobr> / <nobr>WMI Classes</nobr> /
+<nobr>Win32 Classes</nobr></em>)<br>
+Omdat de methode <strong>Terminate()</strong> niet altijd dit
+<em>Privilege</em> moet hebben is deze qualifier blijkbaar niet
+ingesteld.<br>
+Pas de oplossing van oefening 39 aan, zodat alle notepad processen
+worden afgebroken.
+<p><a class="popout" href="44.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="Creer">Creëren en verwijderen van objecten</a></h4>
+Om dit uit te testen moet je inloggen als
+<em>Administrator</em>.<br>
+Er moet onderscheid worden gemaakt tussen
+<strong>dynamische</strong> en <strong>statische</strong> klassen.
+In oefening 28 hebben we bepaald voor welke klassen je zelf
+(dynamisch) instanties kan maken, en welke statische WMImethode je
+hierbij nodig hebt. Indien de <strong>klassequalifier</strong>
+<em>CreatedBy</em> verwijst naar de methode <em>PutInstance</em>,
+dan verwijst dit echter NIET naar een <em>statische</em> WMImethode
+van de klasse, maar betekent dit dat de "statische" methode moet
+worden toegepast. Ook indien deze qualifier niet is ingevuld, moet
+je de "statische" methode toepassen.
+<ul>
+<li>Het creëren van WMI objecten van <strong>dynamische</strong>
+klassen, voor zover ondersteund door de provider, gebruikt de
+specifieke WMImethode beschreven in de klassequalifier
+<em>CreatedBy</em> van de WMI klasse, behalve de uitzondering die
+hiervoor beschreven werd. Het scriptmatig uitvoeren van een
+dergelijke constructor verschilt in geen enkel opzicht van andere
+WMI-methodes.</li>
+<li>Statische methode om objecten van een klasse te creëren. Dit
+gebeurt in vier stappen:
+<ol>
+<li>initialiseer een <em>SWbemObject</em> die de klasse
+representeert waartoe het nieuwe object behoort.</li>
+<li>maak in het geheugen een nieuw <em>SWbemObject</em>, dat het
+nieuw te creëren WMI object representeert, door het uitvoeren van
+de methode <em>SpawnInstance_(&nbsp;)</em>.<br>
+De return-waarde van deze methode refereert naar het nieuwe object,
+hierbij zijn de attributen hetzij <em>niet</em>, hetzij op een
+<em>default</em> waarde ingevuld,</li>
+<li>vul de actuele waarden in van de attributen van dit nieuwe
+object (zoek zelf de belangrijkste waarden op),</li>
+<li>vraag de <em>Put_()</em> methode op het nieuwe object. Dit
+zorgt <em>atomair</em> voor de effectieve creatie. Indien er reeds
+een object met hetzelfde objectpad zou bestaan, dan worden de
+attributen van dit object <em>gewijzigd</em>. Zoek in de
+MSDN-Library op wat de returnwaarde is van deze methode.</li>
+</ol>
+</li>
+</ul>
+Bekijk de foutmelding om na te gaan of <strong>Put_()</strong>
+gelukt is.
+<p><strong>Opmerkingen</strong>: De inhoud van de klassequalifier
+<em>CreatedBy</em> geeft enkel de juiste informatie indien de
+<em>SupportsCreate</em> qualifier ingevuld is.<br>
+Alhoewel de "statische" methode voor alle klassen beschikbaar is,
+wordt het aanbrengen van wijzigingen niet steeds door de provider
+ondersteund. Voor objecten die verband houden met het
+bestandsysteem (<em>Win32_Directory</em> en <em>CIM_DataFile</em>
+objecten) lukt dit bijvoorbeeld niet.</p>
+<dl class="compact">
+<dt>45.</dt>
+<dd>Creëer via een WMI script een <strong>nieuwe gedeelde
+map</strong> (<em>share</em>). Zoek eerst de methode op die je
+hiervoor ter beschikking hebt. Geef ook een tekstuele melding of
+het aanmaken van de share gelukt is. Je kan dit daarna controleren
+met <strong>net share</strong>&nbsp;.<br>
+Probeer de formele en informele techniek voor het uitvoeren van de
+<strong>Create</strong>-methode.
+<p><a class="popout" href="45.pl">antwoord</a></p>
+</dd>
+<dt>46.</dt>
+<dd>Creëer via een WMI script een <strong>nieuwe environment
+variabele</strong>. Controleer dat je hiervoor de
+<em>statische</em> methode moet gebruiken.<br>
+<strong>Belangrijk voor later (permanente
+eventregistratie):</strong> Na creëren van een nieuwe instantie,
+met de statische methode, heb je in bepaalde situaties de absolute
+padnaam nodig van dit nieuwe object. De relatieve padnaam ophalen
+lukt zonder problemen, maar de absolute padnaam kan NIET worden
+opgehaald met de informele methode - zoek uit hoe dit wel lukt
+!!<br>
+Controleer met de oplossing van oefening&nbsp;11 dat dit correct
+gebeurd is. Je kan ook met
+<strong>c:\windows\system32\sysdm.cpl</strong> alle environment
+variabelen controleren.
+<p><a class="popout" href="46.pl">antwoord</a></p>
+</dd>
+</dl>
+Om WMI objecten te <strong>verwijderen</strong> gebruik je in
+principe steeds de <em>Delete_(&nbsp;)</em> methode van het
+<em>SWbemObject</em>. Voor objecten van <strong>statische</strong>
+klassen leidt dit effectief tot verwijdering uit de CIM repository.
+Voor objecten van <strong>dynamische</strong> klassen echter wordt
+de <em>Delete_(&nbsp;)</em> methode niet steeds door de provider
+ondersteund.
+<dl class="compact">
+<dt>47.</dt>
+<dd>Verwijder in een script de <strong>shares</strong> en de
+<strong>environment variabelen</strong> die je in de vorige
+oefeningen aangemaakt hebt.
+<p><a class="popout" href="47.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="PEvent">Permanente Eventregistratie</a></h4>
+In de tak <em><nobr>Using WMI</nobr> / <nobr>Monitoring
+Events</nobr></em> van de <em>WMI-documentatie</em> kan je alles
+terugvinden in de sectie <em>Using Permanent Event
+Consumers</em>.<br>
+In de laatste oefeningen van reeks 3 werd een <strong>permanente
+eventregistratie</strong> volledig geconfigureerd in
+WMI&nbsp;CIM&nbsp;Studio. Het is zinvol om de diverse objecten die
+je hiervoor nodig hebt <strong>via een script</strong> te creëren.
+Vooral indien het de bedoeling is om de eventregistratie te
+realizeren <strong>op een aantal toestellen</strong>, is dit
+onmiddellijk veel efficiënter via een script dan via handmatige
+aanpassingen.
+<p>Controleer of <strong>Put_()</strong> gelukt is - gebruik
+<strong>Win32::OLE-&gt;LastError()</strong>. De eventuele
+foutboodschap verduidelijkt wat er is misgegaan.<br>
+Voor een aantal klassen is het noodzakelijk om de parameter
+<strong>wbemFlagUseAmendedQualifiers</strong> in te geven als
+parameter voor <strong>Put()</strong>. De waarde van deze constante
+is 0x20000, maar je kan beter de constante inladen uit de
+TypeLibrary.<br>
+Je kan deze parameter best altijd meegeven.<br>
+Je moet administrator zijn om volgende oefeningen te kunnen maken.
+Bovendien lukt het dikwijls niet indien je "localhost" gebruikt
+voor de computernaam. Je gebruikt hier beter ".".</p>
+<dl class="compact">
+<dt>48.</dt>
+<dd>Creëer <strong>vanuit een script</strong> alle klassen die
+nodig waren voor oefening 39 (periodiek herstarten van de SNMP
+service) uit de vorige reeks.
+<p><a class="popout" href="48.pl">antwoord</a></p>
+</dd>
+<dt>49.</dt>
+<dd>Creëer ook <strong>vanuit een script</strong> alle klassen die
+nodig waren voor oefening 41 (calc en notepad process afsluiten en
+een mail sturen) uit de vorige reeks.
+<p><a class="popout" href="49.pl">antwoord</a></p>
+</dd>
+<dt>50.</dt>
+<dd>Configureer via een script de <strong>permanente
+eventregistratie</strong> die er voor zorgt dat er een
+<strong>email</strong> gestuurd wordt naar de labobegeleiders,
+telkens je een <strong>USB stick inplugt</strong>. Verwijs in het
+subject van de email naar de driveletter waaronder de USB stick ter
+beschikking is.<br>
+<strong>Tip:</strong> Bij het instellen van de <em>Event query</em>
+kan je gebruik maken van de typische WMI Event klassen. Deze
+beschikken over interessante attributen waarmee je die klasse
+verder kan analyseren. Zoek deze attributen op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> of in de
+<em>WMI&nbsp;References / WMI&nbsp;Classes /
+WMI&nbsp;System&nbsp;Classes</em> tak. Indien de Event klasse
+afgeleid is van de klasse <strong>__InstanceOperationEvent</strong>
+dan beschik je bijvoorbeeld, via het
+<strong>TargetInstance</strong> attribuut, over het object dat het
+event heeft veroorzaakt. Van dit object kan je dan terug de
+specifieke attributen raadplegen.<br>
+(zie ook reeks 3).
+<p><a class="popout" href="50.pl">antwoord</a></p>
+</dd>
+</dl>
+Bij de bespreking in de vorige reeks van de <em>standaard
+eventconsumers</em> voor permanente eventregistratie, werd geen
+aandacht besteed aan één van de meest interessante consumers, de
+<em>ActiveScriptEventConsumer</em>. Nochtans is de configuratie
+ervan volledig analoog als van de andere consumers. Twee attributen
+zijn essentiëel: <em>ScriptingEngine</em> moet ingesteld worden op
+de naam van de engine (in deze labo's <em>PerlScript</em>), en
+hetzij <em>ScriptFileName</em>, hetzij <em>ScriptText</em> moet
+respectievelijk de bestandsnaam van het script, of de volledige
+scriptcode bevatten.
+<dl class="compact">
+<dt>51.</dt>
+<dd>We passen vorige oefening aan zodat een regeltje tekst (vb "USB
+stick") wordt toegevoegd in een tekstbestand "C:\USB.txt", van
+zodra je een <strong>USB stick inplugt</strong>. Gebruik hierbij
+een <em>ActiveScriptEventConsumer</em>. Je moet de absolute padnaam
+van het tekstbestand in je script vermelden.<br>
+<strong>Tip:</strong>Als de nodige WMI objecten zijn aangemaakt,
+kan je best ook controleren of de scriptcode in het
+<em>ScriptText</em> attribuut correct werkt. Kopiëer deze code (uit
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong>) naar een gewoon
+scriptbestand en test uit.
+<p><a class="popout" href="51.pl">antwoord</a></p>
+</dd>
+</dl>
+In het consumerscript kan je beschikken over de <strong>actuele
+informatie</strong> van het object dat het event veroorzaakt heeft.
+Er wordt, in tegenstelling tot de andere <em>standaard
+consumers</em>, geen gebruik gemaakt van
+<strong>templates</strong>. Het consumerscript beschikt over een
+globale variabele, <strong>$TargetEvent</strong>, die, telkens de
+consumer op een event reageert, vervangen wordt door een referentie
+naar het actuele <em>eventobject</em>. Verdere analyse kan gebeuren
+op basis van de diverse systeemattributen of specifieke attributen
+van het eventobject. Zoek deze attributen op in
+<strong>WMI&nbsp;CIM&nbsp;Studio</strong> of in de
+<em>WMI&nbsp;References / WMI&nbsp;Classes /
+WMI&nbsp;System&nbsp;Classes</em> tak. Je beschikt bijvoorbeeld
+bovendien over volgende interessante attributen indien het
+<em>eventobject</em> een instantie is van
+<ul>
+<li><em>__InstanceOperationEvent</em>: met het attribuut
+<em>TargetInstance</em> is het achterliggende object beschikbaar
+voor het script.</li>
+<li><em>__AggregateEvent</em>: de attributen
+(<em>NumberOfEvents</em>, <em>Representative</em>, …)</li>
+</ul>
+Je kan van het achterliggende object alle <em>attributen</em>
+opvragen, maar je kan er geen <em>methodes</em> op toepassen.
+Hiervoor moet je het object opnieuw <em>binden</em>.
+<dl class="compact">
+<dt>52.</dt>
+<dd>Configureer via een script de permanente eventregistratie die
+er voor zorgt dat, indien er <strong>meerdere notepad of calculator
+processen</strong> opgestart worden, ze <strong>op de meest recente
+na afgebroken worden</strong>. Lukt dit ook indien je de events
+vooraf groepeert ?
+<p><a class="popout" href="52.pl">antwoord</a></p>
+</dd>
+<dt>53.</dt>
+<dd>Verwijder <strong>alle objecten</strong> in verband met
+<strong>permanente eventregistratie</strong>. Met
+<strong>LastError()</strong> kan je opvragen of dit gelukt is.
+<p><a class="popout" href="53.pl">antwoord</a></p>
+</dd>
+</dl>
+<h3><a name="Monitoring">Monitoring</a></h3>
+Tot de belangrijkste activiteiten van netwerkbeheer, systeembeheer
+in het bijzonder, horen het continu bekijken van kritische
+variabelen van de omgeving, en het onmiddellijk reageren op
+bepaalde veranderingen en anomaliën. <strong>Permanente
+eventregistratie</strong> is hiervoor het meest geschikte middel.
+De reeds in deze en vorige reeks aan bod gekomen parametriseerbare
+<em>standaard eventconsumers</em>, bieden een eenvoudige
+implementatie van deze techniek. Alhoewel deze eventconsumers
+kunnen instaan voor een groot aantal aspecten van het pro-actief
+systeembeheer, blijken de mogelijkheden ervan voor specifieke noden
+te beperkt. Het ontwikkelen van <strong>eventconsumers op
+maat</strong> is echter te hoog gegrepen voor deze labo's. Een
+alternatief dat we hier wel kunnen behandelen en dat nagenoeg geen
+beperkingen heeft, is het ontwikkelen van een consumerscript dat,
+zolang het actief blijft, continu objecten en hun attributen
+bekijkt, en zelf specifieke acties uitvoert van zodra bepaalde
+criteria in verband met de verzameling attributen wijzigen. De
+volgende paragrafen bekijken drie verschillende uitwerkingen van
+dit idee. In tegenstelling tot permanente eventregistratie wordt
+bij deze methodes <strong>niets in de CIM repository</strong>
+geconfigureerd, en spreekt men van <strong>tijdelijke
+eventregistratie</strong>: van zodra het consumerscript stopt,
+worden er ook geen events meer verwerkt.
+<h4><a name="Epolling">Externe polling</a></h4>
+In de meest eenvoudige benadering voert het consumerscript een
+<em>oneindige lus</em> uit, waarin <strong>periodiek</strong> (via
+de sleep of Win32::Sleep functies van Perl - let op de eenheid voor
+beide functies) aan de WMI service om de attribuutwaarden wordt
+gevraagd van alle objecten waarin men geïnteresseerd is. Aangezien
+de WMI service gebruik maakt van <strong>caching</strong>, zou het
+consumerscript, zonder bijkomende voorzieningen, geen wijzingen
+merken, indien attribuutwaarden veranderen. De <em>Refresh_</em>
+methode van het <em>SWbemObject</em> object kan dit probleem
+opvangen, maar een consumerscript dat aan <strong>externe
+polling</strong> doet, zou bijgevolg verplicht worden om in de lus
+telkens de <em>Refresh_</em> methode toe te passen, voor alle
+objectinstanties die men wenst te monitoren. Dit veroorzaakt een
+<strong>enorme belasting</strong> op het systeem (bovendien blijkt
+de <em>Refresh_</em> methode in Perl niet correct te werken).
+Gelukkig kan deze belasting <strong>significant
+gereduceerd</strong> worden door een <em>SWbemRefresher</em> object
+te creëren.
+<p>In Perl creëert men een <em>SWbemRefresher</em> collectie-object
+met de
+<strong>Win32::OLE-&gt;new</strong>("WbemScripting.SWbemRefresher")&nbsp;.
+Zoek in de <em>WMI documentatie</em> welke attributen en methodes
+dit object heeft.<br>
+Een <em>SWbemRefresher</em> kan beschouwd worden als een
+<strong>container</strong> van <em>SWbemObject</em>en of zelfs van
+collecties van <em>SWbemObject</em>en, al dan niet behorend tot
+diverse namespaces en doelcomputers. Indien men van een
+<em>SWbemRefresher</em> de <em>Refresh</em> methode uitvoert, dan
+worden meteen alle attribuutwaarden van alle objectinstanties
+binnen de container opgefrist.<br>
+Om nieuwe elementen in de <em>SWbemRefresher</em> container toe te
+voegen, zijn de methoden <em>Add</em> en <em>AddEnum</em> ervan
+vereist. Deze methoden zijn equivalent met de <em>Get</em> en
+<em>InstancesOf</em> methoden van een <em>SWbemServices</em>
+object. Als eerste parameter is een <em>SWbemServices</em> object
+vereist, de tweede parameter bevat ofwel (<em>Add</em> methode) het
+relatieve objectpad van een specifieke instantie, ofwel
+(<em>AddEnum</em> methode) de naam van een klasse. Vermijd, om
+performantieredenen, <em>AddEnum</em> indien je <em>Add</em> kan
+gebruiken (in het bijzonder voor <em>singletonklassen</em>).<br>
+Beide methoden hebben als terugkeerwaarde een
+<em>SWbemRefreshableItem</em> object. Het <em>Object</em> of het
+<em>ObjectSet</em> attribuut hiervan levert de corresponderende
+<em>SWbemObject</em> of <em>SWbemObjectSet</em> objecten op. Het is
+<strong>niet</strong> noodzakelijk om deze terugkeerwaarden bij te
+houden. Eens alle elementen tot de <em>SWbemRefresher</em>
+toegevoegd zijn, kan men de individuele
+<em>SWbemRefreshableItem</em> objecten adresseren met de
+<em>Item</em> methode (met een numeriek volgnummer geindexeerd).
+Het <em>IsSet</em> attribuut atribuut van
+<em>SWbemRefreshableItem</em> laat dan toe om uit te maken of men
+<em>Object</em> dan wel <em>ObjectSet</em> moet aanspreken om
+uiteindelijk het <strong>doelobject</strong> of de
+<strong>collectie</strong> van alle instanties van de doelklasse te
+bekomen.</p>
+<dl class="compact">
+<dt>54.</dt>
+<dd>Ontwikkel een script dat geparametriseerd wordt met een lijst
+van een <strong>aantal klassenamen</strong>. Periodiek moeten de
+WMI gegevens van <strong>alle instanties</strong> van die klassen
+(of de enige instantie van eventuele singletonklassen)
+<strong>opgefrist</strong> worden, en de naam en waarde van
+<strong>alle ingestelde attributen</strong> ervan uitgeschreven
+worden. Dergelijk script is ondermeer interessant om toegepast te
+worden op klassen die gegevens representeren die men meestal met de
+<em>Performance&nbsp;Monitor</em> analyseert (cfr. cursus
+<em>Architectuur van Besturingssystemen</em>). Je kan deze klassen
+herkennen aan een naam met <em>Win32_PerfFormattedData_</em>
+prefix). Test het script dan ook op dergelijke klassen uit
+(bijvoorbeeld op klassen met <em>PerfOS_System</em>,
+<em>PerfOS_Processor</em>, <em>PerfDisk_LogicalDisk</em>,
+<em>PerfOS_Memory</em>, … als naamsuffix).
+<p><a class="popout" href="54.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4><a name="SEvent">Synchrone eventconsumers</a></h4>
+De tweede benadering, nauwelijks complexer, laat het
+<strong>initiatief over aan de WMI service</strong> (op de
+doelmachines) en vermijdt hierdoor zowel periodieke wachtlussen in
+het consumerscript als frequente interacties tussen consumer en WMI
+service (eventueel over het netwerk).<br>
+Je kan synchrone events ook uittesten in <strong>WBemTest</strong>.
+Na connecteren vink je <em>Asynchroon</em> aan en initialiseer je
+een <em>Berichtquery</em> met de <strong>notification
+query</strong> in WQL syntax die beschrijft welke gebeurtenis je
+wilt opvolgen. Telkens een gebeurtenis optreedt die aan de
+voorwaarden van de notification voldoet, wordt dit getoond in de
+<em>queryresultaten</em>. Afhankelijk van de specificaties van de
+notification query, representeren de elementen in de
+<em>queryresultaten</em> objecten van een <em>__Event</em> of van
+een <em>__AggregateEvent</em> klasse. Je kan het event verder
+analyseren door te <em>klikken</em>. Net zoals bij de
+<em>permanente eventregistratie</em> beschik je over volgende
+interessante attributen:
+<ul>
+<li><em>__InstanceOperationEvent</em>: met het attribuut
+<em>TargetInstance</em> haal je het achterliggende object op.</li>
+<li><em>__AggregateEvent</em>: de attributen
+(<em>NumberOfEvents</em>, <em>Representative</em>, …)</li>
+</ul>
+<p>In de tak <em><nobr>Using WMI</nobr> / <nobr>Monitoring
+Events</nobr></em> van de <em>WMI-documentatie</em> kan je alles
+terugvinden in de sectie <em>Using Temporary Event Consumers</em>.
+Om dit te automatiseren in een script onderneem je volgende
+stappen:</p>
+<ul>
+<li>initialiseer een <em>SWbemEventSource</em> object die een
+<em>queue</em> van events representeert. Dit object bekom je als
+returnwaarde van de <em>ExecNotificationQuery(WQLquery)</em>
+methode van een <em>SWbemServices</em> object.<br>
+Deze methode vereist als enige parameter een <strong>notification
+query</strong> in WQL syntax, die je best vooraf uittest in
+<strong>WBemTest</strong>.<br>
+De event-<em>queue</em> blijft bestaan <strong>zolang het
+consumerscript actief</strong> is. Telkens een gebeurtenis optreedt
+die aan de voorwaarden van de notification voldoet, plaatst de WMI
+service een <em>SWbemObject</em> element in de <em>queue</em> die
+het event beschrijft.</li>
+<li>Haal een volgend event uit de <em>queue</em>. Dit gebeurt
+meestal op een <strong>synchrone</strong> manier: in een oneindige
+lus wordt de <em>NextEvent(periode)</em> methode opgeroepen van het
+<em>SWbemEventSource</em> object (zie <em>WMI
+documentatie</em>).<br>
+Zonder parameter wordt een <strong>oneindige timeout</strong>
+verondersteld: het script zal hierdoor <em>geblokkeerd</em> blijven
+zolang de <em>queue</em> leeg blijft. Wordt als parameter een
+periode (in milliseconden) opgegeven, dan wordt het script minstens
+éénmaal per periode geactiveerd: hetzij wanneer er effectief een
+event in de <em>queue</em> beschikbaar is (dan heeft
+<em>NextEvent()</em> als terugkeerwaarde een <em>SWbemObject</em>
+dat de gebeurtenis representeert), hetzij door een
+<em>wbemErrTimedOut</em> fout. Men noemt dit wel eens een
+<strong>semi-synchrone</strong> benadering. In dit model kan men
+eenvoudige <strong>periodieke taken</strong> in de consumer
+integreren, al is het maar om een regelmatige <em>feedback</em> aan
+de operator te bezorgen. Uiteraard moet de <em>timeout</em>
+parameter van de <em>NextEvent()</em> methode een veelvoud zijn van
+de eventuele <em>pollingperiode</em> in de WITHIN&nbsp;… extentie
+van de notification query.</li>
+<li>Beschrijf wat het consumerscript moet doen met elke event. De
+reactiemogelijkheden zijn hier <strong>onbeperkt</strong>.<br>
+Merk op dat de elementen in de <em>eventqueue</em> ofwel
+<em>__Event</em> objecten zijn, ofwel <em>__AggregateEvent</em>
+objecten. Verdere analyse gebeurt op basis van de beschikbare
+attributen (zie permanente eventregistratie).</li>
+</ul>
+<dl class="compact">
+<dt>55.</dt>
+<dd>Ontwikkel een semi-synchroon script dat elke
+<strong>verandering in de toestand van een service</strong> meldt.
+Indien er niets te melden is, dat moet om de vijf seconden een
+puntje getoond worden.<br>
+(Stel de perl variabele <strong>$|</strong> in op een waarde
+verschillend van 0 indien je elke schrijfopdracht direct op het
+scherm wilt zien.)
+<p><a class="popout" href="55.pl">antwoord</a></p>
+</dd>
+<dt>56.</dt>
+<dd>Ontwikkel twee semi-synchrone scripts, die respectievelijk op
+het scherm melden:
+<ol>
+<li>dat een willekeurig proces op het toestel <strong>opgestart of
+beeïndigd</strong> wordt (kan op twee manieren),</li>
+<li>dat een willekeurig <em>Office</em> <strong>document</strong>
+(Excel, <em>Word</em>, <em>Powerpoint</em>,&nbsp;...)
+<strong>geopend</strong> wordt (zie oefening 19),</li>
+</ol>
+De details van de gebeurtenis (naam van het proces, bestandsnaam
+van het <em>Office</em> document) moeten hierbij uiteraard eveneens
+vermeld worden.
+<p><a class="popout" href="56.pl">antwoord</a></p>
+</dd>
+</dl>
+<h4>Asynchrone eventconsumers</h4>
+Het model van semi-synchrone eventconsumers is onderheving aan één
+belangrijke beperking: de diverse gebeurtenissen die een event
+kunnen produceren moeten kunnen beschreven worden met <strong>één
+enkele notification query</strong>. Indien diverse namespaces of
+doelcomputers moeten <em>gemonitored</em> worden, is dit alvast
+niet het geval. Uiteindelijk vormt deze beperking op een
+<em>multitasking</em> systeem geen echt functioneel probleem: men
+kan altijd evenveel onafhankelijke consumers opstarten als men
+<em>notification queries</em> nodig heeft om de globale verzameling
+van gebeurtenissen te beschrijven.
+<p>Wil men toch de volledige monitoring vanuit <strong>één enkel
+script</strong> sturen, dan moet men een beroep doen op
+<strong>asynchrone eventnoficatie</strong>. Alhoewel dit in de
+naamgeving slechts een kleine wijziging is, is de opzet van een
+asynchrone eventconsumer toch fundamenteel anders dan van een
+synchrone eventconsumer.<br>
+Om dit te realiseren is het noodzakelijk om een <em>SWbemSink</em>
+COM object te initialiseren, zoek het <em>ProgID</em> op in
+RegEdit. In traditionele WMI scripts worden objecten en hun
+methodes opgeroepen vanuit het script. Een <em>SWbemSink</em>
+object laat toe om de situatie volledig te
+<strong>inverteren</strong>: het consumerscript stelt, via het
+<em>SWbemSink</em> object, <em>EventHandlers</em> ter beschikking,
+die <strong>vanuit de WMI service</strong> aangeroepen worden. Dit
+wordt een <em>callback mechanisme</em> genoemd.</p>
+<p>Een asynchroon eventconsumerscript heeft als
+verantwoordelijkheden:</p>
+<ol>
+<li>Omschrijven van één of meerdere <em>notification queries</em>
+(WQL) waarin men geïnteresseerd is.</li>
+<li>Het creëren van minstens één <em>SWbemSink</em> COM
+object.</li>
+<li>De koppeling van elke <em>notification query</em> aan een
+<em>SWbemSink</em> object. Hiervoor gebruik je een methode van een
+<em>SWbemServices</em> object, nl.
+<nobr><strong>ExecNotificationQueryAsync</strong>(<em>SWbemSinkObject,WQLquery</em><strong>)</strong></nobr>.
+Deze koppeling is <em>veel-op-één</em>: elk <em>SWbemSink</em>
+object kan reageren op één, op enkele of op alle eventbronnen.</li>
+<li>Ter beschikking stellen van methodes (<em>EventHandlers</em>)
+voor elk <em>SWbemSink</em> Object. De belangrijkste
+<em>EventHandler</em> is <strong>OnObjectReady</strong>.</li>
+</ol>
+De <em>EventHandlers</em> worden <strong>vanuit de WMI services
+zelf rechtstreeks opgeroepen</strong>, indien een specifiek event
+optreedt.
+<p>Eens het script de code geïnitialiseerd heeft die beide
+verantwoordelijkheden implementeren, mag het proces waarin het
+script draait in een <strong>permanent geblokkeerde
+toestand</strong> gebracht worden.</p>
+<p>De details van het ter beschikking stellen van een callback
+mechanisme <strong>vanuit een scripttaal</strong> is niet zozeer
+afhankelijk van de <em>scripting engine</em>, maar wel van de
+<em>scripting host</em>. De implementatie van het <em>callback
+mechanisme</em> is wat complexer <strong>indien perl.exe als
+host</strong> fungeert.<br>
+De huidige Perl versie in niet stabiel in een eventgestuurde
+situatie indien voor de <em>default</em>
+<strong>multithreaded</strong> implementatie gekozen wordt. Daarom
+wordt de <em>EVENTS</em> optie aangeschakeld, waardoor een
+<strong>single threaded apartment</strong> model geforceerd
+wordt.<br>
+Men kan onderstaand sjabloon gebruiken. De aanvullende
+<strong>Win32::OLE-&gt;WithEvents</strong> oproepen zijn
+noodzakelijk om het <em>SWbemSink</em> object als een <em>event
+provider</em> te registreren (informatie in de Perl-documentatie,
+de sectie <em>Win32 / OLE</em> ):</p>
+<table border="0" width="100%">
+<tr>
+<td width="10%">&nbsp;</td>
+<td width="90%">
+<pre>
+
+use Win32::OLE qw(EVENTS);
+
+my $Sink = ...
+Win32::OLE-&gt;WithEvents($Sink,\&amp;EventCallBack);  #koppelen van SinkObject aan methode die moet worden uitgevoerd
+
+#oneindige lus
+until (1) {
+        Win32::OLE-&gt;SpinMessageLoop();
+        Win32::Sleep(500);
+}
+
+sub EventCallBack() {
+       #argumenten zijn: bronobject die het event afvuurt, naam van het event, eventobject
+    my ($Source,$EventName,$Event) = @_;
+    return unless $EventName eq "OnObjectReady";
+    ... $Event-&gt;{TargetInstance}-&gt;{...} ...
+}
+</pre></td>
+</tr>
+</table>
+<p>Een negatief gevolg van bovenstaande oplossing is dat de
+<nobr><strong>Win32::OLE-&gt;SpinMessageLoop</strong></nobr>
+methode moet uitgevoerd worden in een oneindige lus. Hierdoor kan
+je het consumerscript enkel <strong>abrupt</strong> afbreken.
+Daarbij wordt ook het asynchrone eventmechanisme stopgezet,
+aangezien de eventhanders zich dan ook niet meer in het geheugen
+bevinden. De <em>SWbemSink</em> objecten blijven echter actief
+events afvuren, die door geen enkel proces opgevangen worden. Zijn
+er een groot aantal van deze <em>SWbemSink</em> objecten, dan kan
+dit de performantie van het systeem nadelig beïnvloeden.<br>
+Je moet dus WMI <strong>expliciet</strong> melden dat de
+notificatie niet langer moet gebeuren - gebruik hiervoor de
+<em>Cancel</em> methode van het <em>SWbemSink</em> object. Maar
+waar moet je dit in je code plaatsen ?</p>
+<p>Dit wordt opgelost door het gebruik van de module
+<strong>Win32::Console</strong> (zie ActivePerl Documentatie) zoals
+in onderstaand voorbeeld:</p>
+<table border="0" width="100%">
+<tr>
+<td width="10%">&nbsp;</td>
+<td width="90%">
+<pre>
+  use Win32::Console;
+  my $Console = Win32::Console-&gt;new(STD_INPUT_HANDLE);
+  $|=1; 
+  print "Wacht op een actie .";
+
+  until ($Console-&gt;GetEvents() &amp;&amp; ($Console-&gt;Input())[1]) {
+      print ".";
+      Win32::Sleep(500);
+  }
+  
+  print "\nLus is gestopt\n";
+</pre></td>
+</tr>
+</table>
+Nu kan je beiden combineren. Zorg ervoor dat de <em>Cancel</em>
+methode van het <em>SWbemSink</em> object wordt uitgevoerd.
+<dl class="compact">
+<dt>57.</dt>
+<dd>Ontwikkel een <strong>asynchroon script</strong> dat de
+functies van de twee synchone scripts van de vorige oefening
+<strong>integreert</strong>. Gebruik hierbij
+<strong>perl.exe</strong> als host.
+<p><a class="popout" href="57.pl">antwoord</a></p>
+</dd>
+</dl>
+
+        <div id="page-content-end"></div>
+    </div>
+    <div id="footer">    <div id="metadata">
+    Laatst gewijzigd
+            op
+        29-10-2013
+        om
+        17:07
+        
+                door
+                    <a href="mailto:Joris.Moreau@UGent.be">Joris Moreau</a>
+                
+        
+    </div>
+<div id="tag">intranetr/0.10.0</div>
+<div id="footer-end"></div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+<!-- 208 ms / 996 KB -->
