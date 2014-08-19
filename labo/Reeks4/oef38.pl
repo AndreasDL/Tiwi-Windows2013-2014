@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Win32::OLE 'in';
 use Win32::OLE::Const 'Microsoft WMI Scripting';
-$Win32::OLE::Warn = 3;
+#$Win32::OLE::Warn = 3;
 
 my $loc  = Win32::OLE->new("wbemScripting.SWbemLocator");
 my $wbem = $loc->ConnectServer("localhost","root/cimv2");
